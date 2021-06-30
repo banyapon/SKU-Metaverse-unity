@@ -10,6 +10,11 @@ public class NetworkPlayer : MonoBehaviourPunCallbacks
     public float moveSpeed = 10.0f;
     public float rotateSpeed = 80.0f;
 
+    void Start()
+    {
+        PV = GetComponent<PhotonView>();
+    }
+
     void Update()
     {
         if (PV.IsMine)
@@ -19,21 +24,6 @@ public class NetworkPlayer : MonoBehaviourPunCallbacks
 
             transform.Translate(0, 0, Move);
             transform.Rotate(0, Rotate, 0);
-
-            PV.RPC("moveRPC", RpcTarget.All, Move);
-            PV.RPC("rotateRPC", RpcTarget.All, Rotate);
         }
     }
-    [PunRPC]
-    void moveRPC(float MoveRPC)
-    {
-        float Move = Input.GetAxis("Vertical");
-    }
-
-    [PunRPC]
-    void rotateRPC(float RotateRPC)
-    {
-        float Rotate = Input.GetAxis("Horizontal");
-    }
-
 }
