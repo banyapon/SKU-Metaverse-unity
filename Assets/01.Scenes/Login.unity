@@ -156,6 +156,7 @@ MonoBehaviour:
     sceneName: Main
     maxPlayer: 20
   roomUI: {fileID: 1666368905}
+  PlayerName: 
 --- !u!4 &219261920
 Transform:
   m_ObjectHideFlags: 0
@@ -333,7 +334,7 @@ GameObject:
   - component: {fileID: 989392501}
   - component: {fileID: 989392500}
   m_Layer: 5
-  m_Name: Button
+  m_Name: ConnectedServer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -788,7 +789,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1666368906}
   m_Layer: 5
-  m_Name: roomUI
+  m_Name: JoinedLobby
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -827,7 +828,7 @@ GameObject:
   - component: {fileID: 1750276376}
   - component: {fileID: 1750276375}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: InitiliazeRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

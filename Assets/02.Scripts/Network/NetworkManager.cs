@@ -16,10 +16,18 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 {
     public List<DefaultRoom> defaultRooms;
     public GameObject roomUI;
+    public string PlayerName;
+
+    void Start()
+    {
+        PhotonNetwork.GameVersion = "0.1";
+        PhotonNetwork.NickName = "Sungkyul"; // 플레이어 이름
+        PhotonNetwork.AutomaticallySyncScene = true; // 마스터 클라이언트로 동기화
+    }
 
     public void ConnectToServer()
     {
-        PhotonNetwork.ConnectUsingSettings();
+        PhotonNetwork.ConnectUsingSettings(); // 서버연결
         Debug.Log("서버에 연결을 시도합니다.");
     }
 
@@ -61,5 +69,11 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     {
         Debug.Log("새로운 플레이어가 입장하였습니다.");
         base.OnPlayerEnteredRoom(newPlayer);
+    }
+
+    public override void OnJoinRandomFailed(short returnCode, string message)
+    {
+        Debug.Log("방 입장에 실패하였습니다..");
+        base.OnJoinRandomFailed(returnCode, message);
     }
 }
