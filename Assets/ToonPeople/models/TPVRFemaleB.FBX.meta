@@ -140,6 +140,10 @@ ModelImporter:
     100268: TPNECK
     100270: Glasses
     100272: HEAD
+    100274: HEADsimple
+    100276: TPFHatA
+    100278: TPFHatB
+    100280: TPFHatC
     400000: ROOT
     400002: TP
     400004: TP Head
@@ -277,6 +281,10 @@ ModelImporter:
     400268: TPNECK
     400270: Glasses
     400272: HEAD
+    400274: HEADsimple
+    400276: TPFHatA
+    400278: TPFHatB
+    400280: TPFHatC
     2300000: TPGlasses
     2300002: Glasses
     3300000: TPGlasses
@@ -309,6 +317,10 @@ ModelImporter:
     4300050: TPFHairG
     4300052: Glasses
     4300054: HEAD
+    4300056: HEADsimple
+    4300058: TPFHatA
+    4300060: TPFHatB
+    4300062: TPFHatC
     9500000: //RootNode
     13700000: TPBowtie002
     13700002: TPFDressS
@@ -336,8 +348,22 @@ ModelImporter:
     13700046: TPHEADsimple
     13700048: TPNECK
     13700050: HEAD
+    13700052: HEADsimple
+    13700054: TPFHatA
+    13700056: TPFHatB
+    13700058: TPFHatC
     2186277476908879412: ImportLogs
   externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HatA01
+    second: {fileID: 2100000, guid: 8d851ac929e475a418b0eddb3accba8a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HatB01
+    second: {fileID: 2100000, guid: 98e0b6ac57175664faaebf1e62d303cc, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -386,6 +412,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: TPFHatC01
+    second: {fileID: 2100000, guid: 06257e62bf2eb764199655361268869c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: TPFShirtA01
     second: {fileID: 2100000, guid: 1e89fcce5eb1445479fa5a95dd9b9296, type: 2}
   - first:
@@ -427,7 +458,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: TPteeth
-    second: {fileID: 2100000, guid: 35c419ca25eb55c4e848862b5e9efcc7, type: 2}
+    second: {fileID: 2100000, guid: 2349c5406afa2ff4cbe5ca19a0192210, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -492,13 +523,13 @@ ModelImporter:
     previousCalculatedGlobalScale: 1
     hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
-    normalSmoothAngle: 60
-    normalImportMode: 0
-    tangentImportMode: 4
-    normalCalculationMode: 0
-    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    normalSmoothAngle: 90
+    normalImportMode: 1
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
-    normalSmoothingSource: 0
+    normalSmoothingSource: 2
   importAnimation: 0
   copyAvatar: 1
   humanDescription:

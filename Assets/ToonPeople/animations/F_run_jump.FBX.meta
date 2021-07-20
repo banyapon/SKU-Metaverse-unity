@@ -122,7 +122,9 @@ ModelImporter:
     4300000: TPBODY
     4300002: TPHEAD
     4300004: HEAD
-    7400000: F_run_jump
+    7400000: TPF_runjumpIN
+    7400002: TPF_runjumpFLY
+    7400004: TPF_runjumpOUT
     9500000: //RootNode
     13700000: TPBODY
     13700002: TPHEAD
@@ -143,7 +145,9 @@ ModelImporter:
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
-    animationImportWarnings: 
+    animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
+      might lower retargeting quality:\n\t'TP Neck' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -157,10 +161,10 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: F_run_jump
+      name: TPF_runjumpIN
       takeName: Take 001
       firstFrame: 0
-      lastFrame: 26
+      lastFrame: 10
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -330,11 +334,359 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: TPF_runjumpFLY
+      takeName: Take 001
+      firstFrame: 12
+      lastFrame: 32
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: HEAD
+        weight: 0
+      - path: ROOT
+        weight: 1
+      - path: ROOT/TP
+        weight: 1
+      - path: ROOT/TP/TP Pelvis
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP L Thigh
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP L Thigh/TP L Calf
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP L Thigh/TP L Calf/TP L Foot
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP L Thigh/TP L Calf/TP L Foot/TP L Toe0
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP R Thigh
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP R Thigh/TP R Calf
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP R Thigh/TP R Calf/TP R Foot
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP R Thigh/TP R Calf/TP R Foot/TP R Toe0
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP L Clavicle
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP L Clavicle/TP L UpperArm
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP L Clavicle/TP L UpperArm/TP
+          L Forearm
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP L Clavicle/TP L UpperArm/TP
+          L Forearm/TP L Hand
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP L Clavicle/TP L UpperArm/TP
+          L Forearm/TP L Hand/TP L Finger0
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP L Clavicle/TP L UpperArm/TP
+          L Forearm/TP L Hand/TP L Finger0/TP L Finger01
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP L Clavicle/TP L UpperArm/TP
+          L Forearm/TP L Hand/TP L Finger0/TP L Finger01/TP L Finger02
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP L Clavicle/TP L UpperArm/TP
+          L Forearm/TP L Hand/TP L Finger1
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP L Clavicle/TP L UpperArm/TP
+          L Forearm/TP L Hand/TP L Finger1/TP L Finger11
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP L Clavicle/TP L UpperArm/TP
+          L Forearm/TP L Hand/TP L Finger1/TP L Finger11/TP L Finger12
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP L Clavicle/TP L UpperArm/TP
+          L Forearm/TP L Hand/TP L Finger2
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP L Clavicle/TP L UpperArm/TP
+          L Forearm/TP L Hand/TP L Finger2/TP L Finger21
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP L Clavicle/TP L UpperArm/TP
+          L Forearm/TP L Hand/TP L Finger2/TP L Finger21/TP L Finger22
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP L Clavicle/TP L UpperArm/TP
+          L Forearm/TP L Hand/TP L Finger3
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP L Clavicle/TP L UpperArm/TP
+          L Forearm/TP L Hand/TP L Finger3/TP L Finger31
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP L Clavicle/TP L UpperArm/TP
+          L Forearm/TP L Hand/TP L Finger3/TP L Finger31/TP L Finger32
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP L Clavicle/TP L UpperArm/TP
+          L Forearm/TP L Hand/TP L Finger4
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP L Clavicle/TP L UpperArm/TP
+          L Forearm/TP L Hand/TP L Finger4/TP L Finger41
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP L Clavicle/TP L UpperArm/TP
+          L Forearm/TP L Hand/TP L Finger4/TP L Finger41/TP L Finger42
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP Neck
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP Neck/TP Head
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP R Clavicle
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP R Clavicle/TP R UpperArm
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP R Clavicle/TP R UpperArm/TP
+          R Forearm
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP R Clavicle/TP R UpperArm/TP
+          R Forearm/TP R Hand
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP R Clavicle/TP R UpperArm/TP
+          R Forearm/TP R Hand/TP R Finger0
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP R Clavicle/TP R UpperArm/TP
+          R Forearm/TP R Hand/TP R Finger0/TP R Finger01
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP R Clavicle/TP R UpperArm/TP
+          R Forearm/TP R Hand/TP R Finger0/TP R Finger01/TP R Finger02
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP R Clavicle/TP R UpperArm/TP
+          R Forearm/TP R Hand/TP R Finger1
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP R Clavicle/TP R UpperArm/TP
+          R Forearm/TP R Hand/TP R Finger1/TP R Finger11
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP R Clavicle/TP R UpperArm/TP
+          R Forearm/TP R Hand/TP R Finger1/TP R Finger11/TP R Finger12
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP R Clavicle/TP R UpperArm/TP
+          R Forearm/TP R Hand/TP R Finger2
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP R Clavicle/TP R UpperArm/TP
+          R Forearm/TP R Hand/TP R Finger2/TP R Finger21
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP R Clavicle/TP R UpperArm/TP
+          R Forearm/TP R Hand/TP R Finger2/TP R Finger21/TP R Finger22
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP R Clavicle/TP R UpperArm/TP
+          R Forearm/TP R Hand/TP R Finger3
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP R Clavicle/TP R UpperArm/TP
+          R Forearm/TP R Hand/TP R Finger3/TP R Finger31
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP R Clavicle/TP R UpperArm/TP
+          R Forearm/TP R Hand/TP R Finger3/TP R Finger31/TP R Finger32
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP R Clavicle/TP R UpperArm/TP
+          R Forearm/TP R Hand/TP R Finger4
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP R Clavicle/TP R UpperArm/TP
+          R Forearm/TP R Hand/TP R Finger4/TP R Finger41
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP R Clavicle/TP R UpperArm/TP
+          R Forearm/TP R Hand/TP R Finger4/TP R Finger41/TP R Finger42
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: TPF_runjumpOUT
+      takeName: Take 001
+      firstFrame: 35
+      lastFrame: 45
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: HEAD
+        weight: 0
+      - path: ROOT
+        weight: 1
+      - path: ROOT/TP
+        weight: 1
+      - path: ROOT/TP/TP Pelvis
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP L Thigh
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP L Thigh/TP L Calf
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP L Thigh/TP L Calf/TP L Foot
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP L Thigh/TP L Calf/TP L Foot/TP L Toe0
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP R Thigh
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP R Thigh/TP R Calf
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP R Thigh/TP R Calf/TP R Foot
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP R Thigh/TP R Calf/TP R Foot/TP R Toe0
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP L Clavicle
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP L Clavicle/TP L UpperArm
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP L Clavicle/TP L UpperArm/TP
+          L Forearm
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP L Clavicle/TP L UpperArm/TP
+          L Forearm/TP L Hand
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP L Clavicle/TP L UpperArm/TP
+          L Forearm/TP L Hand/TP L Finger0
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP L Clavicle/TP L UpperArm/TP
+          L Forearm/TP L Hand/TP L Finger0/TP L Finger01
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP L Clavicle/TP L UpperArm/TP
+          L Forearm/TP L Hand/TP L Finger0/TP L Finger01/TP L Finger02
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP L Clavicle/TP L UpperArm/TP
+          L Forearm/TP L Hand/TP L Finger1
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP L Clavicle/TP L UpperArm/TP
+          L Forearm/TP L Hand/TP L Finger1/TP L Finger11
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP L Clavicle/TP L UpperArm/TP
+          L Forearm/TP L Hand/TP L Finger1/TP L Finger11/TP L Finger12
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP L Clavicle/TP L UpperArm/TP
+          L Forearm/TP L Hand/TP L Finger2
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP L Clavicle/TP L UpperArm/TP
+          L Forearm/TP L Hand/TP L Finger2/TP L Finger21
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP L Clavicle/TP L UpperArm/TP
+          L Forearm/TP L Hand/TP L Finger2/TP L Finger21/TP L Finger22
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP L Clavicle/TP L UpperArm/TP
+          L Forearm/TP L Hand/TP L Finger3
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP L Clavicle/TP L UpperArm/TP
+          L Forearm/TP L Hand/TP L Finger3/TP L Finger31
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP L Clavicle/TP L UpperArm/TP
+          L Forearm/TP L Hand/TP L Finger3/TP L Finger31/TP L Finger32
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP L Clavicle/TP L UpperArm/TP
+          L Forearm/TP L Hand/TP L Finger4
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP L Clavicle/TP L UpperArm/TP
+          L Forearm/TP L Hand/TP L Finger4/TP L Finger41
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP L Clavicle/TP L UpperArm/TP
+          L Forearm/TP L Hand/TP L Finger4/TP L Finger41/TP L Finger42
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP Neck
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP Neck/TP Head
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP R Clavicle
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP R Clavicle/TP R UpperArm
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP R Clavicle/TP R UpperArm/TP
+          R Forearm
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP R Clavicle/TP R UpperArm/TP
+          R Forearm/TP R Hand
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP R Clavicle/TP R UpperArm/TP
+          R Forearm/TP R Hand/TP R Finger0
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP R Clavicle/TP R UpperArm/TP
+          R Forearm/TP R Hand/TP R Finger0/TP R Finger01
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP R Clavicle/TP R UpperArm/TP
+          R Forearm/TP R Hand/TP R Finger0/TP R Finger01/TP R Finger02
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP R Clavicle/TP R UpperArm/TP
+          R Forearm/TP R Hand/TP R Finger1
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP R Clavicle/TP R UpperArm/TP
+          R Forearm/TP R Hand/TP R Finger1/TP R Finger11
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP R Clavicle/TP R UpperArm/TP
+          R Forearm/TP R Hand/TP R Finger1/TP R Finger11/TP R Finger12
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP R Clavicle/TP R UpperArm/TP
+          R Forearm/TP R Hand/TP R Finger2
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP R Clavicle/TP R UpperArm/TP
+          R Forearm/TP R Hand/TP R Finger2/TP R Finger21
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP R Clavicle/TP R UpperArm/TP
+          R Forearm/TP R Hand/TP R Finger2/TP R Finger21/TP R Finger22
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP R Clavicle/TP R UpperArm/TP
+          R Forearm/TP R Hand/TP R Finger3
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP R Clavicle/TP R UpperArm/TP
+          R Forearm/TP R Hand/TP R Finger3/TP R Finger31
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP R Clavicle/TP R UpperArm/TP
+          R Forearm/TP R Hand/TP R Finger3/TP R Finger31/TP R Finger32
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP R Clavicle/TP R UpperArm/TP
+          R Forearm/TP R Hand/TP R Finger4
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP R Clavicle/TP R UpperArm/TP
+          R Forearm/TP R Hand/TP R Finger4/TP R Finger41
+        weight: 1
+      - path: ROOT/TP/TP Pelvis/TP Spine/TP Spine1/TP Spine2/TP R Clavicle/TP R UpperArm/TP
+          R Forearm/TP R Hand/TP R Finger4/TP R Finger41/TP R Finger42
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
-    meshCompression: 0
+    meshCompression: 3
     addColliders: 0
     useSRGBMaterialColor: 1
     importVisibility: 0
@@ -346,7 +698,7 @@ ModelImporter:
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
-    weldVertices: 1
+    weldVertices: 0
     preserveHierarchy: 0
     indexFormat: 0
     secondaryUVAngleDistortion: 8
@@ -358,11 +710,11 @@ ModelImporter:
     hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
-    normalImportMode: 0
-    tangentImportMode: 4
+    normalImportMode: 2
+    tangentImportMode: 2
     normalCalculationMode: 0
-    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
-    blendShapeNormalImportMode: 1
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 2
     normalSmoothingSource: 0
   importAnimation: 1
   copyAvatar: 1

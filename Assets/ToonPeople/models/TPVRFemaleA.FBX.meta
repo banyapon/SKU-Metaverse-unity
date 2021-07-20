@@ -87,6 +87,64 @@ ModelImporter:
     100162: TPHEADsimple
     100164: Glasses
     100166: HEAD
+    100168: HEADsimple
+    100170: ROOT 1
+    100172: TP 1
+    100174: TP Head 1
+    100176: TP L Calf 1
+    100178: TP L Clavicle 1
+    100180: TP L Finger0 1
+    100182: TP L Finger01 1
+    100184: TP L Finger02 1
+    100186: TP L Finger1 1
+    100188: TP L Finger11 1
+    100190: TP L Finger12 1
+    100192: TP L Finger2 1
+    100194: TP L Finger21 1
+    100196: TP L Finger22 1
+    100198: TP L Finger3 1
+    100200: TP L Finger31 1
+    100202: TP L Finger32 1
+    100204: TP L Finger4 1
+    100206: TP L Finger41 1
+    100208: TP L Finger42 1
+    100210: TP L Foot 1
+    100212: TP L Forearm 1
+    100214: TP L Hand 1
+    100216: TP L Thigh 1
+    100218: TP L Toe0 1
+    100220: TP L UpperArm 1
+    100222: TP Neck 1
+    100224: TP Pelvis 1
+    100226: TP R Calf 1
+    100228: TP R Clavicle 1
+    100230: TP R Finger0 1
+    100232: TP R Finger01 1
+    100234: TP R Finger02 1
+    100236: TP R Finger1 1
+    100238: TP R Finger11 1
+    100240: TP R Finger12 1
+    100242: TP R Finger2 1
+    100244: TP R Finger21 1
+    100246: TP R Finger22 1
+    100248: TP R Finger3 1
+    100250: TP R Finger31 1
+    100252: TP R Finger32 1
+    100254: TP R Finger4 1
+    100256: TP R Finger41 1
+    100258: TP R Finger42 1
+    100260: TP R Foot 1
+    100262: TP R Forearm 1
+    100264: TP R Hand 1
+    100266: TP R Thigh 1
+    100268: TP R Toe0 1
+    100270: TP R UpperArm 1
+    100272: TP Spine 1
+    100274: TP Spine1 1
+    100276: TP Spine2 1
+    100278: TPFHatA
+    100280: TPFHatB
+    100282: TPFHatC
     400000: ROOT
     400002: TP
     400004: TP Head
@@ -171,6 +229,64 @@ ModelImporter:
     400162: TPHEADsimple
     400164: Glasses
     400166: HEAD
+    400168: HEADsimple
+    400170: ROOT 1
+    400172: TP 1
+    400174: TP Head 1
+    400176: TP L Calf 1
+    400178: TP L Clavicle 1
+    400180: TP L Finger0 1
+    400182: TP L Finger01 1
+    400184: TP L Finger02 1
+    400186: TP L Finger1 1
+    400188: TP L Finger11 1
+    400190: TP L Finger12 1
+    400192: TP L Finger2 1
+    400194: TP L Finger21 1
+    400196: TP L Finger22 1
+    400198: TP L Finger3 1
+    400200: TP L Finger31 1
+    400202: TP L Finger32 1
+    400204: TP L Finger4 1
+    400206: TP L Finger41 1
+    400208: TP L Finger42 1
+    400210: TP L Foot 1
+    400212: TP L Forearm 1
+    400214: TP L Hand 1
+    400216: TP L Thigh 1
+    400218: TP L Toe0 1
+    400220: TP L UpperArm 1
+    400222: TP Neck 1
+    400224: TP Pelvis 1
+    400226: TP R Calf 1
+    400228: TP R Clavicle 1
+    400230: TP R Finger0 1
+    400232: TP R Finger01 1
+    400234: TP R Finger02 1
+    400236: TP R Finger1 1
+    400238: TP R Finger11 1
+    400240: TP R Finger12 1
+    400242: TP R Finger2 1
+    400244: TP R Finger21 1
+    400246: TP R Finger22 1
+    400248: TP R Finger3 1
+    400250: TP R Finger31 1
+    400252: TP R Finger32 1
+    400254: TP R Finger4 1
+    400256: TP R Finger41 1
+    400258: TP R Finger42 1
+    400260: TP R Foot 1
+    400262: TP R Forearm 1
+    400264: TP R Hand 1
+    400266: TP R Thigh 1
+    400268: TP R Toe0 1
+    400270: TP R UpperArm 1
+    400272: TP Spine 1
+    400274: TP Spine1 1
+    400276: TP Spine2 1
+    400278: TPFHatA
+    400280: TPFHatB
+    400282: TPFHatC
     2300000: TPGlasses
     2300002: TPNECK001
     2300004: Glasses
@@ -206,6 +322,10 @@ ModelImporter:
     4300052: TPHEADsimple
     4300054: Glasses
     4300056: HEAD
+    4300058: HEADsimple
+    4300060: TPFHatA
+    4300062: TPFHatB
+    4300064: TPFHatC
     9500000: //RootNode
     13700000: TPBowtie002
     13700002: TPFDressS
@@ -233,8 +353,21 @@ ModelImporter:
     13700046: TPFHairG
     13700048: TPHEADsimple
     13700050: HEAD
-    2186277476908879412: ImportLogs
+    13700052: HEADsimple
+    13700054: TPFHatA
+    13700056: TPFHatB
+    13700058: TPFHatC
   externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HatA01
+    second: {fileID: 2100000, guid: 8d851ac929e475a418b0eddb3accba8a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HatB01
+    second: {fileID: 2100000, guid: 98e0b6ac57175664faaebf1e62d303cc, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -283,6 +416,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: TPFHatC01
+    second: {fileID: 2100000, guid: 06257e62bf2eb764199655361268869c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: TPFShirtA01
     second: {fileID: 2100000, guid: 1e89fcce5eb1445479fa5a95dd9b9296, type: 2}
   - first:
@@ -325,6 +463,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: eye3
     second: {fileID: 2100000, guid: ee5ede12dae7a1e478545b517f7a65da, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: eye4
+    second: {fileID: 2100000, guid: 8cf628efcde874e4f82b7ec86208017b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -384,13 +527,13 @@ ModelImporter:
     previousCalculatedGlobalScale: 1
     hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
-    normalSmoothAngle: 60
-    normalImportMode: 0
-    tangentImportMode: 4
-    normalCalculationMode: 0
-    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    normalSmoothAngle: 90
+    normalImportMode: 1
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
-    normalSmoothingSource: 0
+    normalSmoothingSource: 2
   importAnimation: 0
   copyAvatar: 1
   humanDescription:

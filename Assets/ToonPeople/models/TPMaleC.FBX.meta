@@ -102,6 +102,9 @@ ModelImporter:
     100192: Glasses
     100194: HEAD
     100196: HEADsimple
+    100198: TPMHatA
+    100200: TPMHatB
+    100202: TPMHatC
     400000: ROOT
     400002: TP
     400004: TP Eyebrows
@@ -201,14 +204,23 @@ ModelImporter:
     400192: Glasses
     400194: HEAD
     400196: HEADsimple
+    400198: TPMHatA
+    400200: TPMHatB
+    400202: TPMHatC
     2300000: TPBowtie
     2300002: TPGlasses
     2300004: TPGlasses001
     2300006: Glasses
+    2300008: TPMHatA
+    2300010: TPMHatB
+    2300012: TPMHatC
     3300000: TPBowtie
     3300002: TPGlasses
     3300004: TPGlasses001
     3300006: Glasses
+    3300008: TPMHatA
+    3300010: TPMHatB
+    3300012: TPMHatC
     4300000: TPGlasses
     4300002: TPBowtie
     4300004: TPMTieL
@@ -249,6 +261,9 @@ ModelImporter:
     4300074: HEADsimple
     4300076: HEAD
     4300078: BEARD
+    4300080: TPMHatA
+    4300082: TPMHatB
+    4300084: TPMHatC
     9500000: //RootNode
     13700000: TPBeard
     13700002: TPHEAD
@@ -287,8 +302,20 @@ ModelImporter:
     13700068: BEARDsimple
     13700070: HEAD
     13700072: HEADsimple
-    2186277476908879412: ImportLogs
+    13700074: TPMHatA
+    13700076: TPMHatB
+    13700078: TPMHatC
   externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HatA01
+    second: {fileID: 2100000, guid: 8d851ac929e475a418b0eddb3accba8a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HatB01
+    second: {fileID: 2100000, guid: 98e0b6ac57175664faaebf1e62d303cc, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -367,8 +394,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: TPMHairF01
+    second: {fileID: 2100000, guid: b0cb6e25c4fd4a94d938a2e5e7977571, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: TPMHairG01
     second: {fileID: 2100000, guid: b0cb6e25c4fd4a94d938a2e5e7977571, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TPMHatC01
+    second: {fileID: 2100000, guid: cc0f165b88c326d49966a7828d6072eb, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -414,6 +451,16 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: TPteeth
     second: {fileID: 2100000, guid: 35c419ca25eb55c4e848862b5e9efcc7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TTHatB01
+    second: {fileID: 2100000, guid: f60aa70bf1af3b948a4ed6588cc393e9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TThatA01
+    second: {fileID: 2100000, guid: a8898d3fe0cc54045b23173308336b2a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -478,13 +525,13 @@ ModelImporter:
     previousCalculatedGlobalScale: 1
     hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
-    normalSmoothAngle: 60
-    normalImportMode: 0
-    tangentImportMode: 4
-    normalCalculationMode: 0
-    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    normalSmoothAngle: 90
+    normalImportMode: 1
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
-    normalSmoothingSource: 0
+    normalSmoothingSource: 2
   importAnimation: 0
   copyAvatar: 1
   humanDescription:
