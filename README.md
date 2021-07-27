@@ -1,4 +1,4 @@
-# blockcodingVR-unity
+# SKU_Metaverse-unity
 # 미디어소프트웨어학과 졸업작품 전시회 메타버스
 
 본 프로젝트는 COVID-19로 인해 언택트로 진행되는 '2021 미디어소프트웨어학과 졸업작품 전시회 메타버스'입니다.
