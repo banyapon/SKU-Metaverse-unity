@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
+using UnityEngine.UI;
 
 [System.Serializable]
 public class DefaultRoom
@@ -16,7 +17,11 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 {
     public List<DefaultRoom> defaultRooms;
     public GameObject roomUI;
+    public GameObject NameFailed;
+    public GameObject InputField;
+    public GameObject ConnerctedServer;
     public string PlayerName;
+    public Text NameText;
 
     void Start()
     {
@@ -27,8 +32,23 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     public void ConnectToServer()
     {
-        PhotonNetwork.ConnectUsingSettings(); // 서버연결
-        Debug.Log("서버에 연결을 시도합니다.");
+        //Debug.Log("서버에 연결을 시도합니다.");
+        //PhotonNetwork.ConnectUsingSettings(); // 서버연결
+
+        if (NameText.text == "")
+        {
+            Debug.Log("null");
+            NameFailed.SetActive(true);
+            ConnerctedServer.GetComponent<Button>().interactable = false;
+        }
+        else
+        {
+            ConnerctedServer.SetActive(false);
+            InputField.SetActive(false);
+            Debug.Log("서버에 연결을 시도합니다.");
+            PhotonNetwork.ConnectUsingSettings(); // 서버연결
+
+        }
     }
 
     public override void OnConnectedToMaster()
