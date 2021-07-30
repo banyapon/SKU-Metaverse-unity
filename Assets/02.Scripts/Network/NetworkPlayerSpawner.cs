@@ -8,19 +8,18 @@ public class NetworkPlayerSpawner : MonoBehaviourPunCallbacks
 {
     private GameObject spawnedPlayerPrefab;
     public string choiceCharacter;
-
     
-
     public override void OnJoinedRoom()
     {
         base.OnJoinedRoom();
         Vector3 randPos = Random.insideUnitSphere * 10;
         randPos.y = 0;
         spawnedPlayerPrefab = PhotonNetwork.Instantiate(choiceCharacter, randPos, Quaternion.identity);
-        var UserName = GameObject.FindGameObjectWithTag("Name");
-        if(PlayerPrefs.HasKey("Name"))
-            UserName.GetComponent<TextMesh>().text = PlayerPrefs.GetString("Name");
 
+        var UserName = GameObject.FindGameObjectWithTag("Name");
+
+        if (PlayerPrefs.HasKey("Name"))
+            UserName.GetComponent<TextMesh>().text = PlayerPrefs.GetString("Name");
     }
 
     public override void OnLeftRoom()

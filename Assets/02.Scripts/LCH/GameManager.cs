@@ -5,44 +5,33 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-
     public GameObject Name;
     public GameObject InputField;
     public GameObject ConnerctedServer;
-    public GameObject NameFailed;
 
     public Text NameText;
-    // Start is called before the first frame update
+    public Text User;
+
+    private NetworkManager netManager;
+
     void Start()
     {
         PlayerPrefs.DeleteKey("Name");
-    }
-
-    // Update is called once per frame
-   
+        netManager = FindObjectOfType<NetworkManager>();
+    }   
   
     public void onNameSaveClick()
     {
         if(NameText.text == "")
         {
             Debug.Log("1 :" + NameText.text);
-            ConnerctedServer.GetComponent<Button>().interactable = false;
-            NameFailed.SetActive(true);
-
+            User.text = "<color=#ff0000>이름을 입력해주세요!</color>";
         }
         else
         {
             Debug.Log("2 :" + NameText.text);
             PlayerPrefs.SetString("Name", NameText.text);
-            InputField.SetActive(false);
+            netManager.ConnectToServer();
         }
     }
-
-    public void FailButtonClick()
-    {
-        NameFailed.SetActive(false);
-        ConnerctedServer.GetComponent<Button>().interactable = true;
-    }
-
-   
 }

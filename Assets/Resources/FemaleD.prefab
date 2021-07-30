@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 715747335582315568}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.002, y: 1.781, z: 0}
+  m_LocalPosition: {x: 0, y: 1.8, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 6663665645895430320}
@@ -50,7 +50,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: 7a032f29a13d49c4ca3b9bb4f0a9c2cc, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -79,7 +79,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 715747335582315568}
-  m_Text: "\uC548\uB155\uD558\uC138\uC694"
+  m_Text: 
   m_OffsetZ: 0
   m_CharacterSize: 0.2
   m_LineSpacing: 1
@@ -89,7 +89,7 @@ TextMesh:
   m_FontSize: 30
   m_FontStyle: 0
   m_RichText: 1
-  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Font: {fileID: 12800000, guid: 7a032f29a13d49c4ca3b9bb4f0a9c2cc, type: 3}
   m_Color:
     serializedVersion: 2
     rgba: 4294967295
@@ -3006,8 +3006,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_Children:
-  - {fileID: 2163552752735246343}
   - {fileID: 2734276051152025286}
+  - {fileID: 2163552752735246343}
   - {fileID: 6663665645895430346}
   - {fileID: 6663665645895430348}
   - {fileID: 6663665645895430350}
@@ -3189,7 +3189,7 @@ MonoBehaviour:
   runspeed: 15
   sprintspeed: 20
   turnspeed: 0.25
-  strafespeed: 1
+  strafespeed: 4
   jumpforce: 4
 --- !u!114 &-127546355534222972
 MonoBehaviour:
@@ -3220,40 +3220,40 @@ MonoBehaviour:
   ShowParameterInspector: 1
   m_SynchronizeParameters:
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 1
     Name: active
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 1
     Name: grounded
   - Type: 1
-    SynchronizeType: 0
+    SynchronizeType: 1
     Name: speed
   - Type: 1
-    SynchronizeType: 0
+    SynchronizeType: 1
     Name: strafespeed
   - Type: 1
-    SynchronizeType: 0
+    SynchronizeType: 1
     Name: turnspeed
   - Type: 1
-    SynchronizeType: 0
+    SynchronizeType: 1
     Name: faster
   - Type: 3
-    SynchronizeType: 0
+    SynchronizeType: 1
     Name: turn
   - Type: 3
-    SynchronizeType: 0
+    SynchronizeType: 1
     Name: forward
   - Type: 3
-    SynchronizeType: 0
+    SynchronizeType: 1
     Name: strafe
   - Type: 1
-    SynchronizeType: 0
+    SynchronizeType: 1
     Name: angle
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 1
     Name: blocked
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 1
     Name: sitdown
   m_SynchronizeLayers:
   - SynchronizeType: 0
@@ -5424,7 +5424,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6663665645895430320}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &8855602038451058973
 AudioSource:
@@ -5553,6 +5553,7 @@ GameObject:
   - component: {fileID: 2734276051152025286}
   - component: {fileID: 6506043022540759701}
   - component: {fileID: 2772238004680623561}
+  - component: {fileID: 3918069186743164458}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -5572,7 +5573,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6663665645895430320}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 10, y: 0, z: 0}
 --- !u!20 &6506043022540759701
 Camera:
@@ -5625,3 +5626,19 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8816179701449466598}
   m_Enabled: 1
+--- !u!114 &3918069186743164458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8816179701449466598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f659f07ddcada7b48bbb9de807cfbcbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XrotateSpeed: 1
+  YrotateSpeed: 1
+  zoomSpeed: 10
+  mainCamera: {fileID: 6506043022540759701}

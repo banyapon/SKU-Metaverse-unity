@@ -26,15 +26,11 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     void Start()
     {
         PhotonNetwork.GameVersion = "0.1";
-        PhotonNetwork.NickName = "Sungkyul"; // 플레이어 이름
         PhotonNetwork.AutomaticallySyncScene = true; // 마스터 클라이언트로 동기화
     }
 
     public void ConnectToServer()
     {
-        //Debug.Log("서버에 연결을 시도합니다.");
-        //PhotonNetwork.ConnectUsingSettings(); // 서버연결
-
         if (NameText.text == "")
         {
             Debug.Log("null");
@@ -43,7 +39,6 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         }
         else
         {
-            ConnerctedServer.SetActive(false);
             InputField.SetActive(false);
             Debug.Log("서버에 연결을 시도합니다.");
             PhotonNetwork.ConnectUsingSettings(); // 서버연결

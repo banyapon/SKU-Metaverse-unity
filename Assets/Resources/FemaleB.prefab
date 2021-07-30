@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5464616116285743520}
   - component: {fileID: 440570281499496335}
   - component: {fileID: 5604847439066384436}
+  - component: {fileID: 6956811045218492769}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -83,6 +84,22 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1209054840547816542}
   m_Enabled: 1
+--- !u!114 &6956811045218492769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209054840547816542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f659f07ddcada7b48bbb9de807cfbcbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XrotateSpeed: 1
+  YrotateSpeed: 1
+  zoomSpeed: 10
+  mainCamera: {fileID: 440570281499496335}
 --- !u!1 &4539353357253564148
 GameObject:
   m_ObjectHideFlags: 0
@@ -257,7 +274,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4751694325840609741}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.002, y: 1.781, z: 0}
+  m_LocalPosition: {x: 0, y: 1.8, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 9062709158961263255}
@@ -281,7 +298,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: 7a032f29a13d49c4ca3b9bb4f0a9c2cc, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -310,7 +327,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4751694325840609741}
-  m_Text: "\uC548\uB155\uD558\uC138\uC694"
+  m_Text: 
   m_OffsetZ: 0
   m_CharacterSize: 0.2
   m_LineSpacing: 1
@@ -320,7 +337,7 @@ TextMesh:
   m_FontSize: 30
   m_FontStyle: 0
   m_RichText: 1
-  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Font: {fileID: 12800000, guid: 7a032f29a13d49c4ca3b9bb4f0a9c2cc, type: 3}
   m_Color:
     serializedVersion: 2
     rgba: 4294967295
@@ -3737,7 +3754,7 @@ MonoBehaviour:
   runspeed: 15
   sprintspeed: 20
   turnspeed: 0.25
-  strafespeed: 1
+  strafespeed: 4
   jumpforce: 4
 --- !u!114 &-8230835873941491459
 MonoBehaviour:
@@ -3768,40 +3785,40 @@ MonoBehaviour:
   ShowParameterInspector: 1
   m_SynchronizeParameters:
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 1
     Name: active
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 1
     Name: grounded
   - Type: 1
-    SynchronizeType: 0
+    SynchronizeType: 1
     Name: speed
   - Type: 1
-    SynchronizeType: 0
+    SynchronizeType: 1
     Name: strafespeed
   - Type: 1
-    SynchronizeType: 0
+    SynchronizeType: 1
     Name: turnspeed
   - Type: 1
-    SynchronizeType: 0
+    SynchronizeType: 1
     Name: faster
   - Type: 3
-    SynchronizeType: 0
+    SynchronizeType: 1
     Name: turn
   - Type: 3
-    SynchronizeType: 0
+    SynchronizeType: 1
     Name: forward
   - Type: 3
-    SynchronizeType: 0
+    SynchronizeType: 1
     Name: strafe
   - Type: 1
-    SynchronizeType: 0
+    SynchronizeType: 1
     Name: angle
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 1
     Name: blocked
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 1
     Name: sitdown
   m_SynchronizeLayers:
   - SynchronizeType: 0
