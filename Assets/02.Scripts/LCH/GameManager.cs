@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     public GameObject InputField;
     public GameObject ConnerctedServer;
 
+    private string toggleStr = "<color=#3232FF>(학부생)</color> ";
+
     public Text NameText;
     public Text User;
 
@@ -18,8 +20,21 @@ public class GameManager : MonoBehaviour
     {
         PlayerPrefs.DeleteKey("Name");
         netManager = FindObjectOfType<NetworkManager>();
-    }   
-  
+    }
+
+    public void CheckToggle1()
+    {
+        toggleStr = "<color=#FF8C00>(교수)</color> ";
+    }
+    public void CheckToggle2()
+    {
+        toggleStr = "<color=#3232FF>(학부생)</color> ";
+    }
+    public void CheckToggle3()
+    {
+        toggleStr = "<color=#225555>(외부인)</color> ";
+    }
+
     public void onNameSaveClick()
     {
         if(NameText.text == "")
@@ -29,8 +44,8 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("2 :" + NameText.text);
-            PlayerPrefs.SetString("Name", NameText.text);
+            Debug.Log("2 :" +  toggleStr + NameText.text);
+            PlayerPrefs.SetString("Name", toggleStr + NameText.text);
             netManager.ConnectToServer();
         }
     }

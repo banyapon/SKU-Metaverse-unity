@@ -7,18 +7,19 @@ using Photon.Realtime;
 public class NetworkPlayer : MonoBehaviourPun
 {
     public Camera _camera;
+    public GameObject cam;
 
     void Start()
     {
-
         if (photonView.IsMine)
         {
             _camera.tag = "MainCamera";
             AudioListener.volume = 1;
         }
+
         else
         {
-            _camera.enabled = false;
+            cam.SetActive(false);
         }
     }
 

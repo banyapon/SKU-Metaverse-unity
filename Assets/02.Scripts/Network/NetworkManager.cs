@@ -17,10 +17,9 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 {
     public List<DefaultRoom> defaultRooms;
     public GameObject roomUI;
-    public GameObject NameFailed;
     public GameObject InputField;
-    public GameObject ConnerctedServer;
-    public string PlayerName;
+    public GameObject toggleGroup;
+
     public Text NameText;
 
     void Start()
@@ -34,15 +33,16 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         if (NameText.text == "")
         {
             Debug.Log("null");
-            NameFailed.SetActive(true);
-            ConnerctedServer.GetComponent<Button>().interactable = false;
         }
+
         else
         {
             InputField.SetActive(false);
+            toggleGroup.SetActive(false);
             Debug.Log("서버에 연결을 시도합니다.");
             PhotonNetwork.ConnectUsingSettings(); // 서버연결
-
+            if (PlayerPrefs.HasKey("Name"))
+                PhotonNetwork.NickName = PlayerPrefs.GetString("Name");
         }
     }
 

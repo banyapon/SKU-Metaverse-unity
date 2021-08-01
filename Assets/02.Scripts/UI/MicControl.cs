@@ -28,7 +28,7 @@ public class MicControl : MonoBehaviour
             rec.TransmitEnabled = false;
             MicOn.SetActive(false);
             MicOff.SetActive(true);
-            Mic.text = "<color=#C0C0C0>마이크 꺼짐</color>";
+            Mic.text = "<color=#4D4D4D>마이크 꺼짐</color>";
             audioSource.PlayOneShot(MicOffEffect);
         }
         else
@@ -36,7 +36,7 @@ public class MicControl : MonoBehaviour
             rec.TransmitEnabled = true;
             MicOff.SetActive(false);
             MicOn.SetActive(true);
-            Mic.text = "마이크 켜짐";
+            Mic.text = "<color=#FF3C3C>마이크 켜짐</color>";
             audioSource.PlayOneShot(MicOnEffect);
         }
     }

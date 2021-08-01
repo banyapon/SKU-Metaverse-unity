@@ -32,6 +32,7 @@ public class PlayerMove : MonoBehaviourPun, IPunObservable
             stream.SendNext(transform.rotation);
             stream.SendNext(_camera.rotation);
         }
+
         else
         {
             remotePos = (Vector3)stream.ReceiveNext();

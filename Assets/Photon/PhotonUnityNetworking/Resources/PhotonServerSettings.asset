@@ -45,6 +45,8 @@ MonoBehaviour:
   - rotateRPC
   - Vote
   - ChatRPC
+  - ReceiveMsg
+  - userName
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1
