@@ -88,7 +88,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     public override void OnJoinRandomFailed(short returnCode, string message)
     {
-        Debug.Log("방 입장에 실패하였습니다..");
+        Debug.Log("방 입장에 실패하였습니다.");
         base.OnJoinRandomFailed(returnCode, message);
     }
 }
