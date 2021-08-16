@@ -1,34 +1,34 @@
 # SKU_Metaverse-unity
-# 미디어소프트웨어학과 졸업작품 전시회 메타버스
+> This project is a Graduation Exhibition Metaverse.
+<p>
+  <a href="https://github.com/sangwookyoo/" target="_blank"><img src="https://img.shields.io/badge/SangwookYoo-181717?style=flat-square&logo=GitHub&logoColor=white"/></a>
+  <a href="mailto:tkddnr032@gmail.com" target="_blank"><img src="https://img.shields.io/badge/tkddnr032@gmail.com-EA4335?style=flat-square&logo=Gmail&logoColor=white"/></a>
+  <a><img src="https://img.shields.io/badge/unity3d-2019.3.5-blue?style=flat-square&logo=unity"></a>
+</p>
 
-------
-본 프로젝트는 COVID-19로 인해 언택트로 진행되는 '2021 미디어소프트웨어학과 졸업작품 전시회 메타버스'입니다.
-가상의 메타버스 공간 속에서 교수, 학부생, 외부인을 비롯한 약 200여명이 동시 접속가능하며 졸업작품 소개영상과
-상호 간의 피드백을 주고 받을 수 있는 보이스챗, 투표기능을 지원합니다.
-또한, IG 스크린샷과 미니게임을 지원하여 메타버스의 역할을 수행합니다.
+## ⚙ Development Environment
+ * OS : Windows 10
+ * Tool : Unity 3D 2019.3.5
+ * Framework : PUN 2.32.0, Photon Voice 2.25.1
 
-## 프로젝트 개요
-
-### 프로젝트 기간
-
-* 2021.07.13 ~ 2021.08.31 (2개월 / 진행중)
-
-### 개발환경
-
-| 구분 | 항목 |
+## ⚙ Metaverse 5C
+| 5C | Explanation |
 | ------ | ------ |
-| 운영체제 | Windows 10 |
-| 개발도구 | Unity 3D 2019.3.5 |
-| 개발환경(IDE) | Visual Studio 2019 |
-| 개발언어 | C# |
-| 기타 | PUN2, Photon Voice |
+| Canon | 2021 Dept. of Media Software, Sungkyul University Graduation Exhibition |
+| Creator | More than 200 professors, undergraduates, outsiders, etc. |
+| Currency | Vote |
+| Continuity | Introduction Video, IG Screenshot, Mission |
+| Connectivity | Multiplayer (Server, Vocie Chat) |
 
-### 메타버스 5C
+## 🚀 Feature
+ * Login (Select ID, enter nickname)
+ * Select Characters (Male 5/Female 5)
+ * Chatting (General chat, booth chat, voice chat)
+ * Booth (Build booth design and introduction video by graduation team)
+ * Announcement (only for professors, can be entered when entering passwords)
+ * IG Screenshot (Save in My Documents\sku_miso folder)
+ * Vote (prevention of redundancy prevention)
+ * Mission (Watch more than 3 videos, IG Screenshot, treasure hunt)
 
-| 구분 | 항목 |
-| ------ | ------ |
-| 세계관(Canon) | 2021 미디어소프트웨어학과 졸업작품 전시회 |
-| 창작자(Creator) | 교수, 학부생, 외부인 등 200여명 |
-| 디지털 통화(Currency) | 작품투표 |
-| 일상의 연장(Continuity) | 졸업작품 소개영상, IG 스크린샷, 미니게임 |
-| 연결(Connectivity) | 멀티플레이어 (서버, 보이스챗) |
+## ✔ License
+Copyright © 2021 Dept. of Media Software, Sungkyul University.
