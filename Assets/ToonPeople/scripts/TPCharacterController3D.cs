@@ -6,6 +6,7 @@ using Photon.Realtime;
 
 public class TPCharacterController3D : MonoBehaviourPun
 {
+    //GameObject NoticeInputField;
     bool alive;
     bool awake;
     bool active;
@@ -76,7 +77,13 @@ public class TPCharacterController3D : MonoBehaviourPun
 
     void Update()
     {
-        if (photonView.IsMine)
+        /* NoticeInputField가 계속 null 로 나옴
+        if(NoticeInputField = null)
+            NoticeInputField = GameObject.FindGameObjectWithTag("Notice");
+        Debug.Log(NoticeInputField);
+        Debug.Log(NoticeInputField.activeSelf);
+        */
+        if (photonView.IsMine) //if(photonView.IsMine && NoticeInputField.activeSelf == false)
         {
             Debug.DrawRay(trans.position + new Vector3(0f, 0.1f, 0f), dirforw, Color.green);
             Debug.DrawRay(trans.position + new Vector3(0f, 0.1f, 0f), dirside, Color.green);

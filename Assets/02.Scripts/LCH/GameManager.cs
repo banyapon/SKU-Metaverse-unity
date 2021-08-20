@@ -16,10 +16,22 @@ public class GameManager : MonoBehaviour
 
     private NetworkManager netManager;
 
+    public bool IsToggle1;
+    public bool IsToggle2;
+    public bool IsToggle3;
+
+    private void Awake()
+    {
+     
+        DontDestroyOnLoad(gameObject);
+    }
+
+    
     void Start()
     {
         PlayerPrefs.DeleteKey("Name");
         netManager = FindObjectOfType<NetworkManager>();
+      
     }
 
     public void CheckToggle1()
