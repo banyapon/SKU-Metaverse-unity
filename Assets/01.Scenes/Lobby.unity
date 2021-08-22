@@ -1006,7 +1006,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uC678\uBD80\uC778"
+  m_Text: "\uAC8C\uC2A4\uD2B8"
 --- !u!222 &331543799
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1579,6 +1579,9 @@ MonoBehaviour:
   ConnerctedServer: {fileID: 1748744330}
   NameText: {fileID: 2095490332}
   User: {fileID: 2145018975}
+  IsToggle1: 0
+  IsToggle2: 0
+  IsToggle3: 0
 --- !u!4 &590414778
 Transform:
   m_ObjectHideFlags: 0

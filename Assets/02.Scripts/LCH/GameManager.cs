@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
     }
     public void CheckToggle3()
     {
-        toggleStr = "<color=#225555>(외부인)</color> ";
+        toggleStr = "<color=#225555>(게스트)</color> ";
     }
 
     public void onNameSaveClick()

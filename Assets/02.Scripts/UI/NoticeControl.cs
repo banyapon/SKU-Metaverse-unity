@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Photon.Pun;
 
-public class NoticeControl : MonoBehaviour
+public class NoticeControl : MonoBehaviourPun
 {
     public GameObject NoticePanel;
     public GameObject Fail;
@@ -19,7 +20,6 @@ public class NoticeControl : MonoBehaviour
     bool isNoticeText;
     int count;
 
-    // Start is called before the first frame update
     void Start()
     {
         isNoticeText = false;
@@ -27,31 +27,32 @@ public class NoticeControl : MonoBehaviour
         StartPos = NoticeText.transform.position;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if((isNoticeText == true))
+        if (NoticeText == true)
         {
             NoticeText.transform.Translate(-100 * Time.deltaTime, 0, 0);
         }
+
         if (NoticeText.transform.position.x <= -1550)
         {
             NoticeText.transform.position = StartPos;
             count++;
         }
+
         if (count > 1) //2번만 반복하도록
         {
             isNoticeText = false;
             count = 0;
-            if(NoticeText.text != TmpText)
+            if (NoticeText.text != TmpText)
             {
                 NoticeText.text = TmpText;
                 isNoticeText = true;
                 Debug.Log("NoticeText2 : " + NoticeText.text);
             }
         }
-
     }
+
     public void OnClickNotice() //교수인지 아닌지 체크
     {
         if (PlayerPrefs.GetString("Name").Contains("교수"))
@@ -81,18 +82,27 @@ public class NoticeControl : MonoBehaviour
 
     public void NoticeConfirm() //공지사항 작성 후 확인버튼
     {
-        isNoticeText = true;
+        //isNoticeText = true;
         NoticePanel.SetActive(false);
-        TmpText = NoticeInputField.text;
-        Debug.Log("NoticeInputField.text : " + NoticeInputField.text);
-        Debug.Log("TmpText : " + TmpText);
+        //TmpText = NoticeInputField.text;
+        photonView.RPC("SendRPC", RpcTarget.All, NoticeInputField.text);
+        //Debug.Log("NoticeInputField.text : " + NoticeInputField.text);
+        //Debug.Log("TmpText : " + TmpText);
+        /*if (NoticeText.text == "")
+        {
+            NoticeText.text = TmpText;
+        }*/
+    }
+
+    [PunRPC]
+    public void SendRPC(string isNotice)
+    {
+        TmpText = isNotice;
+        isNoticeText = true;
+
         if (NoticeText.text == "")
         {
             NoticeText.text = TmpText;
-            Debug.Log("NoticeText1 : " + NoticeText.text);
         }
-
     }
-
-   
 }
