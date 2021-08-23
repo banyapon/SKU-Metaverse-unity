@@ -4517,10 +4517,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c73c840fc27b7a4c85f1c3bd5a403c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkspeed: 10
-  runspeed: 15
+  walkspeed: 15
+  runspeed: 20
   sprintspeed: 20
-  turnspeed: 0.25
+  turnspeed: 0.5
   strafespeed: 4
   jumpforce: 4
 --- !u!114 &6768771945107807148

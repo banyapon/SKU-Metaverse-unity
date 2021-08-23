@@ -1006,7 +1006,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uC678\uBD80\uC778"
+  m_Text: "\uAC8C\uC2A4\uD2B8"
 --- !u!222 &331543799
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1579,6 +1579,9 @@ MonoBehaviour:
   ConnerctedServer: {fileID: 1748744330}
   NameText: {fileID: 2095490332}
   User: {fileID: 2145018975}
+  IsToggle1: 0
+  IsToggle2: 0
+  IsToggle3: 0
 --- !u!4 &590414778
 Transform:
   m_ObjectHideFlags: 0
@@ -2171,7 +2174,7 @@ MonoBehaviour:
   m_Text: "\u203B 2021 \uBBF8\uB514\uC5B4\uC18C\uD504\uD2B8\uC6E8\uC5B4\uD559\uACFC
     \uC878\uC5C5\uC791\uD488 \uC804\uC2DC\uD68C \uBA54\uD0C0\uBC84\uC2A4 \uAC1C\uBC1C\uC9C4
     \u203B\n20161098 \uC720\uC0C1\uC6B1   20161114 \uC774\uCCAD\uD638   20161129
-    \uCD5C\uBBFC\uD601   20180000 \uC724\uC9C0\uC5F0   20180000 \uCD5C\uCC2C\uBBF8  
+    \uCD5C\uBBFC\uD601   20181005 \uC724\uC9C0\uC5F0   20181027 \uCD5C\uCC2C\uBBF8  
     20180515 \uD55C\uC194"
 --- !u!222 &819854128
 CanvasRenderer:
