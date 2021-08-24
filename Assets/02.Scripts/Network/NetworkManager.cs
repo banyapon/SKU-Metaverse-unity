@@ -59,7 +59,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         Debug.Log("대기실에 입장하였습니다.");
         roomUI.SetActive(true);
     }
-
+    
     public void InitiliazeRoom(int defaultRoomIndex)
     {
         DefaultRoom roomSettings = defaultRooms[defaultRoomIndex];
