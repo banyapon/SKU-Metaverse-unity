@@ -29,7 +29,7 @@ public class NoticeControl : MonoBehaviourPun
 
     void Update()
     {
-        if (NoticeText == true)
+        if (isNoticeText == true)
         {
             NoticeText.transform.Translate(-100 * Time.deltaTime, 0, 0);
         }
@@ -97,9 +97,10 @@ public class NoticeControl : MonoBehaviourPun
     [PunRPC]
     public void SendRPC(string isNotice)
     {
+        Debug.Log("SendRPC");
         TmpText = isNotice;
         isNoticeText = true;
-
+        
         if (NoticeText.text == "")
         {
             NoticeText.text = TmpText;
