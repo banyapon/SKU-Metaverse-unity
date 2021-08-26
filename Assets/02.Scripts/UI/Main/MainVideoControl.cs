@@ -23,7 +23,7 @@ public class MainVideoControl : MonoBehaviourPun
             VideoPanel.SetActive(true);
         }
         else
-        {            
+        {
             Fail.SetActive(true);
         }
     }
@@ -32,115 +32,113 @@ public class MainVideoControl : MonoBehaviourPun
     public void Team1()
     {
         photonView.RPC("VideoRPC", RpcTarget.All, 0);
-        VideoPanel.SetActive(false);
     }
 
     public void Team2()
     {
         photonView.RPC("VideoRPC", RpcTarget.All, 1);
-        VideoPanel.SetActive(false);
     }
 
     public void Team3()
     {
         photonView.RPC("VideoRPC", RpcTarget.All, 2);
-        VideoPanel.SetActive(false);
     }
 
     public void Team4()
     {
         photonView.RPC("VideoRPC", RpcTarget.All, 3);
-        VideoPanel.SetActive(false);
     }
 
     public void Team5()
     {
         photonView.RPC("VideoRPC", RpcTarget.All, 4);
-        VideoPanel.SetActive(false);
     }
 
     public void Team6()
     {
         photonView.RPC("VideoRPC", RpcTarget.All, 5);
-        VideoPanel.SetActive(false);
     }
 
     public void Team7()
     {
         photonView.RPC("VideoRPC", RpcTarget.All, 6);
-        VideoPanel.SetActive(false);
     }
 
     public void Team8()
     {
         photonView.RPC("VideoRPC", RpcTarget.All, 7);
-        VideoPanel.SetActive(false);
     }
 
     public void Team9()
     {
         photonView.RPC("VideoRPC", RpcTarget.All, 8);
-        VideoPanel.SetActive(false);
     }
 
     public void Team10()
     {
         photonView.RPC("VideoRPC", RpcTarget.All, 9);
-        VideoPanel.SetActive(false);
     }
 
     public void Team11()
     {
         photonView.RPC("VideoRPC", RpcTarget.All, 10);
-        VideoPanel.SetActive(false);
     }
 
     public void Team12()
     {
         photonView.RPC("VideoRPC", RpcTarget.All, 11);
-        VideoPanel.SetActive(false);
     }
 
     public void Team13()
     {
         photonView.RPC("VideoRPC", RpcTarget.All, 12);
-        VideoPanel.SetActive(false);
     }
 
     public void Team14()
     {
         photonView.RPC("VideoRPC", RpcTarget.All, 13);
-        VideoPanel.SetActive(false);
     }
 
     public void Team15()
     {
         photonView.RPC("VideoRPC", RpcTarget.All, 14);
-        VideoPanel.SetActive(false);
     }
 
     public void Team16()
     {
         photonView.RPC("VideoRPC", RpcTarget.All, 15);
-        VideoPanel.SetActive(false);
     }
 
     public void Team17()
     {
         photonView.RPC("VideoRPC", RpcTarget.All, 16);
-        VideoPanel.SetActive(false);
     }
 
     public void Team18()
     {
         photonView.RPC("VideoRPC", RpcTarget.All, 17);
-        VideoPanel.SetActive(false);
     }
 
     public void Team19()
     {
         photonView.RPC("VideoRPC", RpcTarget.All, 18);
-        VideoPanel.SetActive(false);
+    }
+    #endregion
+
+    #region 컨트롤
+    public void videoPlay()
+    {
+        photonView.RPC("VideoPlayRPC", RpcTarget.All);
+    }
+
+    public void videoStop()
+    {
+        photonView.RPC("VideoStopRPC", RpcTarget.All);
+    }
+
+    public void videoPause()
+    {
+        photonView.RPC("VideoPauseRPC", RpcTarget.All);
     }
     #endregion
 
@@ -149,5 +147,23 @@ public class MainVideoControl : MonoBehaviourPun
     {
         VideoPlayer.GetComponent<VideoPlayer>().clip = TeamVideo[num];
         VideoPlayer.GetComponent<VideoPlayer>().Play();
+    }
+
+    [PunRPC]
+    public void VideoPlayRPC()
+    {
+        VideoPlayer.GetComponent<VideoPlayer>().Play();
+    }
+
+    [PunRPC]
+    public void VideoStopRPC()
+    {
+        VideoPlayer.GetComponent<VideoPlayer>().Stop();
+    }
+
+    [PunRPC]
+    public void VideoPauseRPC()
+    {
+        VideoPlayer.GetComponent<VideoPlayer>().Pause();
     }
 }

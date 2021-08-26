@@ -4,6 +4,7 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class DefaultRoom
@@ -64,7 +65,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     {
         DefaultRoom roomSettings = defaultRooms[defaultRoomIndex];
 
-        PhotonNetwork.LoadLevel(roomSettings.sceneName);
+        SceneManager.LoadScene(roomSettings.sceneName);
 
         RoomOptions roomOptions = new RoomOptions();
         roomOptions.MaxPlayers = (byte)roomSettings.maxPlayer;
