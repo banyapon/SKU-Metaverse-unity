@@ -4224,17 +4224,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 82408842}
-  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.6009043, y: 0.34288627, z: 1}
   m_Children: []
-  m_Father: {fileID: 495596262}
-  m_RootOrder: 5
+  m_Father: {fileID: 1586653816}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 54, y: 856.20026}
-  m_SizeDelta: {x: 72, y: 25}
+  m_AnchoredPosition: {x: -0.8008919, y: -21.053467}
+  m_SizeDelta: {x: 67.5, y: 24.374998}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &82408844
 MonoBehaviour:
@@ -5472,7 +5472,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 107768780}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 185976f92a859034aab2d271f4a0523e, type: 3}
+  m_Script: {fileID: 11500000, guid: 84ba6fad00bc0424ea506a13a42c17bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TeamVideo: {fileID: 631626594}
@@ -5480,6 +5480,7 @@ MonoBehaviour:
   OnButton_: {fileID: 946331316}
   OffButton_: {fileID: 254367282}
   PauseButton_: {fileID: 339888027}
+  Stamp1_: {fileID: 121345894}
 --- !u!1 &111467606
 GameObject:
   m_ObjectHideFlags: 0
@@ -5961,7 +5962,7 @@ GameObject:
   - component: {fileID: 121345897}
   - component: {fileID: 121345896}
   m_Layer: 5
-  m_Name: Button
+  m_Name: V_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5977,7 +5978,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.624647, y: 2.9164193, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 514906641}
   m_Father: {fileID: 495596262}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6047,7 +6049,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 28e72ee7747d9a94d93b9be69ce372ca, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 46dd1944ebf2c2b43a58046ca0453233, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8827,7 +8829,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 182713480}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 185976f92a859034aab2d271f4a0523e, type: 3}
+  m_Script: {fileID: 11500000, guid: 84ba6fad00bc0424ea506a13a42c17bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TeamVideo: {fileID: 591594085}
@@ -8835,6 +8837,7 @@ MonoBehaviour:
   OnButton_: {fileID: 1997963187}
   OffButton_: {fileID: 759106848}
   PauseButton_: {fileID: 985791537}
+  Stamp1_: {fileID: 121345894}
 --- !u!1001 &185652443
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10256,7 +10259,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1938428390}
+      - m_Target: {fileID: 1938428389}
         m_MethodName: OnStopVideo
         m_Mode: 1
         m_Arguments:
@@ -13325,7 +13328,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 263684828}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 185976f92a859034aab2d271f4a0523e, type: 3}
+  m_Script: {fileID: 11500000, guid: 84ba6fad00bc0424ea506a13a42c17bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TeamVideo: {fileID: 1881073816}
@@ -13333,6 +13336,7 @@ MonoBehaviour:
   OnButton_: {fileID: 271401233}
   OffButton_: {fileID: 1881101115}
   PauseButton_: {fileID: 1036305527}
+  Stamp1_: {fileID: 121345894}
 --- !u!1001 &264039030
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19764,7 +19768,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 418127626}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 185976f92a859034aab2d271f4a0523e, type: 3}
+  m_Script: {fileID: 11500000, guid: 84ba6fad00bc0424ea506a13a42c17bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TeamVideo: {fileID: 818187758}
@@ -19772,6 +19776,7 @@ MonoBehaviour:
   OnButton_: {fileID: 2034010810}
   OffButton_: {fileID: 2703922}
   PauseButton_: {fileID: 270211203}
+  Stamp1_: {fileID: 121345894}
 --- !u!1 &418503792
 GameObject:
   m_ObjectHideFlags: 0
@@ -22040,7 +22045,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b93d7035b06fc64e8f1bb0bf76444bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Stamp1_: {fileID: 0}
+  Stamp2_: {fileID: 0}
   Stamp3_: {fileID: 0}
+  CompleteText: {fileID: 0}
+  ParticleMission: {fileID: 0}
   MissionWindow_: {fileID: 1528791887}
   Opendow_: {fileID: 687487375}
   Closedow_: {fileID: 460673753}
@@ -23367,7 +23376,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 492692480}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 185976f92a859034aab2d271f4a0523e, type: 3}
+  m_Script: {fileID: 11500000, guid: 84ba6fad00bc0424ea506a13a42c17bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TeamVideo: {fileID: 1027615924}
@@ -23375,6 +23384,7 @@ MonoBehaviour:
   OnButton_: {fileID: 840726650}
   OffButton_: {fileID: 404664443}
   PauseButton_: {fileID: 1985828981}
+  Stamp1_: {fileID: 121345894}
 --- !u!1001 &493483453
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23572,6 +23582,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 495596262}
+  - component: {fileID: 495596263}
   m_Layer: 0
   m_Name: Tap
   m_TagString: Untagged
@@ -23594,12 +23605,30 @@ Transform:
   - {fileID: 121345895}
   - {fileID: 1586653816}
   - {fileID: 1116731330}
-  - {fileID: 514906641}
-  - {fileID: 82408843}
-  - {fileID: 1178388761}
+  - {fileID: 1871594370}
   m_Father: {fileID: 528928861}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &495596263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495596261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b93d7035b06fc64e8f1bb0bf76444bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stamp1_: {fileID: 121345894}
+  Stamp2_: {fileID: 1586653815}
+  Stamp3_: {fileID: 1116731329}
+  CompleteText: {fileID: 1871594369}
+  ParticleMission: {fileID: 0}
+  MissionWindow_: {fileID: 0}
+  Opendow_: {fileID: 0}
+  Closedow_: {fileID: 0}
 --- !u!1001 &496657696
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24469,17 +24498,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 514906640}
-  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.6009043, y: 0.34288627, z: 1}
   m_Children: []
-  m_Father: {fileID: 495596262}
-  m_RootOrder: 4
+  m_Father: {fileID: 121345895}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 54, y: 981.20026}
-  m_SizeDelta: {x: 72, y: 25}
+  m_AnchoredPosition: {x: -0.32073975, y: -21.053528}
+  m_SizeDelta: {x: 67.5, y: 24.374998}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &514906642
 MonoBehaviour:
@@ -27233,7 +27262,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 590918184}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 185976f92a859034aab2d271f4a0523e, type: 3}
+  m_Script: {fileID: 11500000, guid: 84ba6fad00bc0424ea506a13a42c17bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TeamVideo: {fileID: 1463143085}
@@ -27241,6 +27270,7 @@ MonoBehaviour:
   OnButton_: {fileID: 1563994057}
   OffButton_: {fileID: 1520353137}
   PauseButton_: {fileID: 1238859373}
+  Stamp1_: {fileID: 121345894}
 --- !u!1 &591594085
 GameObject:
   m_ObjectHideFlags: 0
@@ -27351,7 +27381,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 595752074}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 185976f92a859034aab2d271f4a0523e, type: 3}
+  m_Script: {fileID: 11500000, guid: 84ba6fad00bc0424ea506a13a42c17bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TeamVideo: {fileID: 1737081575}
@@ -27359,6 +27389,7 @@ MonoBehaviour:
   OnButton_: {fileID: 1740873328}
   OffButton_: {fileID: 1512729938}
   PauseButton_: {fileID: 966806976}
+  Stamp1_: {fileID: 121345894}
 --- !u!1001 &596271382
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28330,6 +28361,77 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 34568484960379948, guid: 31866959c3ba7f2488e8e5589b988cb6,
     type: 3}
   m_PrefabInstance: {fileID: 620472066}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &623426596
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1871594370}
+    m_Modifications:
+    - target: {fileID: 109282, guid: 40b03378a1fe14f48a9366596d5b9d33, type: 3}
+      propertyPath: m_Name
+      value: Firework_08_8x8-64
+      objectReference: {fileID: 0}
+    - target: {fileID: 109282, guid: 40b03378a1fe14f48a9366596d5b9d33, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 175430, guid: 40b03378a1fe14f48a9366596d5b9d33, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 478782, guid: 40b03378a1fe14f48a9366596d5b9d33, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 478782, guid: 40b03378a1fe14f48a9366596d5b9d33, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 478782, guid: 40b03378a1fe14f48a9366596d5b9d33, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 478782, guid: 40b03378a1fe14f48a9366596d5b9d33, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 478782, guid: 40b03378a1fe14f48a9366596d5b9d33, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 478782, guid: 40b03378a1fe14f48a9366596d5b9d33, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 478782, guid: 40b03378a1fe14f48a9366596d5b9d33, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 478782, guid: 40b03378a1fe14f48a9366596d5b9d33, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 478782, guid: 40b03378a1fe14f48a9366596d5b9d33, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 478782, guid: 40b03378a1fe14f48a9366596d5b9d33, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 478782, guid: 40b03378a1fe14f48a9366596d5b9d33, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 40b03378a1fe14f48a9366596d5b9d33, type: 3}
+--- !u!4 &623426597 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 478782, guid: 40b03378a1fe14f48a9366596d5b9d33,
+    type: 3}
+  m_PrefabInstance: {fileID: 623426596}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &624039237
 PrefabInstance:
@@ -31280,7 +31382,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b93d7035b06fc64e8f1bb0bf76444bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Stamp1_: {fileID: 0}
+  Stamp2_: {fileID: 0}
   Stamp3_: {fileID: 0}
+  CompleteText: {fileID: 0}
+  ParticleMission: {fileID: 0}
   MissionWindow_: {fileID: 1528791887}
   Opendow_: {fileID: 687487375}
   Closedow_: {fileID: 460673753}
@@ -31506,7 +31612,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 689209477}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 185976f92a859034aab2d271f4a0523e, type: 3}
+  m_Script: {fileID: 11500000, guid: 84ba6fad00bc0424ea506a13a42c17bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TeamVideo: {fileID: 830379892}
@@ -31514,6 +31620,7 @@ MonoBehaviour:
   OnButton_: {fileID: 1904895786}
   OffButton_: {fileID: 1941420784}
   PauseButton_: {fileID: 1173505475}
+  Stamp1_: {fileID: 121345894}
 --- !u!1001 &690191367
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32004,7 +32111,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 694154928}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 185976f92a859034aab2d271f4a0523e, type: 3}
+  m_Script: {fileID: 11500000, guid: 84ba6fad00bc0424ea506a13a42c17bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TeamVideo: {fileID: 1670217087}
@@ -32012,6 +32119,7 @@ MonoBehaviour:
   OnButton_: {fileID: 93064684}
   OffButton_: {fileID: 347900894}
   PauseButton_: {fileID: 715498702}
+  Stamp1_: {fileID: 121345894}
 --- !u!1001 &694200764
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36828,7 +36936,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b93d7035b06fc64e8f1bb0bf76444bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Stamp1_: {fileID: 0}
+  Stamp2_: {fileID: 0}
   Stamp3_: {fileID: 0}
+  CompleteText: {fileID: 0}
+  ParticleMission: {fileID: 0}
   MissionWindow_: {fileID: 495596261}
   Opendow_: {fileID: 814759564}
   Closedow_: {fileID: 1291130669}
@@ -40682,7 +40794,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1938428390}
+      - m_Target: {fileID: 1938428389}
         m_MethodName: OnPauseVideo
         m_Mode: 1
         m_Arguments:
@@ -41356,7 +41468,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1353624603}
+      - m_Target: {fileID: 1290155692}
         m_MethodName: OnPauseVideo
         m_Mode: 1
         m_Arguments:
@@ -42507,7 +42619,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 930308148}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 185976f92a859034aab2d271f4a0523e, type: 3}
+  m_Script: {fileID: 11500000, guid: 84ba6fad00bc0424ea506a13a42c17bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TeamVideo: {fileID: 655785408}
@@ -42515,6 +42627,7 @@ MonoBehaviour:
   OnButton_: {fileID: 1081505928}
   OffButton_: {fileID: 1018035208}
   PauseButton_: {fileID: 401152284}
+  Stamp1_: {fileID: 121345894}
 --- !u!1 &930535558
 GameObject:
   m_ObjectHideFlags: 0
@@ -42695,7 +42808,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 932439520}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 185976f92a859034aab2d271f4a0523e, type: 3}
+  m_Script: {fileID: 11500000, guid: 84ba6fad00bc0424ea506a13a42c17bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TeamVideo: {fileID: 442882186}
@@ -42703,6 +42816,7 @@ MonoBehaviour:
   OnButton_: {fileID: 1923052388}
   OffButton_: {fileID: 2003031667}
   PauseButton_: {fileID: 394497510}
+  Stamp1_: {fileID: 121345894}
 --- !u!1001 &937265306
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45060,7 +45174,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 970710990}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 185976f92a859034aab2d271f4a0523e, type: 3}
+  m_Script: {fileID: 11500000, guid: 84ba6fad00bc0424ea506a13a42c17bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TeamVideo: {fileID: 962545268}
@@ -45068,6 +45182,7 @@ MonoBehaviour:
   OnButton_: {fileID: 765335912}
   OffButton_: {fileID: 785249088}
   PauseButton_: {fileID: 646956850}
+  Stamp1_: {fileID: 121345894}
 --- !u!1001 &975521097
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51019,7 +51134,7 @@ GameObject:
   - component: {fileID: 1116731332}
   - component: {fileID: 1116731331}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: S_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51035,7 +51150,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.624647, y: 2.9164193, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1178388761}
   m_Father: {fileID: 495596262}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -51105,7 +51221,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 28e72ee7747d9a94d93b9be69ce372ca, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 46dd1944ebf2c2b43a58046ca0453233, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -52348,7 +52464,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7002d0e5cb7c28943a0f65a744de1b14, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d46444d561a95a04392bdc4f7407f65e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -52378,7 +52494,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b93d7035b06fc64e8f1bb0bf76444bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Stamp1_: {fileID: 0}
+  Stamp2_: {fileID: 0}
   Stamp3_: {fileID: 1116731329}
+  CompleteText: {fileID: 0}
+  ParticleMission: {fileID: 0}
   MissionWindow_: {fileID: 0}
   Opendow_: {fileID: 0}
   Closedow_: {fileID: 0}
@@ -53472,7 +53592,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b93d7035b06fc64e8f1bb0bf76444bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Stamp1_: {fileID: 0}
+  Stamp2_: {fileID: 0}
   Stamp3_: {fileID: 0}
+  CompleteText: {fileID: 0}
+  ParticleMission: {fileID: 0}
   MissionWindow_: {fileID: 1808074947}
   Opendow_: {fileID: 1928327160}
   Closedow_: {fileID: 1169498751}
@@ -53867,17 +53991,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1178388760}
-  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.6009043, y: 0.34288627, z: 1}
   m_Children: []
-  m_Father: {fileID: 495596262}
-  m_RootOrder: 6
+  m_Father: {fileID: 1116731330}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 54, y: 730.80023}
-  m_SizeDelta: {x: 95, y: 25}
+  m_AnchoredPosition: {x: 0.31975937, y: -21.053467}
+  m_SizeDelta: {x: 88.12499, y: 24.374998}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1178388762
 MonoBehaviour:
@@ -58050,7 +58174,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1290155690}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 185976f92a859034aab2d271f4a0523e, type: 3}
+  m_Script: {fileID: 11500000, guid: 84ba6fad00bc0424ea506a13a42c17bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TeamVideo: {fileID: 1159132524}
@@ -58058,6 +58182,7 @@ MonoBehaviour:
   OnButton_: {fileID: 150201513}
   OffButton_: {fileID: 1375554495}
   PauseButton_: {fileID: 28638467}
+  Stamp1_: {fileID: 121345894}
 --- !u!1001 &1290311329
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -58272,7 +58397,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b93d7035b06fc64e8f1bb0bf76444bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Stamp1_: {fileID: 0}
+  Stamp2_: {fileID: 0}
   Stamp3_: {fileID: 0}
+  CompleteText: {fileID: 0}
+  ParticleMission: {fileID: 0}
   MissionWindow_: {fileID: 495596261}
   Opendow_: {fileID: 814759564}
   Closedow_: {fileID: 1291130669}
@@ -60611,7 +60740,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1353624601}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 185976f92a859034aab2d271f4a0523e, type: 3}
+  m_Script: {fileID: 11500000, guid: 84ba6fad00bc0424ea506a13a42c17bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TeamVideo: {fileID: 431925752}
@@ -60619,6 +60748,7 @@ MonoBehaviour:
   OnButton_: {fileID: 1287224685}
   OffButton_: {fileID: 945382666}
   PauseButton_: {fileID: 524837021}
+  Stamp1_: {fileID: 121345894}
 --- !u!1 &1354494290
 GameObject:
   m_ObjectHideFlags: 0
@@ -65203,7 +65333,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1938428390}
+      - m_Target: {fileID: 1938428389}
         m_MethodName: OnPlayVideo
         m_Mode: 1
         m_Arguments:
@@ -70864,7 +70994,7 @@ GameObject:
   - component: {fileID: 1586653818}
   - component: {fileID: 1586653817}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: C_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -70880,7 +71010,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.624647, y: 2.9164193, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 82408843}
   m_Father: {fileID: 495596262}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -70950,7 +71081,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 28e72ee7747d9a94d93b9be69ce372ca, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 46dd1944ebf2c2b43a58046ca0453233, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -81306,6 +81437,99 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1869000928}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1871594369
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1871594370}
+  - component: {fileID: 1871594373}
+  - component: {fileID: 1871594372}
+  - component: {fileID: 1871594371}
+  m_Layer: 0
+  m_Name: EndText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1871594370
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871594369}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 623426597}
+  m_Father: {fileID: 495596262}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 107.7, y: 846.4}
+  m_SizeDelta: {x: 352.49997, y: 48.749996}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1871594371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871594369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 2
+  m_VerticalFit: 2
+--- !u!114 &1871594372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871594369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 019de6d97d2d61d40ab20ce7bd593d28, type: 3}
+    m_FontSize: 40
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Mission Complete!
+--- !u!222 &1871594373
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871594369}
+  m_CullTransparentMesh: 0
 --- !u!1001 &1871763842
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -84208,7 +84432,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b93d7035b06fc64e8f1bb0bf76444bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Stamp1_: {fileID: 0}
+  Stamp2_: {fileID: 0}
   Stamp3_: {fileID: 0}
+  CompleteText: {fileID: 0}
+  ParticleMission: {fileID: 0}
   MissionWindow_: {fileID: 1808074947}
   Opendow_: {fileID: 1928327160}
   Closedow_: {fileID: 1169498751}
@@ -84575,7 +84803,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1938428388}
-  - component: {fileID: 1938428390}
+  - component: {fileID: 1938428389}
   m_Layer: 0
   m_Name: Team1Video
   m_TagString: Untagged
@@ -84597,7 +84825,7 @@ Transform:
   m_Father: {fileID: 2018346506}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1938428390
+--- !u!114 &1938428389
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -84606,7 +84834,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1938428387}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 185976f92a859034aab2d271f4a0523e, type: 3}
+  m_Script: {fileID: 11500000, guid: 84ba6fad00bc0424ea506a13a42c17bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TeamVideo: {fileID: 824339043}
@@ -84614,6 +84842,7 @@ MonoBehaviour:
   OnButton_: {fileID: 1453068378}
   OffButton_: {fileID: 212555614}
   PauseButton_: {fileID: 886369324}
+  Stamp1_: {fileID: 121345894}
 --- !u!1 &1941420784
 GameObject:
   m_ObjectHideFlags: 0
@@ -85436,7 +85665,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1959935837}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 185976f92a859034aab2d271f4a0523e, type: 3}
+  m_Script: {fileID: 11500000, guid: 84ba6fad00bc0424ea506a13a42c17bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TeamVideo: {fileID: 667982407}
@@ -85444,6 +85673,7 @@ MonoBehaviour:
   OnButton_: {fileID: 1947980436}
   OffButton_: {fileID: 87141347}
   PauseButton_: {fileID: 150727994}
+  Stamp1_: {fileID: 121345894}
 --- !u!1 &1961291151
 GameObject:
   m_ObjectHideFlags: 0
@@ -87807,7 +88037,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2007789653}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 185976f92a859034aab2d271f4a0523e, type: 3}
+  m_Script: {fileID: 11500000, guid: 84ba6fad00bc0424ea506a13a42c17bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TeamVideo: {fileID: 478258652}
@@ -87815,6 +88045,7 @@ MonoBehaviour:
   OnButton_: {fileID: 694063433}
   OffButton_: {fileID: 1382212320}
   PauseButton_: {fileID: 213587947}
+  Stamp1_: {fileID: 121345894}
 --- !u!1 &2009263870
 GameObject:
   m_ObjectHideFlags: 0
@@ -92175,7 +92406,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2114503794}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 185976f92a859034aab2d271f4a0523e, type: 3}
+  m_Script: {fileID: 11500000, guid: 84ba6fad00bc0424ea506a13a42c17bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TeamVideo: {fileID: 2064249144}
@@ -92183,6 +92414,7 @@ MonoBehaviour:
   OnButton_: {fileID: 1753857299}
   OffButton_: {fileID: 1961291151}
   PauseButton_: {fileID: 899250499}
+  Stamp1_: {fileID: 121345894}
 --- !u!1001 &2115655998
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -92448,7 +92680,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2121771493}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 185976f92a859034aab2d271f4a0523e, type: 3}
+  m_Script: {fileID: 11500000, guid: 84ba6fad00bc0424ea506a13a42c17bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TeamVideo: {fileID: 42520880}
@@ -92456,6 +92688,7 @@ MonoBehaviour:
   OnButton_: {fileID: 283312668}
   OffButton_: {fileID: 1398581454}
   PauseButton_: {fileID: 239571103}
+  Stamp1_: {fileID: 121345894}
 --- !u!1 &2124449216
 GameObject:
   m_ObjectHideFlags: 0

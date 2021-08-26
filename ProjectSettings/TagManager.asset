@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Name
+  - Stamp1
+  - Notice
+  - Stamp2
+  - Stamp3
+  - Particle
   layers:
   - Default
   - TransparentFX
