@@ -18,17 +18,13 @@
 | Creator | More than 200 professors, undergraduates, outsiders, etc. |
 | Currency | Vote |
 | Continuity | Introduction Video, IG Screenshot, Mission |
-| Connectivity | Multiplayer (Server, Vocie Chat) |
+| Connectivity | Multiplayer (Cloud, Vocie, Chat) |
 
 ## 🚀 Feature
- * Login (Select ID, enter nickname)
- * Select Characters (Male 5/Female 5)
- * Chatting (General chat, booth chat, voice chat)
- * Booth (Build booth design and introduction video by graduation team)
- * Announcement (only for professors, can be entered when entering passwords)
- * IG Screenshot (Save in My Documents\sku_miso folder)
- * Vote (prevention of redundancy prevention)
- * Mission (Watch more than 3 videos, IG Screenshot, treasure hunt)
+ * Screen for graduation project presentation (Presentation video by graduation project team)
+ * Booth for graduation project exhibition (Design by graduation project team)
+ * Communication (General chat, Booth chat, Voice chat)
+ * Additional functions (Notice, IG screenshot, Mission, Vote)
 
 ## ✔ License
 Copyright © 2021 Dept. of Media Software, Sungkyul University.
