@@ -2507,7 +2507,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _camera: {fileID: 525385629093537804}
-  cam: {fileID: 3989435819820804882}
+  cam: {fileID: 8916552072648792446}
 --- !u!54 &5052053431963205199
 Rigidbody:
   m_ObjectHideFlags: 0
