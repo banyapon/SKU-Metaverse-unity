@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
 
     public void CheckToggle1()
     {
-        toggleStr = "<color=#FF8C00>(교수)</color> ";
+        toggleStr = "<color=#FF8C00>(교직원)</color> ";
     }
     public void CheckToggle2()
     {
