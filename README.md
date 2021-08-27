@@ -15,16 +15,16 @@
 | 5C | Explanation |
 | ------ | ------ |
 | Canon | 2021 Dept. of Media Software, Sungkyul University Graduation Exhibition |
-| Creator | More than 200 professors, undergraduates, outsiders, etc. |
-| Currency | Vote |
-| Continuity | Introduction Video, IG Screenshot, Mission |
-| Connectivity | Multiplayer (Cloud, Vocie, Chat) |
+| Creator | Faculty member, Student, Guest etc. |
+| Currency | - |
+| Continuity | Graduation project, IG Screenshot, Mission |
+| Connectivity | Multiplayer (Cloud, Vocie) |
 
 ## 🚀 Feature
  * Screen for graduation project presentation (Presentation video by graduation project team)
  * Booth for graduation project exhibition (Design by graduation project team)
  * Communication (General chat, Booth chat, Voice chat)
- * Additional functions (Notice, IG screenshot, Mission, Vote)
+ * Additional functions (Notice, IG screenshot, Mission)
 
 ## ✔ License
 Copyright © 2021 Dept. of Media Software, Sungkyul University.
