@@ -16,7 +16,7 @@
 | ------ | ------ |
 | Canon | 2021 Dept. of Media Software, Sungkyul University Graduation Exhibition |
 | Creator | Faculty member, Student, Guest etc. |
-| Currency | - |
+| Currency | Vote |
 | Continuity | Graduation project, IG Screenshot, Mission |
 | Connectivity | Multiplayer (Cloud, Vocie) |
 
@@ -24,7 +24,7 @@
  * Screen for graduation project presentation (Presentation video by graduation project team)
  * Booth for graduation project exhibition (Design by graduation project team)
  * Communication (General chat, Booth chat, Voice chat)
- * Additional functions (Notice, IG screenshot, Mission)
+ * Additional functions (Notice, IG screenshot, Mission, Vote)
 
 ## ✔ License
 Copyright © 2021 Dept. of Media Software, Sungkyul University.
