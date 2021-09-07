@@ -10,6 +10,8 @@ TagManager:
   - Stamp2
   - Stamp3
   - Particle
+  - Male
+  - Female
   layers:
   - Default
   - TransparentFX
