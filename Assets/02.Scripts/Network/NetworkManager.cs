@@ -20,6 +20,8 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public GameObject roomUI;
     public GameObject InputField;
     public GameObject toggleGroup;
+    public GameObject BackButton;
+    public GameObject NextButton;
 
     public Text NameText;
 
@@ -59,6 +61,8 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         base.OnJoinedLobby();
         Debug.Log("대기실에 입장하였습니다.");
         roomUI.SetActive(true);
+        BackButton.SetActive(true);
+        NextButton.SetActive(true);
     }
     
     public void InitiliazeRoom(int defaultRoomIndex)

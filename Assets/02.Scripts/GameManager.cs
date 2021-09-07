@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
     {
         PlayerPrefs.DeleteKey("Name");
         netManager = FindObjectOfType<NetworkManager>();
+       
       
     }
 
@@ -61,4 +62,5 @@ public class GameManager : MonoBehaviour
             netManager.ConnectToServer();
         }
     }
+
 }

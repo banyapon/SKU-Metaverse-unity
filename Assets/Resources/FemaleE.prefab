@@ -336,8 +336,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f659f07ddcada7b48bbb9de807cfbcbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  XrotateSpeed: 1
-  YrotateSpeed: 1
   zoomSpeed: 10
   mainCamera: {fileID: 2758783981802817886}
 --- !u!1 &5502191852296579745
