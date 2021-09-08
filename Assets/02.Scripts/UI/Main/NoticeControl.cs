@@ -55,7 +55,7 @@ public class NoticeControl : MonoBehaviourPun
 
     public void OnClickNotice() //교수인지 아닌지 체크
     {
-        if (PlayerPrefs.GetString("Name").Contains("교수"))
+        if (PlayerPrefs.GetString("Name").Contains("교직원"))
         {
             PassWord.SetActive(true);
         }

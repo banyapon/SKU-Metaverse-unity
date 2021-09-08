@@ -6,6 +6,7 @@ using Photon.Realtime;
 
 public class TPCharacterController3D : MonoBehaviourPun
 {
+    bool clapping;
     bool alive;
     bool awake;
     bool active;
@@ -72,6 +73,7 @@ public class TPCharacterController3D : MonoBehaviourPun
         flying = false;
         pushing = false;
         climbing = false;
+        clapping = false;
     }
 
     void Update()
@@ -243,6 +245,14 @@ public class TPCharacterController3D : MonoBehaviourPun
             //jump
             if (Input.GetButtonDown("Jump") && grounded && !jumping) StartCoroutine("Jump");
 
+            //clap
+            if (Input.GetKeyDown(KeyCode.G) && grounded && !jumping && !clapping && (forward == 0))
+            {
+                anim.SetBool("TPM_clap", true);
+                StartCoroutine("Clap");
+            }
+
+
             //SITDOWN      
             if (Input.GetKeyDown(KeyCode.C) && forward == 0)
             {
@@ -404,6 +414,7 @@ public class TPCharacterController3D : MonoBehaviourPun
         yield return new WaitForSeconds(itime);
         active = true;        
     }
+
     IEnumerator Jump()
     {
         if (forward < 0.2f) anim.Play("jump");
@@ -413,5 +424,14 @@ public class TPCharacterController3D : MonoBehaviourPun
         rigid.AddForce(Vector3.up * jumpforce , ForceMode.Impulse);
         yield return new WaitForSeconds(0.3f);
         jumping = false;
+    }
+
+    IEnumerator Clap()
+    {
+        anim.Play("TPM_clap");
+        clapping = true;
+        yield return new WaitForSeconds(1f);
+        clapping = false;
+        anim.SetBool("TPM_clap", false);
     }
 }

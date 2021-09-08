@@ -2620,8 +2620,11 @@ MonoBehaviour:
   - Type: 4
     SynchronizeType: 1
     Name: sitdown
+  - Type: 4
+    SynchronizeType: 1
+    Name: TPM_clap
   m_SynchronizeLayers:
-  - SynchronizeType: 0
+  - SynchronizeType: 1
     LayerIndex: 0
 --- !u!1 &8526153482066713650
 GameObject:
