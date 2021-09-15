@@ -13,11 +13,11 @@ public class MainVideoControl : MonoBehaviourPun
     public GameObject VideoPlayer;
     public InputField PwdText;
 
-    public VideoClip[] TeamVideo = new VideoClip[19];
+    public VideoClip[] TeamVideo = new VideoClip[20];
 
     public void OnClickPwdButton()
     {
-        if (PwdText.text == "0000") //비밀번호 0000
+        if (PwdText.text == "1726") //비밀번호 1726
         {
             PassWord.SetActive(false);
             VideoPanel.SetActive(true);
@@ -29,6 +29,11 @@ public class MainVideoControl : MonoBehaviourPun
     }
 
     #region 버튼
+    public void Vlog()
+    {
+        photonView.RPC("VideoRPC", RpcTarget.All, 19);
+    }
+
     public void Team1()
     {
         photonView.RPC("VideoRPC", RpcTarget.All, 0);
@@ -147,12 +152,14 @@ public class MainVideoControl : MonoBehaviourPun
     {
         VideoPlayer.GetComponent<VideoPlayer>().clip = TeamVideo[num];
         VideoPlayer.GetComponent<VideoPlayer>().Play();
+        VideoPlayer.GetComponent<VideoPlayer>().SetDirectAudioVolume(0, 0.1f);
     }
 
     [PunRPC]
     public void VideoPlayRPC()
     {
         VideoPlayer.GetComponent<VideoPlayer>().Play();
+        VideoPlayer.GetComponent<VideoPlayer>().SetDirectAudioVolume(0, 0.1f);
     }
 
     [PunRPC]

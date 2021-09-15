@@ -67,7 +67,7 @@ public class NoticeControl : MonoBehaviourPun
 
     public void OnClickButton() //공지(교수용) 버튼 클릭
     {
-        if(PasswordInputField.text == "0000") //비밀번호 0000
+        if(PasswordInputField.text == "7654") //비밀번호 7654
         {
             PassWord.SetActive(false);
             NoticePanel.SetActive(true);
