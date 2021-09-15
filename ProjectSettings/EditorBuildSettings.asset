@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/01.Scenes/Main.unity
     guid: 7426bfe1aee861d4fae9eaa593eef49d
+  - enabled: 1
+    path: Assets/01.Scenes/Poll.unity
+    guid: 324bf9228a3ca3c478ae5cec5b8f7475
   m_configObjects: {}

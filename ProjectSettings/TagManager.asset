@@ -12,6 +12,9 @@ TagManager:
   - Particle
   - Male
   - Female
+  - Selected Image
+  - Text
+  - Selected done
   layers:
   - Default
   - TransparentFX
