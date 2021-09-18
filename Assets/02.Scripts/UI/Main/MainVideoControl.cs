@@ -11,9 +11,13 @@ public class MainVideoControl : MonoBehaviourPun
     public GameObject VideoPanel;
     public GameObject Fail;
     public GameObject VideoPlayer;
+    public GameObject AudioPlayer;
     public InputField PwdText;
 
+    public GameObject FireManager;
+
     public VideoClip[] TeamVideo = new VideoClip[20];
+    public AudioClip[] audioSource = new AudioClip[3];
 
     public void OnClickPwdButton()
     {
@@ -26,6 +30,30 @@ public class MainVideoControl : MonoBehaviourPun
         {
             Fail.SetActive(true);
         }
+    }
+    public void Fireworks()
+    {
+        photonView.RPC("FireworksRPC", RpcTarget.All, true);
+    }
+
+    public void FireworksOff()
+    {
+        photonView.RPC("FireworksOffRPC", RpcTarget.All, false);
+    }
+
+    public void Clap1()
+    {
+        photonView.RPC("AudioRPC", RpcTarget.All, 0);
+    }
+
+    public void Clap2()
+    {
+        photonView.RPC("AudioRPC", RpcTarget.All, 1);
+    }
+
+    public void Clap3()
+    {
+        photonView.RPC("AudioRPC", RpcTarget.All, 2);
     }
 
     #region 버튼
@@ -145,7 +173,38 @@ public class MainVideoControl : MonoBehaviourPun
     {
         photonView.RPC("VideoPauseRPC", RpcTarget.All);
     }
+
+    public void audioStop()
+    {
+        photonView.RPC("AudioStopRPC", RpcTarget.All);
+    }
     #endregion
+
+    [PunRPC]
+    public void AudioRPC(int num)
+    {
+        AudioPlayer.GetComponent<AudioSource>().clip = audioSource[num];
+        AudioPlayer.GetComponent<AudioSource>().Play();
+        AudioPlayer.GetComponent<AudioSource>().volume = 0.1f;
+    }
+
+    [PunRPC]
+    public void AudioStopRPC()
+    {
+        AudioPlayer.GetComponent<AudioSource>().Stop();
+    }
+
+    [PunRPC]
+    public void FireworksRPC(bool fireplay)
+    {
+        FireManager.gameObject.SetActive(fireplay);
+    }
+
+    [PunRPC]
+    public void FireworksOffRPC(bool fireplay2)
+    {
+        FireManager.gameObject.SetActive(fireplay2);
+    }
 
     [PunRPC]
     public void VideoRPC(int num)
