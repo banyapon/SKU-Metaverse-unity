@@ -20,18 +20,36 @@ public class MissionClear : MonoBehaviour
     //    MissionDone();
     //}
 
+    //void Update()
+    //{
+    //    Color FirstColor = Stamp1_.GetComponent<Image>().color;
+    //    Color SecondColor = Stamp2_.GetComponent<Image>().color;
+    //    Color ThirdColor = Stamp3_.GetComponent<Image>().color;
+    //    if (FirstColor.a == 1 && SecondColor.a == 1 && ThirdColor.a == 1)
+    //    {
+    //        //GameObject ParticleMission = GameObject.FindGameObjectWithTag("Particle");
+    //        //GameObject Particle = GameObject.FindGameObjectWithTag("Player");
+
+    //        CompleteText.SetActive(true); //축하메세지 on
+    //        Stamp1_.SetActive(false);
+    //        Stamp2_.SetActive(false);
+    //        Stamp3_.SetActive(false);
+    //        //Particle_.SetActive(true);
+    //    }
+    //}
+
     void Update()
     {
-        Color FirstColor = Stamp1_.GetComponent<Image>().color;
+        //Color FirstColor = Stamp1_.GetComponent<Image>().color;
         Color SecondColor = Stamp2_.GetComponent<Image>().color;
         Color ThirdColor = Stamp3_.GetComponent<Image>().color;
-        if (FirstColor.a == 1 && SecondColor.a == 1 && ThirdColor.a == 1)
+        if (SecondColor.a == 1 && ThirdColor.a == 1)
         {
             //GameObject ParticleMission = GameObject.FindGameObjectWithTag("Particle");
             //GameObject Particle = GameObject.FindGameObjectWithTag("Player");
 
             CompleteText.SetActive(true); //축하메세지 on
-            Stamp1_.SetActive(false);
+            //Stamp1_.SetActive(false);
             Stamp2_.SetActive(false);
             Stamp3_.SetActive(false);
             //Particle_.SetActive(true);
