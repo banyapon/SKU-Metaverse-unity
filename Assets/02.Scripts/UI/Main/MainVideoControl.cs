@@ -11,12 +11,14 @@ public class MainVideoControl : MonoBehaviourPun
     public GameObject VideoPanel;
     public GameObject Fail;
     public GameObject VideoPlayer;
+    public GameObject ImagePlayer;
     public GameObject AudioPlayer;
     public InputField PwdText;
 
     public GameObject FireManager;
 
     public VideoClip[] TeamVideo = new VideoClip[20];
+    public Sprite[] TeamImage = new Sprite[20];
     public AudioClip[] audioSource = new AudioClip[3];
 
     public void OnClickPwdButton()
@@ -180,6 +182,108 @@ public class MainVideoControl : MonoBehaviourPun
     }
     #endregion
 
+    #region 이미지
+    public void Image_Vlog()
+    {
+        photonView.RPC("ImageRPC", RpcTarget.All, 19);
+    }
+
+    public void Image_Team1()
+    {
+        photonView.RPC("ImageRPC", RpcTarget.All, 0);
+    }
+
+    public void Image_Team2()
+    {
+        photonView.RPC("ImageRPC", RpcTarget.All, 1);
+    }
+
+    public void Image_Team3()
+    {
+        photonView.RPC("ImageRPC", RpcTarget.All, 2);
+    }
+
+    public void Image_Team4()
+    {
+        photonView.RPC("ImageRPC", RpcTarget.All, 3);
+    }
+
+    public void Image_Team5()
+    {
+        photonView.RPC("ImageRPC", RpcTarget.All, 4);
+    }
+
+    public void Image_Team6()
+    {
+        photonView.RPC("ImageRPC", RpcTarget.All, 5);
+    }
+
+    public void Image_Team7()
+    {
+        photonView.RPC("ImageRPC", RpcTarget.All, 6);
+    }
+
+    public void Image_Team8()
+    {
+        photonView.RPC("ImageRPC", RpcTarget.All, 7);
+    }
+
+    public void Image_Team9()
+    {
+        photonView.RPC("ImageRPC", RpcTarget.All, 8);
+    }
+
+    public void Image_Team10()
+    {
+        photonView.RPC("ImageRPC", RpcTarget.All, 9);
+    }
+
+    public void Image_Team11()
+    {
+        photonView.RPC("ImageRPC", RpcTarget.All, 10);
+    }
+
+    public void Image_Team12()
+    {
+        photonView.RPC("ImageRPC", RpcTarget.All, 11);
+    }
+
+    public void Image_Team13()
+    {
+        photonView.RPC("ImageRPC", RpcTarget.All, 12);
+    }
+
+    public void Image_Team14()
+    {
+        photonView.RPC("ImageRPC", RpcTarget.All, 13);
+    }
+
+    public void Image_Team15()
+    {
+        photonView.RPC("ImageRPC", RpcTarget.All, 14);
+    }
+
+    public void Image_Team16()
+    {
+        photonView.RPC("ImageRPC", RpcTarget.All, 15);
+    }
+
+    public void Image_Team17()
+    {
+        photonView.RPC("ImageRPC", RpcTarget.All, 16);
+    }
+
+    public void Image_Team18()
+    {
+        photonView.RPC("ImageRPC", RpcTarget.All, 17);
+    }
+
+    public void Image_Team19()
+    {
+        photonView.RPC("ImageRPC", RpcTarget.All, 18);
+    }
+    #endregion
+
     [PunRPC]
     public void AudioRPC(int num)
     {
@@ -210,6 +314,7 @@ public class MainVideoControl : MonoBehaviourPun
     public void VideoRPC(int num)
     {
         VideoPlayer.GetComponent<VideoPlayer>().clip = TeamVideo[num];
+        ImagePlayer.GetComponent<Image>().enabled = false;
         VideoPlayer.GetComponent<VideoPlayer>().Play();
         VideoPlayer.GetComponent<VideoPlayer>().SetDirectAudioVolume(0, 0.1f);
     }
@@ -231,5 +336,13 @@ public class MainVideoControl : MonoBehaviourPun
     public void VideoPauseRPC()
     {
         VideoPlayer.GetComponent<VideoPlayer>().Pause();
+    }
+
+    [PunRPC]
+    public void ImageRPC(int num)
+    {
+        VideoPlayer.GetComponent<VideoPlayer>().Stop();
+        ImagePlayer.GetComponent<Image>().enabled = true;
+        ImagePlayer.GetComponent<Image>().sprite = TeamImage[num];
     }
 }
