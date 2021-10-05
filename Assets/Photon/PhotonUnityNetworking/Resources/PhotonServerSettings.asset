@@ -52,6 +52,8 @@ MonoBehaviour:
   - AudioRPC
   - AudioStopRPC
   - ImageRPC
+  - VideoVolumeDOWNRPC
+  - VideoVolumeUPRPC
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

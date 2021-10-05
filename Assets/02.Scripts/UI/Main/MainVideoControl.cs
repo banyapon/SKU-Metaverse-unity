@@ -58,6 +58,16 @@ public class MainVideoControl : MonoBehaviourPun
         photonView.RPC("AudioRPC", RpcTarget.All, 2);
     }
 
+    public void VideoVolumeUP()
+    {
+        photonView.RPC("VideoVolumeUPRPC", RpcTarget.All);
+    }
+
+    public void VideoVolumeDOWN()
+    {
+        photonView.RPC("VideoVolumeDOWNRPC", RpcTarget.All);
+    }
+
     #region 버튼
     public void Vlog()
     {
@@ -344,5 +354,21 @@ public class MainVideoControl : MonoBehaviourPun
         VideoPlayer.GetComponent<VideoPlayer>().Stop();
         ImagePlayer.GetComponent<Image>().enabled = true;
         ImagePlayer.GetComponent<Image>().sprite = TeamImage[num];
+    }
+
+    [PunRPC]
+    public void VideoVolumeUPRPC()
+    {
+        if (VideoPlayer.GetComponent<VideoPlayer>().GetDirectAudioVolume(0) < 1)
+            // 볼륨 0.1씩 올리기
+            VideoPlayer.GetComponent<VideoPlayer>().SetDirectAudioVolume(0, VideoPlayer.GetComponent<VideoPlayer>().GetDirectAudioVolume(0) + 0.1f);
+    }
+
+    [PunRPC]
+    public void VideoVolumeDOWNRPC()
+    {
+        if (VideoPlayer.GetComponent<VideoPlayer>().GetDirectAudioVolume(0) > 0)
+            // 볼륨 0.1씩 줄이기
+            VideoPlayer.GetComponent<VideoPlayer>().SetDirectAudioVolume(0, VideoPlayer.GetComponent<VideoPlayer>().GetDirectAudioVolume(0) - 0.1f);
     }
 }
