@@ -672,7 +672,7 @@ MonoBehaviour:
   walkspeed: 15
   runspeed: 20
   sprintspeed: 20
-  turnspeed: 0.5
+  turnspeed: 1
   strafespeed: 4
   jumpforce: 4
 --- !u!114 &2081993217588131582
