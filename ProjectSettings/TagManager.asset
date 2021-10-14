@@ -15,6 +15,7 @@ TagManager:
   - Selected Image
   - Text
   - Selected done
+  - camara
   layers:
   - Default
   - TransparentFX

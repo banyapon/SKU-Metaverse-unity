@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4189695412947911620
 Transform:
   m_ObjectHideFlags: 0
@@ -2171,6 +2171,7 @@ GameObject:
   - component: {fileID: -6582830627411251742}
   - component: {fileID: 3616022145152161498}
   - component: {fileID: 2784073158796067110}
+  - component: {fileID: 709226076823247060}
   m_Layer: 0
   m_Name: FemaleA
   m_TagString: Player
@@ -2250,7 +2251,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5849040053135355531}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c6d5479919f9a46439f9099e046c383d, type: 3}
   m_Name: 
@@ -2394,6 +2395,18 @@ MonoBehaviour:
   AutoCreateRecorderIfNotFound: 0
   UsePrimaryRecorder: 1
   SetupDebugSpeaker: 0
+--- !u!114 &709226076823247060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5849040053135355531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a3d6aa0c5126b44eb4a3a4d128f7293, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5849209340451016437
 GameObject:
   m_ObjectHideFlags: 0

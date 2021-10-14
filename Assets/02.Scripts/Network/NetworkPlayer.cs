@@ -17,11 +17,12 @@ public class NetworkPlayer : MonoBehaviourPun
             AudioListener.volume = 1;
         }
 
-        if (!photonView.IsMine)
+        /*if (!photonView.IsMine)
         {
             cam.SetActive(false);
             AudioListener.volume = 0;
-        }
+
+        }*/
     }
 
     /*void Update()
