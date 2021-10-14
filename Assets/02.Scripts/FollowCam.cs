@@ -15,6 +15,9 @@ public class FollowCam : MonoBehaviourPun
         if (photonView.IsMine)
         {
             target = Camera.main.transform;
+            target.position = new Vector3(my_trans.position.x, my_trans.position.y + 7.5f, my_trans.position.z - 10.5f);
+            target.rotation = Quaternion.Euler(5f, 0f, 0f);
+            target.transform.parent = transform;
         }
     }
 
@@ -25,7 +28,8 @@ public class FollowCam : MonoBehaviourPun
             return;
         }
 
-        target.position = new Vector3(target.position.x, my_trans.position.y, target.position.z);
-        target.LookAt(my_trans);
+        //target.position = new Vector3 (my_trans.position.x, my_trans.position.y + 7.5f, my_trans.position.z - 10.5f);
+        //target.rotation = Quaternion.Euler (5f, 0f, 0f);
+        //target.LookAt(my_trans);
     }
 }
