@@ -1255,7 +1255,7 @@ GameObject:
   - component: {fileID: 7142034210180265316}
   - component: {fileID: -6036507866355678140}
   - component: {fileID: 5664145759041831392}
-  - component: {fileID: -958039440882746246}
+  - component: {fileID: -8068676653586256077}
   m_Layer: 0
   m_Name: FemaleH
   m_TagString: Player
@@ -1458,7 +1458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a3d6aa0c5126b44eb4a3a4d128f7293, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-958039440882746246
+--- !u!114 &-8068676653586256077
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1476,7 +1476,7 @@ MonoBehaviour:
   speakerInUse: {fileID: 0}
   AutoCreateRecorderIfNotFound: 0
   UsePrimaryRecorder: 1
-  SetupDebugSpeaker: 1
+  SetupDebugSpeaker: 0
 --- !u!1 &1462200159495986
 GameObject:
   m_ObjectHideFlags: 0
