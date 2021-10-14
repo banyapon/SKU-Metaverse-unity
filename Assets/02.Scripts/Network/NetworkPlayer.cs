@@ -17,7 +17,7 @@ public class NetworkPlayer : MonoBehaviourPun
             AudioListener.volume = 1;
         }
 
-        else
+        if (!photonView.IsMine)
         {
             cam.SetActive(false);
             AudioListener.volume = 0;
@@ -28,6 +28,8 @@ public class NetworkPlayer : MonoBehaviourPun
     {
         if (!photonView.IsMine)
         {
+            cam.SetActive(false);
+            AudioListener.volume = 0;
             return;
         }
     }*/
