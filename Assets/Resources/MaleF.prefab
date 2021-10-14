@@ -663,8 +663,8 @@ MonoBehaviour:
   recorderInUse: {fileID: 0}
   speakerInUse: {fileID: 0}
   AutoCreateRecorderIfNotFound: 0
-  UsePrimaryRecorder: 1
-  SetupDebugSpeaker: 0
+  UsePrimaryRecorder: 0
+  SetupDebugSpeaker: 1
 --- !u!1 &1289065010650088
 GameObject:
   m_ObjectHideFlags: 0
