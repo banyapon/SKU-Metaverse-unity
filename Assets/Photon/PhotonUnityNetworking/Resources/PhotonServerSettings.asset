@@ -33,25 +33,25 @@ MonoBehaviour:
   RunInBackground: 1
   StartInOfflineMode: 0
   RpcList:
+  - AudioRPC
+  - AudioStopRPC
   - CantHearYou
   - ChangeColour
   - ClickRpc
   - DestroyRpc
   - DestroySpaceship
   - Fire
+  - FireworksOffRPC
+  - FireworksRPC
   - HeresWhy
+  - ImageRPC
   - MicRPC
   - RespawnSpaceship
   - SendRPC
-  - VideoRPC
   - VideoPauseRPC
   - VideoPlayRPC
+  - VideoRPC
   - VideoStopRPC
-  - FireworksOffRPC
-  - FireworksRPC
-  - AudioRPC
-  - AudioStopRPC
-  - ImageRPC
   - VideoVolumeDOWNRPC
   - VideoVolumeUPRPC
   DisableAutoOpenWizard: 1
