@@ -1990,7 +1990,7 @@ MonoBehaviour:
   speakerInUse: {fileID: 0}
   AutoCreateRecorderIfNotFound: 0
   UsePrimaryRecorder: 0
-  SetupDebugSpeaker: 1
+  SetupDebugSpeaker: 0
 --- !u!1 &5502191852296579851
 GameObject:
   m_ObjectHideFlags: 0
