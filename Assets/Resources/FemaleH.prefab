@@ -1254,7 +1254,6 @@ GameObject:
   - component: {fileID: -8120041808035078819}
   - component: {fileID: 7142034210180265316}
   - component: {fileID: -6036507866355678140}
-  - component: {fileID: 8728768446203596601}
   - component: {fileID: 5664145759041831392}
   m_Layer: 0
   m_Name: FemaleH
@@ -1389,7 +1388,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7276cf660bbe03447a5035a149de1f36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _camera: {fileID: 0}
 --- !u!114 &-6036507866355678140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1447,25 +1445,6 @@ MonoBehaviour:
   m_SynchronizeLayers:
   - SynchronizeType: 1
     LayerIndex: 0
---- !u!114 &8728768446203596601
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1450934536039392}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 126494ae2a10a34499272ed97a6c9f5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  logLevel: 1
-  ignoreGlobalLogLevel: 0
-  recorderInUse: {fileID: 0}
-  speakerInUse: {fileID: 0}
-  AutoCreateRecorderIfNotFound: 0
-  UsePrimaryRecorder: 1
-  SetupDebugSpeaker: 0
 --- !u!114 &5664145759041831392
 MonoBehaviour:
   m_ObjectHideFlags: 0
