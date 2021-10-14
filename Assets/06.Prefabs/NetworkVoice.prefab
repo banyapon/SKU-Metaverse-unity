@@ -175,5 +175,5 @@ MonoBehaviour:
   speakerInUse: {fileID: 2287400731852942401, guid: 78d74123dfebab24b94db1c5e25ab829,
     type: 3}
   AutoCreateRecorderIfNotFound: 0
-  UsePrimaryRecorder: 0
+  UsePrimaryRecorder: 1
   SetupDebugSpeaker: 0
