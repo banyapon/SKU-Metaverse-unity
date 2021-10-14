@@ -27163,6 +27163,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: NetworkVoice
       objectReference: {fileID: 0}
+    - target: {fileID: 8609109846663133770, guid: 46445810e030438428b1467db32e15f2,
+        type: 3}
+      propertyPath: sceneViewId
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8609109846663133770, guid: 46445810e030438428b1467db32e15f2,
+        type: 3}
+      propertyPath: observableSearch
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8609109846663133770, guid: 46445810e030438428b1467db32e15f2,
+        type: 3}
+      propertyPath: Synchronization
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46445810e030438428b1467db32e15f2, type: 3}
 --- !u!1 &481028848
@@ -110992,7 +111007,7 @@ GameObject:
   - component: {fileID: 1995324732}
   - component: {fileID: 1995324734}
   m_Layer: 0
-  m_Name: Audio Manger
+  m_Name: Audio Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

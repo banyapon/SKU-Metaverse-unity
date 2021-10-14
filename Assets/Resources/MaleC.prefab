@@ -1246,13 +1246,13 @@ GameObject:
   - component: {fileID: 6228871350381750309}
   - component: {fileID: 6283871774669111063}
   - component: {fileID: -6970959952969543146}
-  - component: {fileID: 8808254179947397726}
   - component: {fileID: -2231858679826461699}
   - component: {fileID: 176094742255749749}
   - component: {fileID: 7450469332057379802}
   - component: {fileID: -1547228744085429246}
   - component: {fileID: 3639517244036526942}
   - component: {fileID: 609207225983571442}
+  - component: {fileID: -4935739217299145111}
   m_Layer: 0
   m_Name: MaleC
   m_TagString: Player
@@ -1329,25 +1329,6 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &8808254179947397726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6225319819786850659}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 126494ae2a10a34499272ed97a6c9f5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  logLevel: 1
-  ignoreGlobalLogLevel: 0
-  recorderInUse: {fileID: 0}
-  speakerInUse: {fileID: 0}
-  AutoCreateRecorderIfNotFound: 0
-  UsePrimaryRecorder: 1
-  SetupDebugSpeaker: 0
 --- !u!114 &-2231858679826461699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1480,6 +1461,25 @@ MonoBehaviour:
   m_SynchronizeLayers:
   - SynchronizeType: 1
     LayerIndex: 0
+--- !u!114 &-4935739217299145111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6225319819786850659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 126494ae2a10a34499272ed97a6c9f5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  logLevel: 1
+  ignoreGlobalLogLevel: 0
+  recorderInUse: {fileID: 0}
+  speakerInUse: {fileID: 0}
+  AutoCreateRecorderIfNotFound: 0
+  UsePrimaryRecorder: 1
+  SetupDebugSpeaker: 0
 --- !u!1 &6225354498903895047
 GameObject:
   m_ObjectHideFlags: 0
