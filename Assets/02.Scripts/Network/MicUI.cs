@@ -20,12 +20,12 @@ public class MicUI : MonoBehaviourPun
     {
         if (photonView.IsMine)
         {
-            if (rec.TransmitEnabled == true)
+            if (rec.IsRecording == true)
             {
-                photonView.RPC("MicRPC", RpcTarget.All, true);
+                photonView.RPC("MicRPC", RpcTarget.AllViaServer, true);
             }
             else
-                photonView.RPC("MicRPC", RpcTarget.All, false);
+                photonView.RPC("MicRPC", RpcTarget.AllViaServer, false);
         }
     }
 

@@ -10,9 +10,9 @@ public class MainVideoControl : MonoBehaviourPun
     public GameObject PassWord;
     public GameObject VideoPanel;
     public GameObject Fail;
-    public GameObject VideoPlayer;
-    public GameObject ImagePlayer;
-    public GameObject AudioPlayer;
+    public VideoPlayer VideoPlayer;
+    public Image ImagePlayer;
+    public AudioSource AudioPlayer;
     public InputField PwdText;
 
     public GameObject FireManager;
@@ -325,15 +325,15 @@ public class MainVideoControl : MonoBehaviourPun
     [PunRPC]
     public void AudioRPC(int num)
     {
-        AudioPlayer.GetComponent<AudioSource>().clip = audioSource[num];
-        AudioPlayer.GetComponent<AudioSource>().Play();
-        AudioPlayer.GetComponent<AudioSource>().volume = 0.1f;
+        AudioPlayer.clip = audioSource[num];
+        AudioPlayer.Play();
+        AudioPlayer.volume = 0.1f;
     }
 
     [PunRPC]
     public void AudioStopRPC()
     {
-        AudioPlayer.GetComponent<AudioSource>().Stop();
+        AudioPlayer.Stop();
     }
 
     #endregion
@@ -356,45 +356,45 @@ public class MainVideoControl : MonoBehaviourPun
     [PunRPC]
     public void VideoRPC(int num)
     {
-        VideoPlayer.GetComponent<VideoPlayer>().clip = TeamVideo[num];
-        ImagePlayer.GetComponent<Image>().enabled = false;
-        VideoPlayer.GetComponent<VideoPlayer>().Play();
-        VideoPlayer.GetComponent<VideoPlayer>().SetDirectAudioVolume(0, 0.1f);
+        VideoPlayer.clip = TeamVideo[num];
+        ImagePlayer.enabled = false;
+        VideoPlayer.Play();
+        VideoPlayer.SetDirectAudioVolume(0, 0.1f);
     }
 
     [PunRPC]
     public void VideoPlayRPC()
     {
-        VideoPlayer.GetComponent<VideoPlayer>().Play();
-        VideoPlayer.GetComponent<VideoPlayer>().SetDirectAudioVolume(0, 0.1f);
+        VideoPlayer.Play();
+        VideoPlayer.SetDirectAudioVolume(0, 0.1f);
     }
 
     [PunRPC]
     public void VideoStopRPC()
     {
-        VideoPlayer.GetComponent<VideoPlayer>().Stop();
+        VideoPlayer.Stop();
     }
 
     [PunRPC]
     public void VideoPauseRPC()
     {
-        VideoPlayer.GetComponent<VideoPlayer>().Pause();
+        VideoPlayer.Pause();
     }
 
     [PunRPC]
     public void VideoVolumeUPRPC()
     {
-        if (VideoPlayer.GetComponent<VideoPlayer>().GetDirectAudioVolume(0) < 1)
+        if (VideoPlayer.GetDirectAudioVolume(0) < 1)
             // 볼륨 0.1씩 올리기
-            VideoPlayer.GetComponent<VideoPlayer>().SetDirectAudioVolume(0, VideoPlayer.GetComponent<VideoPlayer>().GetDirectAudioVolume(0) + 0.1f);
+            VideoPlayer.SetDirectAudioVolume(0, VideoPlayer.GetDirectAudioVolume(0) + 0.1f);
     }
 
     [PunRPC]
     public void VideoVolumeDOWNRPC()
     {
-        if (VideoPlayer.GetComponent<VideoPlayer>().GetDirectAudioVolume(0) > 0)
+        if (VideoPlayer.GetDirectAudioVolume(0) > 0)
             // 볼륨 0.1씩 줄이기
-            VideoPlayer.GetComponent<VideoPlayer>().SetDirectAudioVolume(0, VideoPlayer.GetComponent<VideoPlayer>().GetDirectAudioVolume(0) - 0.1f);
+            VideoPlayer.SetDirectAudioVolume(0, VideoPlayer.GetDirectAudioVolume(0) - 0.1f);
     }
     #endregion
 
@@ -402,9 +402,9 @@ public class MainVideoControl : MonoBehaviourPun
     [PunRPC]
     public void ImageRPC(int num)
     {
-        VideoPlayer.GetComponent<VideoPlayer>().Stop();
-        ImagePlayer.GetComponent<Image>().enabled = true;
-        ImagePlayer.GetComponent<Image>().sprite = TeamImage[num];
+        VideoPlayer.Stop();
+        ImagePlayer.enabled = true;
+        ImagePlayer.sprite = TeamImage[num];
     }
     #endregion
 }

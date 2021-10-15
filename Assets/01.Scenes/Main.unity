@@ -959,7 +959,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &18219131
 Transform:
   m_ObjectHideFlags: 0
@@ -1857,7 +1857,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &37842914
 Transform:
   m_ObjectHideFlags: 0
@@ -5158,6 +5158,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Backdrop_20x10_Yellow (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5246214170953048724, guid: 3e7fea53f96c64b40aba6af2095c573b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9121216578028834951, guid: 3e7fea53f96c64b40aba6af2095c573b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5617,55 +5622,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 198869467}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &107768780
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 107768781}
-  - component: {fileID: 107768782}
-  m_Layer: 0
-  m_Name: Team5Video
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &107768781
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 107768780}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2018346506}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &107768782
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 107768780}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84ba6fad00bc0424ea506a13a42c17bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TeamVideo: {fileID: 0}
-  videoClip: {fileID: 1680495386}
-  OnButton_: {fileID: 946331316}
-  OffButton_: {fileID: 0}
-  PauseButton_: {fileID: 0}
-  Stamp1_: {fileID: 121345894}
 --- !u!1001 &108752029
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9534,55 +9490,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 897559587}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &182713480
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 182713481}
-  - component: {fileID: 182713482}
-  m_Layer: 0
-  m_Name: Team4Video
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &182713481
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 182713480}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2018346506}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &182713482
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 182713480}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84ba6fad00bc0424ea506a13a42c17bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TeamVideo: {fileID: 0}
-  videoClip: {fileID: 1009354878}
-  OnButton_: {fileID: 1997963187}
-  OffButton_: {fileID: 0}
-  PauseButton_: {fileID: 0}
-  Stamp1_: {fileID: 121345894}
 --- !u!1001 &184622583
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9716,7 +9623,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &185652443
 PrefabInstance:
@@ -13112,81 +13019,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 243326851}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &246736519
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 246736522}
-  - component: {fileID: 246736521}
-  - component: {fileID: 246736520}
-  m_Layer: 0
-  m_Name: Notice Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &246736520
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 246736519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  Synchronization: 3
-  OwnershipTransfer: 0
-  observableSearch: 2
-  ObservedComponents: []
-  sceneViewId: 2
-  InstantiationId: 0
-  isRuntimeInstantiated: 0
---- !u!114 &246736521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 246736519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6573d403796f54647a6f5ceb95a2c8f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NoticePanel: {fileID: 1285848189}
-  Fail: {fileID: 914418351}
-  isProfessor: {fileID: 90232245}
-  PassWord: {fileID: 712356280}
-  PassWordPanel: {fileID: 2071183062}
-  Canvas: {fileID: 929028711}
-  PasswordInputField: {fileID: 68455008}
-  NoticeInputField: {fileID: 1324921563}
-  NoticeText: {fileID: 1093448285}
---- !u!4 &246736522
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 246736519}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 618, y: 346.21295, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &246900539
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14039,7 +13871,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 246736521}
+      - m_Target: {fileID: 0}
         m_MethodName: NoticeConfirm
         m_Mode: 1
         m_Arguments:
@@ -14556,55 +14388,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 262349361}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &263684828
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 263684829}
-  - component: {fileID: 263684830}
-  m_Layer: 0
-  m_Name: Team19Video
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &263684829
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 263684828}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2018346506}
-  m_RootOrder: 19
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &263684830
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 263684828}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84ba6fad00bc0424ea506a13a42c17bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TeamVideo: {fileID: 0}
-  videoClip: {fileID: 13312772}
-  OnButton_: {fileID: 271401233}
-  OffButton_: {fileID: 0}
-  PauseButton_: {fileID: 0}
-  Stamp1_: {fileID: 121345894}
 --- !u!1001 &264039030
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23048,55 +22831,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 416607950}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &418127626
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 418127627}
-  - component: {fileID: 418127628}
-  m_Layer: 0
-  m_Name: Team16Video
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &418127627
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 418127626}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2018346506}
-  m_RootOrder: 16
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &418127628
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 418127626}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84ba6fad00bc0424ea506a13a42c17bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TeamVideo: {fileID: 0}
-  videoClip: {fileID: 1189622604}
-  OnButton_: {fileID: 2034010810}
-  OffButton_: {fileID: 0}
-  PauseButton_: {fileID: 0}
-  Stamp1_: {fileID: 121345894}
 --- !u!1 &418503792
 GameObject:
   m_ObjectHideFlags: 0
@@ -27145,7 +26879,7 @@ PrefabInstance:
     - target: {fileID: 3917717636100630549, guid: 46445810e030438428b1467db32e15f2,
         type: 3}
       propertyPath: transmitEnabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3917717636100630549, guid: 46445810e030438428b1467db32e15f2,
         type: 3}
@@ -27156,6 +26890,16 @@ PrefabInstance:
         type: 3}
       propertyPath: debugEchoMode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3917717636100630549, guid: 46445810e030438428b1467db32e15f2,
+        type: 3}
+      propertyPath: autoStart
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3917717636100630549, guid: 46445810e030438428b1467db32e15f2,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4071992729098339085, guid: 46445810e030438428b1467db32e15f2,
         type: 3}
@@ -27445,7 +27189,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &485864243
 Transform:
   m_ObjectHideFlags: 0
@@ -27915,55 +27659,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 492530880}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &492692480
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 492692481}
-  - component: {fileID: 492692482}
-  m_Layer: 0
-  m_Name: Team17Video
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &492692481
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 492692480}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2018346506}
-  m_RootOrder: 17
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &492692482
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 492692480}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84ba6fad00bc0424ea506a13a42c17bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TeamVideo: {fileID: 0}
-  videoClip: {fileID: 848770148}
-  OnButton_: {fileID: 840726650}
-  OffButton_: {fileID: 0}
-  PauseButton_: {fileID: 0}
-  Stamp1_: {fileID: 121345894}
 --- !u!1001 &493483453
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32422,55 +32117,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 586875409}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &590918184
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 590918185}
-  - component: {fileID: 590918186}
-  m_Layer: 0
-  m_Name: Team12Video
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &590918185
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 590918184}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2018346506}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &590918186
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 590918184}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84ba6fad00bc0424ea506a13a42c17bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TeamVideo: {fileID: 0}
-  videoClip: {fileID: 345779292}
-  OnButton_: {fileID: 1563994057}
-  OffButton_: {fileID: 0}
-  PauseButton_: {fileID: 0}
-  Stamp1_: {fileID: 121345894}
 --- !u!1 &590921829
 GameObject:
   m_ObjectHideFlags: 0
@@ -32751,55 +32397,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 593157804}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &595752074
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 595752075}
-  - component: {fileID: 595752076}
-  m_Layer: 0
-  m_Name: Team10Video
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &595752075
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 595752074}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2018346506}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &595752076
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 595752074}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84ba6fad00bc0424ea506a13a42c17bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TeamVideo: {fileID: 0}
-  videoClip: {fileID: 1881881123}
-  OnButton_: {fileID: 1740873328}
-  OffButton_: {fileID: 0}
-  PauseButton_: {fileID: 0}
-  Stamp1_: {fileID: 121345894}
 --- !u!1001 &596271382
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33277,7 +32874,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &599972420
 Transform:
   m_ObjectHideFlags: 0
@@ -36488,7 +36085,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &663587136
 GameObject:
@@ -37705,55 +37302,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 688544883}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &689209477
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 689209478}
-  - component: {fileID: 689209479}
-  m_Layer: 0
-  m_Name: Team3Video
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &689209478
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 689209477}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2018346506}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &689209479
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 689209477}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84ba6fad00bc0424ea506a13a42c17bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TeamVideo: {fileID: 0}
-  videoClip: {fileID: 986990330}
-  OnButton_: {fileID: 1904895786}
-  OffButton_: {fileID: 0}
-  PauseButton_: {fileID: 0}
-  Stamp1_: {fileID: 121345894}
 --- !u!1 &689215702
 GameObject:
   m_ObjectHideFlags: 0
@@ -38411,55 +37959,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 694063433}
   m_CullTransparentMesh: 0
---- !u!1 &694154928
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 694154929}
-  - component: {fileID: 694154930}
-  m_Layer: 0
-  m_Name: Team11Video
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &694154929
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 694154928}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2018346506}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &694154930
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 694154928}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84ba6fad00bc0424ea506a13a42c17bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TeamVideo: {fileID: 0}
-  videoClip: {fileID: 1184285754}
-  OnButton_: {fileID: 93064684}
-  OffButton_: {fileID: 0}
-  PauseButton_: {fileID: 0}
-  Stamp1_: {fileID: 121345894}
 --- !u!1001 &694200764
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39765,6 +39264,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 3.39
       objectReference: {fileID: 0}
+    - target: {fileID: 3833883235998225193, guid: ac91b9cf1c1769947a7ee3876367415f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5199568926549678175, guid: ac91b9cf1c1769947a7ee3876367415f,
         type: 3}
       propertyPath: m_Name
@@ -39785,10 +39289,20 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -5.75
       objectReference: {fileID: 0}
+    - target: {fileID: 6015007721490985789, guid: ac91b9cf1c1769947a7ee3876367415f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6278166110304161394, guid: ac91b9cf1c1769947a7ee3876367415f,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -9.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 6451140154536393690, guid: ac91b9cf1c1769947a7ee3876367415f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6614146389628975528, guid: ac91b9cf1c1769947a7ee3876367415f,
         type: 3}
@@ -39805,10 +39319,20 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 3.41
       objectReference: {fileID: 0}
+    - target: {fileID: 7276381391739917906, guid: ac91b9cf1c1769947a7ee3876367415f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7552953063211495278, guid: ac91b9cf1c1769947a7ee3876367415f,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 3.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 8338152908329056551, guid: ac91b9cf1c1769947a7ee3876367415f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8452540242735367403, guid: ac91b9cf1c1769947a7ee3876367415f,
         type: 3}
@@ -40969,7 +40493,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &737215859
 Transform:
   m_ObjectHideFlags: 0
@@ -53710,7 +53234,7 @@ RectTransform:
   - {fileID: 913338863}
   - {fileID: 667670061}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -54074,55 +53598,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 929276333}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &930308148
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 930308149}
-  - component: {fileID: 930308150}
-  m_Layer: 0
-  m_Name: Team2Video
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &930308149
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 930308148}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2018346506}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &930308150
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 930308148}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84ba6fad00bc0424ea506a13a42c17bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TeamVideo: {fileID: 0}
-  videoClip: {fileID: 236530552}
-  OnButton_: {fileID: 1081505928}
-  OffButton_: {fileID: 0}
-  PauseButton_: {fileID: 0}
-  Stamp1_: {fileID: 121345894}
 --- !u!1001 &930497327
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54222,7 +53697,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 930535558}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: f1a3fa586f936ad44a654d4aeb255042, type: 3}
+  m_VideoClip: {fileID: 0}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -54236,10 +53711,10 @@ VideoPlayer:
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
   m_TargetAudioSources:
-  - {fileID: 0}
+  - {fileID: 1995324732}
   m_DirectAudioVolumes:
   - 0.5
-  m_Url: 
+  m_Url: https://www.youtube.com/watch?v=0f4hwZ5ZNIM
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
@@ -54343,55 +53818,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 932410599}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &932439520
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 932439521}
-  - component: {fileID: 932439522}
-  m_Layer: 0
-  m_Name: Team14Video
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &932439521
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 932439520}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2018346506}
-  m_RootOrder: 14
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &932439522
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 932439520}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84ba6fad00bc0424ea506a13a42c17bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TeamVideo: {fileID: 0}
-  videoClip: {fileID: 734045447}
-  OnButton_: {fileID: 1923052388}
-  OffButton_: {fileID: 0}
-  PauseButton_: {fileID: 0}
-  Stamp1_: {fileID: 121345894}
 --- !u!1001 &936452357
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54967,7 +54393,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &948017951
 Transform:
   m_ObjectHideFlags: 0
@@ -56538,55 +55964,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 969409139}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &970710990
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 970710991}
-  - component: {fileID: 970710992}
-  m_Layer: 0
-  m_Name: Team13Video
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &970710991
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 970710990}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2018346506}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &970710992
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 970710990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84ba6fad00bc0424ea506a13a42c17bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TeamVideo: {fileID: 0}
-  videoClip: {fileID: 375455584}
-  OnButton_: {fileID: 765335912}
-  OffButton_: {fileID: 0}
-  PauseButton_: {fileID: 0}
-  Stamp1_: {fileID: 121345894}
 --- !u!1001 &970980739
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57297,7 +56674,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &983841560
 Transform:
   m_ObjectHideFlags: 0
@@ -60725,7 +60102,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1048631611}
   m_Layer: 0
-  m_Name: Effect
+  m_Name: Effect Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -60749,7 +60126,7 @@ Transform:
   - {fileID: 1942442969}
   - {fileID: 491105590}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1049325574
 PrefabInstance:
@@ -66236,7 +65613,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1163685825
 Transform:
   m_ObjectHideFlags: 0
@@ -66335,6 +65712,11 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: ecd1b55b79caba2448671ac675d292a0,
         type: 3}
       propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: ecd1b55b79caba2448671ac675d292a0,
+        type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -69790,7 +69172,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1224084446
 Transform:
   m_ObjectHideFlags: 0
@@ -71967,7 +71349,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 2284bc7bf5613e543ab53c847416eac2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -22.3
+      value: -17.51
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 2284bc7bf5613e543ab53c847416eac2,
         type: 3}
@@ -71977,7 +71359,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 2284bc7bf5613e543ab53c847416eac2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -65
+      value: -66.06
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 2284bc7bf5613e543ab53c847416eac2,
         type: 3}
@@ -72047,7 +71429,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 2284bc7bf5613e543ab53c847416eac2,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2284bc7bf5613e543ab53c847416eac2, type: 3}
@@ -73492,55 +72874,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1287297173}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1290155690
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1290155691}
-  - component: {fileID: 1290155692}
-  m_Layer: 0
-  m_Name: Team8Video
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1290155691
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1290155690}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2018346506}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1290155692
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1290155690}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84ba6fad00bc0424ea506a13a42c17bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TeamVideo: {fileID: 0}
-  videoClip: {fileID: 922674892}
-  OnButton_: {fileID: 150201513}
-  OffButton_: {fileID: 0}
-  PauseButton_: {fileID: 0}
-  Stamp1_: {fileID: 121345894}
 --- !u!1001 &1290311329
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -76372,7 +75705,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1344881178
 Transform:
   m_ObjectHideFlags: 0
@@ -76795,55 +76128,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1351100375}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1353624601
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1353624602}
-  - component: {fileID: 1353624603}
-  m_Layer: 0
-  m_Name: Team9Video
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1353624602
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1353624601}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2018346506}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1353624603
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1353624601}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84ba6fad00bc0424ea506a13a42c17bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TeamVideo: {fileID: 0}
-  videoClip: {fileID: 1128547485}
-  OnButton_: {fileID: 1287224685}
-  OffButton_: {fileID: 0}
-  PauseButton_: {fileID: 0}
-  Stamp1_: {fileID: 121345894}
 --- !u!1 &1354494290
 GameObject:
   m_ObjectHideFlags: 0
@@ -76958,79 +76242,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1355018798}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1356603854
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1356603857}
-  - component: {fileID: 1356603856}
-  - component: {fileID: 1356603855}
-  m_Layer: 0
-  m_Name: testAS
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1356603855
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1356603854}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 126494ae2a10a34499272ed97a6c9f5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  logLevel: 1
-  ignoreGlobalLogLevel: 0
-  recorderInUse: {fileID: 0}
-  speakerInUse: {fileID: 0}
-  AutoCreateRecorderIfNotFound: 0
-  UsePrimaryRecorder: 1
-  SetupDebugSpeaker: 1
---- !u!114 &1356603856
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1356603854}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  Synchronization: 3
-  OwnershipTransfer: 0
-  observableSearch: 2
-  ObservedComponents: []
-  sceneViewId: 4
-  InstantiationId: 0
-  isRuntimeInstantiated: 0
---- !u!4 &1356603857
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1356603854}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.949543, y: 8.291313, z: 10.027826}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1356838520
 GameObject:
   m_ObjectHideFlags: 0
@@ -77046,7 +76257,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1356838521
 Transform:
   m_ObjectHideFlags: 0
@@ -77254,7 +76465,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1372199271
 Transform:
   m_ObjectHideFlags: 0
@@ -80512,7 +79723,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1419619011
 Transform:
   m_ObjectHideFlags: 0
@@ -81109,7 +80320,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1427199051
 Transform:
   m_ObjectHideFlags: 0
@@ -82575,7 +81786,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1453707332
 Transform:
   m_ObjectHideFlags: 0
@@ -84288,7 +83499,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1480632585
 Transform:
   m_ObjectHideFlags: 0
@@ -86903,6 +86114,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Backdrop_20x10_Yellow (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5246214170953048724, guid: 3e7fea53f96c64b40aba6af2095c573b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5832898132770608712, guid: 3e7fea53f96c64b40aba6af2095c573b,
         type: 3}
@@ -91865,6 +91081,100 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1627767871}
   m_CullTransparentMesh: 0
+--- !u!1 &1637543768
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1637543772}
+  - component: {fileID: 1637543771}
+  - component: {fileID: 1637543770}
+  - component: {fileID: 1637543769}
+  m_Layer: 0
+  m_Name: Plane
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!64 &1637543769
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637543768}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &1637543770
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637543768}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1637543771
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637543768}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1637543772
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637543768}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.0725632, y: -13.402966, z: 33.764103}
+  m_LocalScale: {x: 100, y: 1, z: 100}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1638292871
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -96346,7 +95656,7 @@ Transform:
   - {fileID: 972392540}
   - {fileID: 1278193976}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1726916792
 PrefabInstance:
@@ -107639,55 +106949,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1935523970}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1938428387
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1938428388}
-  - component: {fileID: 1938428389}
-  m_Layer: 0
-  m_Name: Team1Video
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1938428388
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1938428387}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2018346506}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1938428389
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1938428387}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84ba6fad00bc0424ea506a13a42c17bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TeamVideo: {fileID: 0}
-  videoClip: {fileID: 663587137}
-  OnButton_: {fileID: 1453068378}
-  OffButton_: {fileID: 0}
-  PauseButton_: {fileID: 0}
-  Stamp1_: {fileID: 121345894}
 --- !u!1001 &1940855474
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -108431,7 +107692,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 246736521}
+      - m_Target: {fileID: 0}
         m_MethodName: OnClickButton
         m_Mode: 1
         m_Arguments:
@@ -109109,55 +108370,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1959525687}
   m_Mesh: {fileID: 0}
---- !u!1 &1959935837
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1959935838}
-  - component: {fileID: 1959935839}
-  m_Layer: 0
-  m_Name: Team15Video
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1959935838
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1959935837}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2018346506}
-  m_RootOrder: 15
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1959935839
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1959935837}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84ba6fad00bc0424ea506a13a42c17bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TeamVideo: {fileID: 0}
-  videoClip: {fileID: 1572132218}
-  OnButton_: {fileID: 1947980436}
-  OffButton_: {fileID: 0}
-  PauseButton_: {fileID: 0}
-  Stamp1_: {fileID: 121345894}
 --- !u!1 &1960981880
 GameObject:
   m_ObjectHideFlags: 0
@@ -109999,7 +109211,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1968430291
 Transform:
   m_ObjectHideFlags: 0
@@ -111032,7 +110244,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1995324733}
   - component: {fileID: 1995324732}
-  - component: {fileID: 1995324734}
   m_Layer: 0
   m_Name: Audio Manager
   m_TagString: Untagged
@@ -111150,28 +110361,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1995324734
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1995324731}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  Synchronization: 3
-  OwnershipTransfer: 0
-  observableSearch: 2
-  ObservedComponents: []
-  sceneViewId: 1
-  InstantiationId: 0
-  isRuntimeInstantiated: 0
 --- !u!1 &1997467908
 GameObject:
   m_ObjectHideFlags: 0
@@ -111596,7 +110785,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2006994791
 Transform:
   m_ObjectHideFlags: 0
@@ -111708,55 +110897,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2007608675}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &2007789653
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2007789654}
-  - component: {fileID: 2007789655}
-  m_Layer: 0
-  m_Name: Team18Video
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2007789654
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2007789653}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2018346506}
-  m_RootOrder: 18
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2007789655
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2007789653}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84ba6fad00bc0424ea506a13a42c17bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TeamVideo: {fileID: 0}
-  videoClip: {fileID: 1244117186}
-  OnButton_: {fileID: 694063433}
-  OffButton_: {fileID: 0}
-  PauseButton_: {fileID: 0}
-  Stamp1_: {fileID: 121345894}
 --- !u!1 &2009263870
 GameObject:
   m_ObjectHideFlags: 0
@@ -112190,25 +111330,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 930535560}
-  - {fileID: 1938428388}
-  - {fileID: 930308149}
-  - {fileID: 689209478}
-  - {fileID: 182713481}
-  - {fileID: 107768781}
-  - {fileID: 2121771494}
-  - {fileID: 2114503795}
-  - {fileID: 1290155691}
-  - {fileID: 1353624602}
-  - {fileID: 595752075}
-  - {fileID: 694154929}
-  - {fileID: 590918185}
-  - {fileID: 970710991}
-  - {fileID: 932439521}
-  - {fileID: 1959935838}
-  - {fileID: 418127627}
-  - {fileID: 492692481}
-  - {fileID: 2007789654}
-  - {fileID: 263684829}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -112227,9 +111348,9 @@ MonoBehaviour:
   PassWord: {fileID: 165257552}
   VideoPanel: {fileID: 111467606}
   Fail: {fileID: 832776446}
-  VideoPlayer: {fileID: 930535558}
-  ImagePlayer: {fileID: 1627767871}
-  AudioPlayer: {fileID: 1995324731}
+  VideoPlayer: {fileID: 930535559}
+  ImagePlayer: {fileID: 1627767873}
+  AudioPlayer: {fileID: 1995324732}
   PwdText: {fileID: 800447018}
   FireManager: {fileID: 1048631610}
   TeamVideo:
@@ -112300,7 +111421,7 @@ MonoBehaviour:
   OwnershipTransfer: 0
   observableSearch: 2
   ObservedComponents: []
-  sceneViewId: 3
+  sceneViewId: 1
   InstantiationId: 0
   isRuntimeInstantiated: 0
 --- !u!1001 &2019760177
@@ -115902,7 +115023,7 @@ Transform:
   - {fileID: 1439565675}
   - {fileID: 826779551}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2077272250
 GameObject:
@@ -116547,7 +115668,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2093213940
 Transform:
   m_ObjectHideFlags: 0
@@ -117581,55 +116702,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2113923648}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2114503794
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2114503795}
-  - component: {fileID: 2114503796}
-  m_Layer: 0
-  m_Name: Team7Video
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2114503795
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2114503794}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2018346506}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2114503796
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2114503794}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84ba6fad00bc0424ea506a13a42c17bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TeamVideo: {fileID: 0}
-  videoClip: {fileID: 1823792531}
-  OnButton_: {fileID: 1753857299}
-  OffButton_: {fileID: 0}
-  PauseButton_: {fileID: 0}
-  Stamp1_: {fileID: 121345894}
 --- !u!1001 &2115655998
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -117924,55 +116996,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2120756036}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2121771493
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2121771494}
-  - component: {fileID: 2121771495}
-  m_Layer: 0
-  m_Name: Team6Video
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2121771494
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2121771493}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2018346506}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2121771495
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2121771493}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84ba6fad00bc0424ea506a13a42c17bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TeamVideo: {fileID: 0}
-  videoClip: {fileID: 1027329261}
-  OnButton_: {fileID: 283312668}
-  OffButton_: {fileID: 0}
-  PauseButton_: {fileID: 0}
-  Stamp1_: {fileID: 121345894}
 --- !u!1001 &2124023162
 PrefabInstance:
   m_ObjectHideFlags: 0

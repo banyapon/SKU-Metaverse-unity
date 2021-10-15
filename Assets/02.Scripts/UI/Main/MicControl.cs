@@ -23,9 +23,9 @@ public class MicControl : MonoBehaviour
 
     public void MicButton()
     {
-        if (rec.TransmitEnabled == true)
+        if (rec.IsRecording == true)
         {
-            rec.TransmitEnabled = false;
+            rec.IsRecording = false;
             MicOn.SetActive(false);
             MicOff.SetActive(true);
             Mic.text = "<color=#1E1E1E>마이크 꺼짐</color>";
@@ -33,7 +33,7 @@ public class MicControl : MonoBehaviour
         }
         else
         {
-            rec.TransmitEnabled = true;
+            rec.IsRecording = true;
             MicOff.SetActive(false);
             MicOn.SetActive(true);
             Mic.text = "<color=#FF3C3C>마이크 켜짐</color>";
