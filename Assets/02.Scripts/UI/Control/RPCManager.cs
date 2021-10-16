@@ -5,34 +5,17 @@ using UnityEngine.UI;
 using UnityEngine.Video;
 using Photon.Pun;
 
-public class MainVideoControl : MonoBehaviourPun
+public class RPCManager : MonoBehaviourPun
 {
-    public GameObject PassWord;
-    public GameObject VideoPanel;
-    public GameObject Fail;
     public VideoPlayer VideoPlayer;
     public Image ImagePlayer;
     public AudioSource AudioPlayer;
-    public InputField PwdText;
-
-    public GameObject FireManager;
+    public GameObject EffectManager;
 
     public VideoClip[] TeamVideo = new VideoClip[20];
     public Sprite[] TeamImage = new Sprite[20];
     public AudioClip[] audioSource = new AudioClip[6];
 
-    public void OnClickPwdButton()
-    {
-        if (PwdText.text == "1726")
-        {
-            PassWord.SetActive(false);
-            VideoPanel.SetActive(true);
-        }
-        else
-        {
-            Fail.SetActive(true);
-        }
-    }
 
     #region Firework Effect
     public void Fireworks()
@@ -66,17 +49,17 @@ public class MainVideoControl : MonoBehaviourPun
     #region BGM
     public void BGM1()
     {
-        photonView.RPC("AudioRPC", RpcTarget.AllViaServer, 3);
+        photonView.RPC("AudioRPC", RpcTarget.AllBufferedViaServer, 3);
     }
 
     public void BGM2()
     {
-        photonView.RPC("AudioRPC", RpcTarget.AllViaServer, 4);
+        photonView.RPC("AudioRPC", RpcTarget.AllBufferedViaServer, 4);
     }
 
     public void BGM3()
     {
-        photonView.RPC("AudioRPC", RpcTarget.AllViaServer, 5);
+        photonView.RPC("AudioRPC", RpcTarget.AllBufferedViaServer, 5);
     }
     #endregion
 
@@ -342,13 +325,13 @@ public class MainVideoControl : MonoBehaviourPun
     [PunRPC]
     public void FireworksRPC(bool fireplay)
     {
-        FireManager.gameObject.SetActive(fireplay);
+        EffectManager.gameObject.SetActive(fireplay);
     }
 
     [PunRPC]
     public void FireworksOffRPC(bool fireplay2)
     {
-        FireManager.gameObject.SetActive(fireplay2);
+        EffectManager.gameObject.SetActive(fireplay2);
     }
     #endregion
 

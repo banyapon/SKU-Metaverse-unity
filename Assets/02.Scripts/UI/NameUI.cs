@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class NameControl : MonoBehaviour
+public class NameUI : MonoBehaviour
 {
     private Text user;
 

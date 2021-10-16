@@ -27,7 +27,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     void Start()
     {
-        PhotonNetwork.GameVersion = "1.0";
+        PhotonNetwork.GameVersion = "2.0";
         //PhotonNetwork.AutomaticallySyncScene = false; // 마스터 클라이언트로 동기화
     }
 

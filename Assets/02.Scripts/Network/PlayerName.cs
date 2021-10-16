@@ -1,9 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using Photon.Pun;
-using Photon.Realtime;
 
 public class PlayerName : MonoBehaviourPunCallbacks
 {
@@ -12,6 +10,13 @@ public class PlayerName : MonoBehaviourPunCallbacks
     void Start()
     {
         userName = GetComponent<TextMesh>();
-        userName.text = photonView.Owner.NickName;
+
+        if (PhotonNetwork.IsConnected)
+        {
+            userName.text = photonView.Owner.NickName;
+        }
+
+        else
+            Debug.Log("서버에 연결되어 있지 않음");
     }
 }

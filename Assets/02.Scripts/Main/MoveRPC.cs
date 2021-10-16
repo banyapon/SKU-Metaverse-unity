@@ -4,7 +4,7 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 
-public class PlayerMove : MonoBehaviourPun, IPunObservable
+public class MoveRPC : MonoBehaviourPun, IPunObservable
 {
     //public Transform _camera;
 
