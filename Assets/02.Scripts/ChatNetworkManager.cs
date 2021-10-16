@@ -19,7 +19,6 @@ public class ChatNetworkManager : MonoBehaviourPunCallbacks
     public PhotonView PV;
 
 
-
     void Update()
     {
         StatusText.text = PhotonNetwork.NetworkClientState.ToString();
@@ -34,6 +33,9 @@ public class ChatNetworkManager : MonoBehaviourPunCallbacks
     {
         ChatPanel.SetActive(false);
     }
+
+
+
 
     #region 채팅
     public void Send()
