@@ -111410,9 +111410,7 @@ MonoBehaviour:
   AudioPlayer: {fileID: 1995324732}
   EffectManager: {fileID: 1048631610}
   TeamVideo:
-  - {fileID: 32900000, guid: ac7393c5de9fb504fb5e069e6e1d6733, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 32900000, guid: 5225849f506a5f04598017ebb99c8a89, type: 3}
   - {fileID: 0}
   - {fileID: 0}
   TeamImage:
