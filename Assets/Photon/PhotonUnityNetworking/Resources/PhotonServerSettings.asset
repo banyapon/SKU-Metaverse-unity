@@ -55,6 +55,8 @@ MonoBehaviour:
   - VideoVolumeDOWNRPC
   - VideoVolumeUPRPC
   - ChatRPC
+  - AudioVolumeDown
+  - AudioVolumeUp
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

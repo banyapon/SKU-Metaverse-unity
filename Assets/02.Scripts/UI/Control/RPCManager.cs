@@ -12,8 +12,8 @@ public class RPCManager : MonoBehaviourPun
     public AudioSource AudioPlayer;
     public GameObject EffectManager;
 
-    public VideoClip[] TeamVideo = new VideoClip[20];
-    public Sprite[] TeamImage = new Sprite[20];
+    public VideoClip[] TeamVideo = new VideoClip[3];
+    public Sprite[] TeamImage = new Sprite[19];
     public AudioClip[] audioSource = new AudioClip[6];
 
 
@@ -66,21 +66,28 @@ public class RPCManager : MonoBehaviourPun
     #region VideoVolume
     public void VideoVolumeUP()
     {
-        photonView.RPC("VideoVolumeUPRPC", RpcTarget.AllViaServer);
+        photonView.RPC("VideoVolumeUPRPC", RpcTarget.AllBufferedViaServer);
     }
 
     public void VideoVolumeDOWN()
     {
-        photonView.RPC("VideoVolumeDOWNRPC", RpcTarget.AllViaServer);
+        photonView.RPC("VideoVolumeDOWNRPC", RpcTarget.AllBufferedViaServer);
+    }
+    #endregion
+
+    #region AudioVolume
+    public void AudioVolumeUP()
+    {
+        photonView.RPC("AudioVolumeUP", RpcTarget.AllBufferedViaServer);
+    }
+
+    public void AudioVolumeDOWN()
+    {
+        photonView.RPC("AudioVolumeDOWN", RpcTarget.AllBufferedViaServer);
     }
     #endregion
 
     #region TeamVideo
-    public void Vlog()
-    {
-        photonView.RPC("VideoRPC", RpcTarget.AllViaServer, 19);
-    }
-
     public void Team1()
     {
         photonView.RPC("VideoRPC", RpcTarget.AllViaServer, 0);
@@ -95,94 +102,9 @@ public class RPCManager : MonoBehaviourPun
     {
         photonView.RPC("VideoRPC", RpcTarget.AllViaServer, 2);
     }
-
-    public void Team4()
-    {
-        photonView.RPC("VideoRPC", RpcTarget.AllViaServer, 3);
-    }
-
-    public void Team5()
-    {
-        photonView.RPC("VideoRPC", RpcTarget.AllViaServer, 4);
-    }
-
-    public void Team6()
-    {
-        photonView.RPC("VideoRPC", RpcTarget.AllViaServer, 5);
-    }
-
-    public void Team7()
-    {
-        photonView.RPC("VideoRPC", RpcTarget.AllViaServer, 6);
-    }
-
-    public void Team8()
-    {
-        photonView.RPC("VideoRPC", RpcTarget.AllViaServer, 7);
-    }
-
-    public void Team9()
-    {
-        photonView.RPC("VideoRPC", RpcTarget.AllViaServer, 8);
-    }
-
-    public void Team10()
-    {
-        photonView.RPC("VideoRPC", RpcTarget.AllViaServer, 9);
-    }
-
-    public void Team11()
-    {
-        photonView.RPC("VideoRPC", RpcTarget.AllViaServer, 10);
-    }
-
-    public void Team12()
-    {
-        photonView.RPC("VideoRPC", RpcTarget.AllViaServer, 11);
-    }
-
-    public void Team13()
-    {
-        photonView.RPC("VideoRPC", RpcTarget.AllViaServer, 12);
-    }
-
-    public void Team14()
-    {
-        photonView.RPC("VideoRPC", RpcTarget.AllViaServer, 13);
-    }
-
-    public void Team15()
-    {
-        photonView.RPC("VideoRPC", RpcTarget.AllViaServer, 14);
-    }
-
-    public void Team16()
-    {
-        photonView.RPC("VideoRPC", RpcTarget.AllViaServer, 15);
-    }
-
-    public void Team17()
-    {
-        photonView.RPC("VideoRPC", RpcTarget.AllViaServer, 16);
-    }
-
-    public void Team18()
-    {
-        photonView.RPC("VideoRPC", RpcTarget.AllViaServer, 17);
-    }
-
-    public void Team19()
-    {
-        photonView.RPC("VideoRPC", RpcTarget.AllViaServer, 18);
-    }
     #endregion
 
     #region TeamImage
-    public void Image_Vlog()
-    {
-        photonView.RPC("ImageRPC", RpcTarget.AllViaServer, 19);
-    }
-
     public void Image_Team1()
     {
         photonView.RPC("ImageRPC", RpcTarget.AllViaServer, 0);
@@ -304,36 +226,6 @@ public class RPCManager : MonoBehaviourPun
     #endregion
 
 
-    #region RPC_AudioControl
-    [PunRPC]
-    public void AudioRPC(int num)
-    {
-        AudioPlayer.clip = audioSource[num];
-        AudioPlayer.Play();
-        AudioPlayer.volume = 0.1f;
-    }
-
-    [PunRPC]
-    public void AudioStopRPC()
-    {
-        AudioPlayer.Stop();
-    }
-
-    #endregion
-
-    #region RPC_Firework Effect
-    [PunRPC]
-    public void FireworksRPC(bool fireplay)
-    {
-        EffectManager.gameObject.SetActive(fireplay);
-    }
-
-    [PunRPC]
-    public void FireworksOffRPC(bool fireplay2)
-    {
-        EffectManager.gameObject.SetActive(fireplay2);
-    }
-    #endregion
 
     #region RPC_VideoControl
     [PunRPC]
@@ -378,6 +270,55 @@ public class RPCManager : MonoBehaviourPun
         if (VideoPlayer.GetDirectAudioVolume(0) > 0)
             // 볼륨 0.1씩 줄이기
             VideoPlayer.SetDirectAudioVolume(0, VideoPlayer.GetDirectAudioVolume(0) - 0.1f);
+    }
+    #endregion
+
+    #region RPC_AudioControl
+    [PunRPC]
+    public void AudioRPC(int num)
+    {
+        AudioPlayer.clip = audioSource[num];
+        AudioPlayer.Play();
+        AudioPlayer.volume = 0.1f;
+    }
+
+    [PunRPC]
+    public void AudioStopRPC()
+    {
+        AudioPlayer.Stop();
+    }
+
+    [PunRPC]
+    public void AudioVolumeUp()
+    {
+        if (AudioPlayer.volume < 1)
+            // 볼륨 0.1씩 올리기
+            AudioPlayer.volume += 0.1f;
+    }
+
+    [PunRPC]
+    public void AudioVolumeDown()
+    {
+        if (AudioPlayer.volume > 0)
+        {
+            // 볼륨 0.1씩 내리기
+            AudioPlayer.volume -= 0.1f;
+        }
+    }
+
+    #endregion
+
+    #region RPC_Firework Effect
+    [PunRPC]
+    public void FireworksRPC(bool fireplay)
+    {
+        EffectManager.gameObject.SetActive(fireplay);
+    }
+
+    [PunRPC]
+    public void FireworksOffRPC(bool fireplay2)
+    {
+        EffectManager.gameObject.SetActive(fireplay2);
     }
     #endregion
 
