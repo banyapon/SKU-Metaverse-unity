@@ -61,6 +61,26 @@ public class RPCManager : MonoBehaviourPun
     {
         photonView.RPC("AudioRPC", RpcTarget.AllBufferedViaServer, 5);
     }
+
+    public void BGM4()
+    {
+        photonView.RPC("AudioRPC", RpcTarget.AllBufferedViaServer, 6);
+    }
+
+    public void BGM5()
+    {
+        photonView.RPC("AudioRPC", RpcTarget.AllBufferedViaServer, 7);
+    }
+
+    public void BGM6()
+    {
+        photonView.RPC("AudioRPC", RpcTarget.AllBufferedViaServer, 8);
+    }
+
+    public void BGM7()
+    {
+        photonView.RPC("AudioRPC", RpcTarget.AllBufferedViaServer, 9);
+    }
     #endregion
 
     #region VideoVolume
