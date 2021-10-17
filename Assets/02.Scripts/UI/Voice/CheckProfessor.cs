@@ -1,18 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
-public class CheckProfessor : MonoBehaviour
+public class CheckProfessor : MonoBehaviourPunCallbacks
 {
     public GameObject micButton;
     public GameObject controlButton;
 
     void Start()
     {
-        if (FindObjectOfType<GameManager>().IsToggle1 == true)
+        if (PhotonNetwork.IsConnected)
         {
-            micButton.SetActive(true);
-            controlButton.SetActive(true);
-        }    
+            if (FindObjectOfType<GameManager>().IsToggle1 == true)
+            {
+                micButton.SetActive(true);
+                controlButton.SetActive(true);
+            }
+        }
     }
 }

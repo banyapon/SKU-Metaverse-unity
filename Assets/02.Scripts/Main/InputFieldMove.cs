@@ -2,16 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Photon.Pun;
 
-public class InputFieldMove : MonoBehaviour
+public class InputFieldMove : MonoBehaviourPunCallbacks
 {
     public GameObject mainInputField;
     public GameObject controlInputField;
 
     void Update()
     {
-        chatField();
-        controlField();
+        if (PhotonNetwork.IsConnected)
+        {
+            chatField();
+            controlField();
+        }
     }
 
     public void chatField()
@@ -22,7 +26,7 @@ public class InputFieldMove : MonoBehaviour
         }
 
         else
-        {
+        {   
             FindObjectOfType<TPCharacterController3D>().enabled = true;
         }
     }
