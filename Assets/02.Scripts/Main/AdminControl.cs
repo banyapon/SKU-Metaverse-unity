@@ -19,10 +19,12 @@ public class AdminControl : MonoBehaviour
         {
             Password.SetActive(false);
             ControlPanel.SetActive(true);
+            PwdText.text = "";
         }
         else
         {
             Fail.SetActive(true);
+            PwdText.text = "";
         }
     }
 }

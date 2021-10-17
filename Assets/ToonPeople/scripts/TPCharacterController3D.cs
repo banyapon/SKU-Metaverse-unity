@@ -52,8 +52,6 @@ public class TPCharacterController3D : MonoBehaviourPun
     RaycastHit hit1;
     RaycastHit hit2;
 
-
-
     void Start()
     {
         idletime = 5f;

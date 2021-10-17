@@ -2212,6 +2212,7 @@ GameObject:
   - component: {fileID: 1228479239167843270}
   - component: {fileID: -6114681654988382850}
   - component: {fileID: 5967560190696599738}
+  - component: {fileID: 1619867743243932530}
   m_Layer: 0
   m_Name: MaleB
   m_TagString: Player
@@ -2413,6 +2414,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a3d6aa0c5126b44eb4a3a4d128f7293, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1619867743243932530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2406640955064267263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 126494ae2a10a34499272ed97a6c9f5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  logLevel: 1
+  ignoreGlobalLogLevel: 0
+  recorderInUse: {fileID: 0}
+  speakerInUse: {fileID: 0}
+  AutoCreateRecorderIfNotFound: 0
+  UsePrimaryRecorder: 1
+  SetupDebugSpeaker: 0
 --- !u!1 &2406647015974772665
 GameObject:
   m_ObjectHideFlags: 0

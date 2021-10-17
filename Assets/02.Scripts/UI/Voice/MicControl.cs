@@ -19,6 +19,7 @@ public class MicControl : MonoBehaviour
     {
         rec = FindObjectOfType<Recorder>();
         audioSource = GetComponent<AudioSource>();
+        rec.IsRecording = false;
     }
 
     public void MicButton()

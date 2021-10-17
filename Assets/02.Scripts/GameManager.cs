@@ -17,8 +17,6 @@ public class GameManager : MonoBehaviour
     private NetworkManager netManager;
 
     public bool IsToggle1;
-    public bool IsToggle2;
-    public bool IsToggle3;
 
     private void Awake()
     {
@@ -38,6 +36,7 @@ public class GameManager : MonoBehaviour
     public void CheckToggle1()
     {
         toggleStr = "<color=#FF8C00>(교직원)</color> ";
+        IsToggle1 = true;
     }
     public void CheckToggle2()
     {
