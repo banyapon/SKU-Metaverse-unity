@@ -13,8 +13,10 @@ public class MenuMove : MonoBehaviour
 
     //[1]에는 close 버튼, [2]에는 list
     public GameObject[] videoList = new GameObject[2];
-    public GameObject[] imageList = new GameObject[2];
+    public GameObject[] audioList = new GameObject[2];
+    public GameObject[] effectList = new GameObject[2];
 
+    #region 비디오
     public void VideoOpen()
     {
         Main_.transform.DOMoveX(posx, 0.7f);
@@ -22,7 +24,8 @@ public class MenuMove : MonoBehaviour
         for (int i = 0; i < 2; i++)
         {
             videoList[i].SetActive(true);
-            imageList[i].SetActive(false);
+            audioList[i].SetActive(false);
+            effectList[i].SetActive(false);
         }
 
         //videoList[1].SetActive(true);
@@ -35,25 +38,53 @@ public class MenuMove : MonoBehaviour
 
         videoList[0].SetActive(false);
     }
+    #endregion
 
-    public void ImageOpen()
+    #region 오디오
+    public void AudioOpen()
     {
         Main_.transform.DOMoveX(posx, 0.7f);
 
         for (int i = 0; i < 2; i++)
         {
             videoList[i].SetActive(false);
-            imageList[i].SetActive(true);
+            audioList[i].SetActive(true);
+            effectList[i].SetActive(false);
         }
 
         //videoList[1].SetActive(false);
         //imageList[1].SetActive(true);
     }
 
-    public void ImageClose()
+    public void AudioClose()
     {
         Main_.transform.DOMoveX(r_posx, 0.7f);
 
-        imageList[0].SetActive(false);
+        audioList[0].SetActive(false);
     }
+    #endregion
+
+    #region 기능
+    public void EffectOpen()
+    {
+        Main_.transform.DOMoveX(posx, 0.7f);
+
+        for (int i = 0; i < 2; i++)
+        {
+            videoList[i].SetActive(false);
+            audioList[i].SetActive(false);
+            effectList[i].SetActive(true);
+        }
+
+        //videoList[1].SetActive(false);
+        //imageList[1].SetActive(true);
+    }
+
+    public void EffectClose()
+    {
+        Main_.transform.DOMoveX(r_posx, 0.7f);
+
+        effectList[0].SetActive(false);
+    }
+    #endregion
 }
