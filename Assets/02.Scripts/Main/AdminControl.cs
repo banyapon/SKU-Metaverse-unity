@@ -11,7 +11,7 @@ public class AdminControl : MonoBehaviour
 
     public InputField PwdText;
 
-    private string password = "miso0806";
+    private string password = "941602";
 
     public void OnClickPwdButton()
     {

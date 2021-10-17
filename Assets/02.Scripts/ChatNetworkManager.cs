@@ -7,22 +7,18 @@ using UnityEngine.UI;
 
 public class ChatNetworkManager : MonoBehaviourPunCallbacks
 {
-    
-
-    [Header("ChatPanel")]
     public GameObject ChatPanel;
     public Text[] ChatText;
     public InputField ChatInput;
 
-    [Header("ETC")]
-    public Text StatusText;
+    //public Text StatusText;
     public PhotonView PV;
 
 
-    void Update()
+    /*void Update()
     {
         StatusText.text = PhotonNetwork.NetworkClientState.ToString();
-    }
+    }*/
 
     public void ChatOpen()
     {
