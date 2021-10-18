@@ -98,12 +98,12 @@ public class RPCManager : MonoBehaviourPun
     #region AudioVolume
     public void AudioVolumeUP()
     {
-        photonView.RPC("AudioVolumeUP", RpcTarget.AllBufferedViaServer);
+        photonView.RPC("AudioVolumeUp", RpcTarget.AllBufferedViaServer);
     }
 
     public void AudioVolumeDOWN()
     {
-        photonView.RPC("AudioVolumeDOWN", RpcTarget.AllBufferedViaServer);
+        photonView.RPC("AudioVolumeDown", RpcTarget.AllBufferedViaServer);
     }
     #endregion
 

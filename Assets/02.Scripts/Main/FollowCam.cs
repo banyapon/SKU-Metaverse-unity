@@ -5,22 +5,25 @@ using Photon.Pun;
 
 public class FollowCam : MonoBehaviourPun
 {
-    Transform target;
-    Transform my_trans;
+    private Transform target;
+    private Transform my_trans;
 
     float zoomSpeed = 10.0f;
-    Camera mainCamera;
+    private Camera mainCamera;
+
+    private Transform cameraArm;
 
     void Start()
     {
         my_trans = GetComponent<Transform>();
+        cameraArm = Camera.main.transform;
 
         if (photonView.IsMine)
         {
             target = Camera.main.transform;
             mainCamera = Camera.main;
 
-            target.position = new Vector3(my_trans.position.x, my_trans.position.y + 7.5f, my_trans.position.z - 10.5f);
+            target.position = new Vector3(my_trans.position.x, my_trans.position.y + 7.5f, my_trans.position.z - 11.5f);
             target.rotation = Quaternion.Euler(5f, 0f, 0f);
             target.transform.parent = transform;
         }
@@ -34,6 +37,7 @@ public class FollowCam : MonoBehaviourPun
         }
 
         Zoom();
+        LookAround();
     }
 
     private void Zoom()
@@ -42,6 +46,27 @@ public class FollowCam : MonoBehaviourPun
         if (distance != 0)
         {
             mainCamera.fieldOfView += distance;
+        }
+    }
+
+    private void LookAround()
+    {
+        if (Input.GetMouseButton(1))
+        {
+            Vector2 mouseDelta = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
+            Vector3 camAngle = cameraArm.rotation.eulerAngles;
+            float x = camAngle.x - mouseDelta.y;
+
+            if (x < 180f)
+            {
+                x = Mathf.Clamp(x, -1f, 70f);
+            }
+            else
+            {
+                x = Mathf.Clamp(x, 335f, 361f);
+            }
+
+            cameraArm.rotation = Quaternion.Euler(x, camAngle.y + mouseDelta.x, camAngle.z);
         }
     }
 }
