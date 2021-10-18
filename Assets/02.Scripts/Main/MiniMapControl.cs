@@ -14,11 +14,11 @@ public class MiniMapControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.T) && MiniMap.activeSelf == false)
+        if(Input.GetKeyDown(KeyCode.T) && MiniMap.activeInHierarchy == false)
         {
             MiniMap.SetActive(true);
         }
-        else
+        else if(Input.GetKeyDown(KeyCode.T) && MiniMap.activeInHierarchy == true)
             MiniMap.SetActive(false);
     }
 }
