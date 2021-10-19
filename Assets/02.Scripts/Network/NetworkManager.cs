@@ -21,8 +21,6 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     void Start()
     {
         PhotonNetwork.GameVersion = "2.0";
-
-        //ConnectToServer();
         DontDestroyOnLoad(gameObject);
     }
 
@@ -62,6 +60,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         roomOptions.IsOpen = true;
 
         PhotonNetwork.JoinOrCreateRoom(roomSettings.Name, roomOptions, TypedLobby.Default);
+        SceneManager.LoadScene("Main");
     }
 
     public override void OnJoinRandomFailed(short returnCode, string message)
@@ -82,7 +81,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         Vector3 randPos = pos + Random.insideUnitSphere * 5;
         randPos.y = 0;
 
-        spawnedPlayerPrefab = PhotonNetwork.Instantiate(ChoiceCharacter.instance.currentCharacter.ToString(), randPos, Quaternion.identity);
+        spawnedPlayerPrefab = PhotonNetwork.Instantiate(ChoiceCharacter.netPlayer, randPos, Quaternion.identity);
     }
 
     public override void OnLeftRoom()
