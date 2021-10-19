@@ -35,11 +35,12 @@ public class ChoiceCharacter : MonoBehaviour
     public string FemaleN = "FemaleN";
     public string FemaleO = "FemaleO";
 
-    private NetworkPlayerSpawner netPlayer;
+    private NetworkManager netPlayer;
 
     void Start()
     {
-        netPlayer = FindObjectOfType<NetworkPlayerSpawner>();
+        DontDestroyOnLoad(gameObject);
+        netPlayer = FindObjectOfType<NetworkManager>();
     }
 
     public void funcMaleA()

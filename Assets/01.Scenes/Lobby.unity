@@ -280,7 +280,6 @@ GameObject:
   - component: {fileID: 7383280}
   - component: {fileID: 7383279}
   - component: {fileID: 7383278}
-  - component: {fileID: 7383277}
   m_Layer: 5
   m_Name: MaleK
   m_TagString: Male
@@ -309,48 +308,6 @@ RectTransform:
   m_AnchoredPosition: {x: 150, y: -70}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7383277
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7383275}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4715693f7dae27945b997d5be778ddc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaleA: MaleA
-  MaleB: MaleB
-  MaleC: MaleC
-  MaleD: MaleD
-  MaleE: MaleE
-  MaleF: MaleF
-  MaleG: MaleG
-  MaleH: MaleH
-  MaleI: MaleI
-  MaleJ: MaleJ
-  MaleK: MaleK
-  MaleL: MaleL
-  MaleM: MaleM
-  MaleN: MaleN
-  MaleO: MaleO
-  FemaleA: FemaleA
-  FemaleB: FemaleB
-  FemaleC: FemaleC
-  FemaleD: FemaleD
-  FemaleE: FemaleE
-  FemaleF: FemaleF
-  FemaleG: FemaleG
-  FemaleH: FemaleH
-  FemaleI: FemaleI
-  FemaleJ: FemaleJ
-  FemaleK: FemaleK
-  FemaleL: FemaleL
-  FemaleM: FemaleM
-  FemaleN: FemaleN
-  FemaleO: FemaleO
 --- !u!114 &7383278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -394,7 +351,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1954162599}
+      - m_Target: {fileID: 346245825}
         m_MethodName: funcMaleK
         m_Mode: 1
         m_Arguments:
@@ -970,7 +927,6 @@ GameObject:
   - component: {fileID: 148305180}
   - component: {fileID: 148305179}
   - component: {fileID: 148305178}
-  - component: {fileID: 148305177}
   m_Layer: 5
   m_Name: MaleM
   m_TagString: Male
@@ -999,48 +955,6 @@ RectTransform:
   m_AnchoredPosition: {x: 790, y: -70}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &148305177
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 148305175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4715693f7dae27945b997d5be778ddc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaleA: MaleA
-  MaleB: MaleB
-  MaleC: MaleC
-  MaleD: MaleD
-  MaleE: MaleE
-  MaleF: MaleF
-  MaleG: MaleG
-  MaleH: MaleH
-  MaleI: MaleI
-  MaleJ: MaleJ
-  MaleK: MaleK
-  MaleL: MaleL
-  MaleM: MaleM
-  MaleN: MaleN
-  MaleO: MaleO
-  FemaleA: FemaleA
-  FemaleB: FemaleB
-  FemaleC: FemaleC
-  FemaleD: FemaleD
-  FemaleE: FemaleE
-  FemaleF: FemaleF
-  FemaleG: FemaleG
-  FemaleH: FemaleH
-  FemaleI: FemaleI
-  FemaleJ: FemaleJ
-  FemaleK: FemaleK
-  FemaleL: FemaleL
-  FemaleM: FemaleM
-  FemaleN: FemaleN
-  FemaleO: FemaleO
 --- !u!114 &148305178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1084,7 +998,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1954162599}
+      - m_Target: {fileID: 346245825}
         m_MethodName: funcMaleM
         m_Mode: 1
         m_Arguments:
@@ -1250,7 +1164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultRooms:
   - Name: Room1
-    sceneName: Main
+    sceneName: LoadingScene
     maxPlayer: 500
   roomUI: {fileID: 1783652546}
   InputField: {fileID: 1296458271}
@@ -1515,7 +1429,6 @@ GameObject:
   - component: {fileID: 289178646}
   - component: {fileID: 289178645}
   - component: {fileID: 289178644}
-  - component: {fileID: 289178647}
   m_Layer: 5
   m_Name: MaleB
   m_TagString: Male
@@ -1587,7 +1500,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 889944497}
+      - m_Target: {fileID: 346245825}
         m_MethodName: funcMaleB
         m_Mode: 1
         m_Arguments:
@@ -1645,48 +1558,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 289178642}
   m_CullTransparentMesh: 0
---- !u!114 &289178647
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 289178642}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4715693f7dae27945b997d5be778ddc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaleA: MaleA
-  MaleB: MaleB
-  MaleC: MaleC
-  MaleD: MaleD
-  MaleE: MaleE
-  MaleF: MaleF
-  MaleG: MaleG
-  MaleH: MaleH
-  MaleI: MaleI
-  MaleJ: MaleJ
-  MaleK: MaleK
-  MaleL: MaleL
-  MaleM: MaleM
-  MaleN: MaleN
-  MaleO: MaleO
-  FemaleA: FemaleA
-  FemaleB: FemaleB
-  FemaleC: FemaleC
-  FemaleD: FemaleD
-  FemaleE: FemaleE
-  FemaleF: FemaleF
-  FemaleG: FemaleG
-  FemaleH: FemaleH
-  FemaleI: FemaleI
-  FemaleJ: FemaleJ
-  FemaleK: FemaleK
-  FemaleL: FemaleL
-  FemaleM: FemaleM
-  FemaleN: FemaleN
-  FemaleO: FemaleO
 --- !u!1 &290592979
 GameObject:
   m_ObjectHideFlags: 0
@@ -1916,7 +1787,6 @@ GameObject:
   - component: {fileID: 305875052}
   - component: {fileID: 305875051}
   - component: {fileID: 305875050}
-  - component: {fileID: 305875049}
   m_Layer: 5
   m_Name: MaleI
   m_TagString: Male
@@ -1945,48 +1815,6 @@ RectTransform:
   m_AnchoredPosition: {x: 1110, y: -70}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &305875049
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 305875047}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4715693f7dae27945b997d5be778ddc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaleA: MaleA
-  MaleB: MaleB
-  MaleC: MaleC
-  MaleD: MaleD
-  MaleE: MaleE
-  MaleF: MaleF
-  MaleG: MaleG
-  MaleH: MaleH
-  MaleI: MaleI
-  MaleJ: MaleJ
-  MaleK: MaleK
-  MaleL: MaleL
-  MaleM: MaleM
-  MaleN: MaleN
-  MaleO: MaleO
-  FemaleA: FemaleA
-  FemaleB: FemaleB
-  FemaleC: FemaleC
-  FemaleD: FemaleD
-  FemaleE: FemaleE
-  FemaleF: FemaleF
-  FemaleG: FemaleG
-  FemaleH: FemaleH
-  FemaleI: FemaleI
-  FemaleJ: FemaleJ
-  FemaleK: FemaleK
-  FemaleL: FemaleL
-  FemaleM: FemaleM
-  FemaleN: FemaleN
-  FemaleO: FemaleO
 --- !u!114 &305875050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2030,7 +1858,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1718252732}
+      - m_Target: {fileID: 346245825}
         m_MethodName: funcMaleI
         m_Mode: 1
         m_Arguments:
@@ -2100,7 +1928,6 @@ GameObject:
   - component: {fileID: 312937227}
   - component: {fileID: 312937226}
   - component: {fileID: 312937225}
-  - component: {fileID: 312937224}
   m_Layer: 5
   m_Name: MaleL
   m_TagString: Male
@@ -2129,48 +1956,6 @@ RectTransform:
   m_AnchoredPosition: {x: 470, y: -70}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &312937224
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 312937222}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4715693f7dae27945b997d5be778ddc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaleA: MaleA
-  MaleB: MaleB
-  MaleC: MaleC
-  MaleD: MaleD
-  MaleE: MaleE
-  MaleF: MaleF
-  MaleG: MaleG
-  MaleH: MaleH
-  MaleI: MaleI
-  MaleJ: MaleJ
-  MaleK: MaleK
-  MaleL: MaleL
-  MaleM: MaleM
-  MaleN: MaleN
-  MaleO: MaleO
-  FemaleA: FemaleA
-  FemaleB: FemaleB
-  FemaleC: FemaleC
-  FemaleD: FemaleD
-  FemaleE: FemaleE
-  FemaleF: FemaleF
-  FemaleG: FemaleG
-  FemaleH: FemaleH
-  FemaleI: FemaleI
-  FemaleJ: FemaleJ
-  FemaleK: FemaleK
-  FemaleL: FemaleL
-  FemaleM: FemaleM
-  FemaleN: FemaleN
-  FemaleO: FemaleO
 --- !u!114 &312937225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2214,7 +1999,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1954162599}
+      - m_Target: {fileID: 346245825}
         m_MethodName: funcMaleL
         m_Mode: 1
         m_Arguments:
@@ -2585,6 +2370,79 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 344852463}
   m_CullTransparentMesh: 0
+--- !u!1 &346245824
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 346245826}
+  - component: {fileID: 346245825}
+  m_Layer: 0
+  m_Name: ChoiceChracter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &346245825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346245824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4715693f7dae27945b997d5be778ddc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaleA: MaleA
+  MaleB: MaleB
+  MaleC: MaleC
+  MaleD: MaleD
+  MaleE: MaleE
+  MaleF: MaleF
+  MaleG: MaleG
+  MaleH: MaleH
+  MaleI: MaleI
+  MaleJ: MaleJ
+  MaleK: MaleK
+  MaleL: MaleL
+  MaleM: MaleM
+  MaleN: MaleN
+  MaleO: MaleO
+  FemaleA: FemaleA
+  FemaleB: FemaleB
+  FemaleC: FemaleC
+  FemaleD: FemaleD
+  FemaleE: FemaleE
+  FemaleF: FemaleF
+  FemaleG: FemaleG
+  FemaleH: FemaleH
+  FemaleI: FemaleI
+  FemaleJ: FemaleJ
+  FemaleK: FemaleK
+  FemaleL: FemaleL
+  FemaleM: FemaleM
+  FemaleN: FemaleN
+  FemaleO: FemaleO
+--- !u!4 &346245826
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346245824}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &358644871
 GameObject:
   m_ObjectHideFlags: 0
@@ -3023,7 +2881,6 @@ GameObject:
   - component: {fileID: 472399711}
   - component: {fileID: 472399710}
   - component: {fileID: 472399709}
-  - component: {fileID: 472399708}
   m_Layer: 5
   m_Name: FemaleJ
   m_TagString: Female
@@ -3052,48 +2909,6 @@ RectTransform:
   m_AnchoredPosition: {x: 1430, y: -523.5}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &472399708
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 472399706}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4715693f7dae27945b997d5be778ddc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaleA: MaleA
-  MaleB: MaleB
-  MaleC: MaleC
-  MaleD: MaleD
-  MaleE: MaleE
-  MaleF: MaleF
-  MaleG: MaleG
-  MaleH: MaleH
-  MaleI: MaleI
-  MaleJ: MaleJ
-  MaleK: MaleK
-  MaleL: MaleL
-  MaleM: MaleM
-  MaleN: MaleN
-  MaleO: MaleO
-  FemaleA: FemaleA
-  FemaleB: FemaleB
-  FemaleC: FemaleC
-  FemaleD: FemaleD
-  FemaleE: FemaleE
-  FemaleF: FemaleF
-  FemaleG: FemaleG
-  FemaleH: FemaleH
-  FemaleI: FemaleI
-  FemaleJ: FemaleJ
-  FemaleK: FemaleK
-  FemaleL: FemaleL
-  FemaleM: FemaleM
-  FemaleN: FemaleN
-  FemaleO: FemaleO
 --- !u!114 &472399709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3137,7 +2952,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1718252732}
+      - m_Target: {fileID: 346245825}
         m_MethodName: funcFemaleJ
         m_Mode: 1
         m_Arguments:
@@ -3654,8 +3469,6 @@ MonoBehaviour:
   NameText: {fileID: 2095490332}
   User: {fileID: 2145018975}
   IsToggle1: 0
-  IsToggle2: 0
-  IsToggle3: 0
 --- !u!4 &590414778
 Transform:
   m_ObjectHideFlags: 0
@@ -4116,7 +3929,6 @@ GameObject:
   - component: {fileID: 672281805}
   - component: {fileID: 672281804}
   - component: {fileID: 672281803}
-  - component: {fileID: 672281802}
   m_Layer: 5
   m_Name: FemaleO
   m_TagString: Female
@@ -4145,48 +3957,6 @@ RectTransform:
   m_AnchoredPosition: {x: 1430, y: -523.5}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &672281802
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 672281800}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4715693f7dae27945b997d5be778ddc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaleA: MaleA
-  MaleB: MaleB
-  MaleC: MaleC
-  MaleD: MaleD
-  MaleE: MaleE
-  MaleF: MaleF
-  MaleG: MaleG
-  MaleH: MaleH
-  MaleI: MaleI
-  MaleJ: MaleJ
-  MaleK: MaleK
-  MaleL: MaleL
-  MaleM: MaleM
-  MaleN: MaleN
-  MaleO: MaleO
-  FemaleA: FemaleA
-  FemaleB: FemaleB
-  FemaleC: FemaleC
-  FemaleD: FemaleD
-  FemaleE: FemaleE
-  FemaleF: FemaleF
-  FemaleG: FemaleG
-  FemaleH: FemaleH
-  FemaleI: FemaleI
-  FemaleJ: FemaleJ
-  FemaleK: FemaleK
-  FemaleL: FemaleL
-  FemaleM: FemaleM
-  FemaleN: FemaleN
-  FemaleO: FemaleO
 --- !u!114 &672281803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4230,7 +4000,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1954162599}
+      - m_Target: {fileID: 346245825}
         m_MethodName: funcFemaleO
         m_Mode: 1
         m_Arguments:
@@ -4443,7 +4213,6 @@ GameObject:
   - component: {fileID: 747534030}
   - component: {fileID: 747534029}
   - component: {fileID: 747534028}
-  - component: {fileID: 747534027}
   m_Layer: 5
   m_Name: MaleF
   m_TagString: Male
@@ -4472,48 +4241,6 @@ RectTransform:
   m_AnchoredPosition: {x: 150, y: -70}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &747534027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 747534025}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4715693f7dae27945b997d5be778ddc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaleA: MaleA
-  MaleB: MaleB
-  MaleC: MaleC
-  MaleD: MaleD
-  MaleE: MaleE
-  MaleF: MaleF
-  MaleG: MaleG
-  MaleH: MaleH
-  MaleI: MaleI
-  MaleJ: MaleJ
-  MaleK: MaleK
-  MaleL: MaleL
-  MaleM: MaleM
-  MaleN: MaleN
-  MaleO: MaleO
-  FemaleA: FemaleA
-  FemaleB: FemaleB
-  FemaleC: FemaleC
-  FemaleD: FemaleD
-  FemaleE: FemaleE
-  FemaleF: FemaleF
-  FemaleG: FemaleG
-  FemaleH: FemaleH
-  FemaleI: FemaleI
-  FemaleJ: FemaleJ
-  FemaleK: FemaleK
-  FemaleL: FemaleL
-  FemaleM: FemaleM
-  FemaleN: FemaleN
-  FemaleO: FemaleO
 --- !u!114 &747534028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4557,7 +4284,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1718252732}
+      - m_Target: {fileID: 346245825}
         m_MethodName: funcMaleF
         m_Mode: 1
         m_Arguments:
@@ -4627,7 +4354,6 @@ GameObject:
   - component: {fileID: 758095456}
   - component: {fileID: 758095455}
   - component: {fileID: 758095454}
-  - component: {fileID: 758095453}
   m_Layer: 5
   m_Name: MaleN
   m_TagString: Male
@@ -4656,48 +4382,6 @@ RectTransform:
   m_AnchoredPosition: {x: 1110, y: -70}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &758095453
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 758095451}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4715693f7dae27945b997d5be778ddc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaleA: MaleA
-  MaleB: MaleB
-  MaleC: MaleC
-  MaleD: MaleD
-  MaleE: MaleE
-  MaleF: MaleF
-  MaleG: MaleG
-  MaleH: MaleH
-  MaleI: MaleI
-  MaleJ: MaleJ
-  MaleK: MaleK
-  MaleL: MaleL
-  MaleM: MaleM
-  MaleN: MaleN
-  MaleO: MaleO
-  FemaleA: FemaleA
-  FemaleB: FemaleB
-  FemaleC: FemaleC
-  FemaleD: FemaleD
-  FemaleE: FemaleE
-  FemaleF: FemaleF
-  FemaleG: FemaleG
-  FemaleH: FemaleH
-  FemaleI: FemaleI
-  FemaleJ: FemaleJ
-  FemaleK: FemaleK
-  FemaleL: FemaleL
-  FemaleM: FemaleM
-  FemaleN: FemaleN
-  FemaleO: FemaleO
 --- !u!114 &758095454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4741,7 +4425,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1954162599}
+      - m_Target: {fileID: 346245825}
         m_MethodName: funcMaleN
         m_Mode: 1
         m_Arguments:
@@ -5105,7 +4789,6 @@ GameObject:
   - component: {fileID: 800858852}
   - component: {fileID: 800858851}
   - component: {fileID: 800858850}
-  - component: {fileID: 800858849}
   m_Layer: 5
   m_Name: FemaleG
   m_TagString: Female
@@ -5134,48 +4817,6 @@ RectTransform:
   m_AnchoredPosition: {x: 470, y: -523.5}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &800858849
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 800858847}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4715693f7dae27945b997d5be778ddc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaleA: MaleA
-  MaleB: MaleB
-  MaleC: MaleC
-  MaleD: MaleD
-  MaleE: MaleE
-  MaleF: MaleF
-  MaleG: MaleG
-  MaleH: MaleH
-  MaleI: MaleI
-  MaleJ: MaleJ
-  MaleK: MaleK
-  MaleL: MaleL
-  MaleM: MaleM
-  MaleN: MaleN
-  MaleO: MaleO
-  FemaleA: FemaleA
-  FemaleB: FemaleB
-  FemaleC: FemaleC
-  FemaleD: FemaleD
-  FemaleE: FemaleE
-  FemaleF: FemaleF
-  FemaleG: FemaleG
-  FemaleH: FemaleH
-  FemaleI: FemaleI
-  FemaleJ: FemaleJ
-  FemaleK: FemaleK
-  FemaleL: FemaleL
-  FemaleM: FemaleM
-  FemaleN: FemaleN
-  FemaleO: FemaleO
 --- !u!114 &800858850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5219,7 +4860,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1718252732}
+      - m_Target: {fileID: 346245825}
         m_MethodName: funcFemaleG
         m_Mode: 1
         m_Arguments:
@@ -5440,7 +5081,6 @@ GameObject:
   - component: {fileID: 846521816}
   - component: {fileID: 846521815}
   - component: {fileID: 846521814}
-  - component: {fileID: 846521813}
   m_Layer: 5
   m_Name: FemaleF
   m_TagString: Female
@@ -5469,48 +5109,6 @@ RectTransform:
   m_AnchoredPosition: {x: 150, y: -523.5}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &846521813
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 846521811}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4715693f7dae27945b997d5be778ddc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaleA: MaleA
-  MaleB: MaleB
-  MaleC: MaleC
-  MaleD: MaleD
-  MaleE: MaleE
-  MaleF: MaleF
-  MaleG: MaleG
-  MaleH: MaleH
-  MaleI: MaleI
-  MaleJ: MaleJ
-  MaleK: MaleK
-  MaleL: MaleL
-  MaleM: MaleM
-  MaleN: MaleN
-  MaleO: MaleO
-  FemaleA: FemaleA
-  FemaleB: FemaleB
-  FemaleC: FemaleC
-  FemaleD: FemaleD
-  FemaleE: FemaleE
-  FemaleF: FemaleF
-  FemaleG: FemaleG
-  FemaleH: FemaleH
-  FemaleI: FemaleI
-  FemaleJ: FemaleJ
-  FemaleK: FemaleK
-  FemaleL: FemaleL
-  FemaleM: FemaleM
-  FemaleN: FemaleN
-  FemaleO: FemaleO
 --- !u!114 &846521814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5554,7 +5152,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1718252732}
+      - m_Target: {fileID: 346245825}
         m_MethodName: funcFemaleF
         m_Mode: 1
         m_Arguments:
@@ -5624,7 +5222,6 @@ GameObject:
   - component: {fileID: 864063791}
   - component: {fileID: 864063790}
   - component: {fileID: 864063789}
-  - component: {fileID: 864063788}
   m_Layer: 5
   m_Name: MaleG
   m_TagString: Male
@@ -5653,48 +5250,6 @@ RectTransform:
   m_AnchoredPosition: {x: 470, y: -70}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &864063788
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 864063786}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4715693f7dae27945b997d5be778ddc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaleA: MaleA
-  MaleB: MaleB
-  MaleC: MaleC
-  MaleD: MaleD
-  MaleE: MaleE
-  MaleF: MaleF
-  MaleG: MaleG
-  MaleH: MaleH
-  MaleI: MaleI
-  MaleJ: MaleJ
-  MaleK: MaleK
-  MaleL: MaleL
-  MaleM: MaleM
-  MaleN: MaleN
-  MaleO: MaleO
-  FemaleA: FemaleA
-  FemaleB: FemaleB
-  FemaleC: FemaleC
-  FemaleD: FemaleD
-  FemaleE: FemaleE
-  FemaleF: FemaleF
-  FemaleG: FemaleG
-  FemaleH: FemaleH
-  FemaleI: FemaleI
-  FemaleJ: FemaleJ
-  FemaleK: FemaleK
-  FemaleL: FemaleL
-  FemaleM: FemaleM
-  FemaleN: FemaleN
-  FemaleO: FemaleO
 --- !u!114 &864063789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5738,7 +5293,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1718252732}
+      - m_Target: {fileID: 346245825}
         m_MethodName: funcMaleG
         m_Mode: 1
         m_Arguments:
@@ -5885,7 +5440,6 @@ GameObject:
   - component: {fileID: 889944496}
   - component: {fileID: 889944495}
   - component: {fileID: 889944494}
-  - component: {fileID: 889944497}
   m_Layer: 5
   m_Name: MaleE
   m_TagString: Male
@@ -5957,7 +5511,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 889944497}
+      - m_Target: {fileID: 346245825}
         m_MethodName: funcMaleE
         m_Mode: 1
         m_Arguments:
@@ -6015,48 +5569,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 889944492}
   m_CullTransparentMesh: 0
---- !u!114 &889944497
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 889944492}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4715693f7dae27945b997d5be778ddc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaleA: MaleA
-  MaleB: MaleB
-  MaleC: MaleC
-  MaleD: MaleD
-  MaleE: MaleE
-  MaleF: MaleF
-  MaleG: MaleG
-  MaleH: MaleH
-  MaleI: MaleI
-  MaleJ: MaleJ
-  MaleK: MaleK
-  MaleL: MaleL
-  MaleM: MaleM
-  MaleN: MaleN
-  MaleO: MaleO
-  FemaleA: FemaleA
-  FemaleB: FemaleB
-  FemaleC: FemaleC
-  FemaleD: FemaleD
-  FemaleE: FemaleE
-  FemaleF: FemaleF
-  FemaleG: FemaleG
-  FemaleH: FemaleH
-  FemaleI: FemaleI
-  FemaleJ: FemaleJ
-  FemaleK: FemaleK
-  FemaleL: FemaleL
-  FemaleM: FemaleM
-  FemaleN: FemaleN
-  FemaleO: FemaleO
 --- !u!1 &893247134
 GameObject:
   m_ObjectHideFlags: 0
@@ -6069,7 +5581,6 @@ GameObject:
   - component: {fileID: 893247138}
   - component: {fileID: 893247137}
   - component: {fileID: 893247136}
-  - component: {fileID: 893247139}
   m_Layer: 5
   m_Name: MaleA
   m_TagString: Male
@@ -6141,7 +5652,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 889944497}
+      - m_Target: {fileID: 346245825}
         m_MethodName: funcMaleA
         m_Mode: 1
         m_Arguments:
@@ -6199,48 +5710,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 893247134}
   m_CullTransparentMesh: 0
---- !u!114 &893247139
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 893247134}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4715693f7dae27945b997d5be778ddc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaleA: MaleA
-  MaleB: MaleB
-  MaleC: MaleC
-  MaleD: MaleD
-  MaleE: MaleE
-  MaleF: MaleF
-  MaleG: MaleG
-  MaleH: MaleH
-  MaleI: MaleI
-  MaleJ: MaleJ
-  MaleK: MaleK
-  MaleL: MaleL
-  MaleM: MaleM
-  MaleN: MaleN
-  MaleO: MaleO
-  FemaleA: FemaleA
-  FemaleB: FemaleB
-  FemaleC: FemaleC
-  FemaleD: FemaleD
-  FemaleE: FemaleE
-  FemaleF: FemaleF
-  FemaleG: FemaleG
-  FemaleH: FemaleH
-  FemaleI: FemaleI
-  FemaleJ: FemaleJ
-  FemaleK: FemaleK
-  FemaleL: FemaleL
-  FemaleM: FemaleM
-  FemaleN: FemaleN
-  FemaleO: FemaleO
 --- !u!1 &905929493
 GameObject:
   m_ObjectHideFlags: 0
@@ -6944,7 +6413,6 @@ GameObject:
   - component: {fileID: 1165588177}
   - component: {fileID: 1165588176}
   - component: {fileID: 1165588175}
-  - component: {fileID: 1165588174}
   m_Layer: 5
   m_Name: FemaleL
   m_TagString: Female
@@ -6973,48 +6441,6 @@ RectTransform:
   m_AnchoredPosition: {x: 470, y: -523.5}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1165588174
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1165588172}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4715693f7dae27945b997d5be778ddc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaleA: MaleA
-  MaleB: MaleB
-  MaleC: MaleC
-  MaleD: MaleD
-  MaleE: MaleE
-  MaleF: MaleF
-  MaleG: MaleG
-  MaleH: MaleH
-  MaleI: MaleI
-  MaleJ: MaleJ
-  MaleK: MaleK
-  MaleL: MaleL
-  MaleM: MaleM
-  MaleN: MaleN
-  MaleO: MaleO
-  FemaleA: FemaleA
-  FemaleB: FemaleB
-  FemaleC: FemaleC
-  FemaleD: FemaleD
-  FemaleE: FemaleE
-  FemaleF: FemaleF
-  FemaleG: FemaleG
-  FemaleH: FemaleH
-  FemaleI: FemaleI
-  FemaleJ: FemaleJ
-  FemaleK: FemaleK
-  FemaleL: FemaleL
-  FemaleM: FemaleM
-  FemaleN: FemaleN
-  FemaleO: FemaleO
 --- !u!114 &1165588175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7058,7 +6484,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1954162599}
+      - m_Target: {fileID: 346245825}
         m_MethodName: funcFemaleL
         m_Mode: 1
         m_Arguments:
@@ -7805,7 +7231,6 @@ GameObject:
   - component: {fileID: 1299568992}
   - component: {fileID: 1299568991}
   - component: {fileID: 1299568990}
-  - component: {fileID: 1299568989}
   m_Layer: 5
   m_Name: MaleH
   m_TagString: Male
@@ -7834,48 +7259,6 @@ RectTransform:
   m_AnchoredPosition: {x: 790, y: -70}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1299568989
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1299568987}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4715693f7dae27945b997d5be778ddc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaleA: MaleA
-  MaleB: MaleB
-  MaleC: MaleC
-  MaleD: MaleD
-  MaleE: MaleE
-  MaleF: MaleF
-  MaleG: MaleG
-  MaleH: MaleH
-  MaleI: MaleI
-  MaleJ: MaleJ
-  MaleK: MaleK
-  MaleL: MaleL
-  MaleM: MaleM
-  MaleN: MaleN
-  MaleO: MaleO
-  FemaleA: FemaleA
-  FemaleB: FemaleB
-  FemaleC: FemaleC
-  FemaleD: FemaleD
-  FemaleE: FemaleE
-  FemaleF: FemaleF
-  FemaleG: FemaleG
-  FemaleH: FemaleH
-  FemaleI: FemaleI
-  FemaleJ: FemaleJ
-  FemaleK: FemaleK
-  FemaleL: FemaleL
-  FemaleM: FemaleM
-  FemaleN: FemaleN
-  FemaleO: FemaleO
 --- !u!114 &1299568990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7919,7 +7302,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1718252732}
+      - m_Target: {fileID: 346245825}
         m_MethodName: funcMaleH
         m_Mode: 1
         m_Arguments:
@@ -8867,7 +8250,6 @@ GameObject:
   - component: {fileID: 1479501042}
   - component: {fileID: 1479501041}
   - component: {fileID: 1479501040}
-  - component: {fileID: 1479501039}
   m_Layer: 5
   m_Name: FemaleI
   m_TagString: Female
@@ -8896,48 +8278,6 @@ RectTransform:
   m_AnchoredPosition: {x: 1110, y: -523.5}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1479501039
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1479501037}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4715693f7dae27945b997d5be778ddc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaleA: MaleA
-  MaleB: MaleB
-  MaleC: MaleC
-  MaleD: MaleD
-  MaleE: MaleE
-  MaleF: MaleF
-  MaleG: MaleG
-  MaleH: MaleH
-  MaleI: MaleI
-  MaleJ: MaleJ
-  MaleK: MaleK
-  MaleL: MaleL
-  MaleM: MaleM
-  MaleN: MaleN
-  MaleO: MaleO
-  FemaleA: FemaleA
-  FemaleB: FemaleB
-  FemaleC: FemaleC
-  FemaleD: FemaleD
-  FemaleE: FemaleE
-  FemaleF: FemaleF
-  FemaleG: FemaleG
-  FemaleH: FemaleH
-  FemaleI: FemaleI
-  FemaleJ: FemaleJ
-  FemaleK: FemaleK
-  FemaleL: FemaleL
-  FemaleM: FemaleM
-  FemaleN: FemaleN
-  FemaleO: FemaleO
 --- !u!114 &1479501040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8981,7 +8321,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1718252732}
+      - m_Target: {fileID: 346245825}
         m_MethodName: funcFemaleI
         m_Mode: 1
         m_Arguments:
@@ -9282,7 +8622,6 @@ GameObject:
   - component: {fileID: 1552185570}
   - component: {fileID: 1552185569}
   - component: {fileID: 1552185568}
-  - component: {fileID: 1552185571}
   m_Layer: 5
   m_Name: FemaleB
   m_TagString: Female
@@ -9354,7 +8693,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 889944497}
+      - m_Target: {fileID: 346245825}
         m_MethodName: funcFemaleB
         m_Mode: 1
         m_Arguments:
@@ -9412,48 +8751,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1552185566}
   m_CullTransparentMesh: 0
---- !u!114 &1552185571
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1552185566}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4715693f7dae27945b997d5be778ddc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaleA: MaleA
-  MaleB: MaleB
-  MaleC: MaleC
-  MaleD: MaleD
-  MaleE: MaleE
-  MaleF: MaleF
-  MaleG: MaleG
-  MaleH: MaleH
-  MaleI: MaleI
-  MaleJ: MaleJ
-  MaleK: MaleK
-  MaleL: MaleL
-  MaleM: MaleM
-  MaleN: MaleN
-  MaleO: MaleO
-  FemaleA: FemaleA
-  FemaleB: FemaleB
-  FemaleC: FemaleC
-  FemaleD: FemaleD
-  FemaleE: FemaleE
-  FemaleF: FemaleF
-  FemaleG: FemaleG
-  FemaleH: FemaleH
-  FemaleI: FemaleI
-  FemaleJ: FemaleJ
-  FemaleK: FemaleK
-  FemaleL: FemaleL
-  FemaleM: FemaleM
-  FemaleN: FemaleN
-  FemaleO: FemaleO
 --- !u!1 &1561348357
 GameObject:
   m_ObjectHideFlags: 0
@@ -9536,7 +8833,6 @@ GameObject:
   - component: {fileID: 1566199125}
   - component: {fileID: 1566199124}
   - component: {fileID: 1566199123}
-  - component: {fileID: 1566199122}
   m_Layer: 5
   m_Name: FemaleK
   m_TagString: Female
@@ -9565,48 +8861,6 @@ RectTransform:
   m_AnchoredPosition: {x: 150, y: -523.5}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1566199122
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1566199120}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4715693f7dae27945b997d5be778ddc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaleA: MaleA
-  MaleB: MaleB
-  MaleC: MaleC
-  MaleD: MaleD
-  MaleE: MaleE
-  MaleF: MaleF
-  MaleG: MaleG
-  MaleH: MaleH
-  MaleI: MaleI
-  MaleJ: MaleJ
-  MaleK: MaleK
-  MaleL: MaleL
-  MaleM: MaleM
-  MaleN: MaleN
-  MaleO: MaleO
-  FemaleA: FemaleA
-  FemaleB: FemaleB
-  FemaleC: FemaleC
-  FemaleD: FemaleD
-  FemaleE: FemaleE
-  FemaleF: FemaleF
-  FemaleG: FemaleG
-  FemaleH: FemaleH
-  FemaleI: FemaleI
-  FemaleJ: FemaleJ
-  FemaleK: FemaleK
-  FemaleL: FemaleL
-  FemaleM: FemaleM
-  FemaleN: FemaleN
-  FemaleO: FemaleO
 --- !u!114 &1566199123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9650,7 +8904,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1954162599}
+      - m_Target: {fileID: 346245825}
         m_MethodName: funcFemaleK
         m_Mode: 1
         m_Arguments:
@@ -9790,7 +9044,6 @@ GameObject:
   - component: {fileID: 1581545402}
   - component: {fileID: 1581545401}
   - component: {fileID: 1581545400}
-  - component: {fileID: 1581545399}
   m_Layer: 5
   m_Name: FemaleN
   m_TagString: Female
@@ -9819,48 +9072,6 @@ RectTransform:
   m_AnchoredPosition: {x: 1110, y: -523.5}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1581545399
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1581545397}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4715693f7dae27945b997d5be778ddc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaleA: MaleA
-  MaleB: MaleB
-  MaleC: MaleC
-  MaleD: MaleD
-  MaleE: MaleE
-  MaleF: MaleF
-  MaleG: MaleG
-  MaleH: MaleH
-  MaleI: MaleI
-  MaleJ: MaleJ
-  MaleK: MaleK
-  MaleL: MaleL
-  MaleM: MaleM
-  MaleN: MaleN
-  MaleO: MaleO
-  FemaleA: FemaleA
-  FemaleB: FemaleB
-  FemaleC: FemaleC
-  FemaleD: FemaleD
-  FemaleE: FemaleE
-  FemaleF: FemaleF
-  FemaleG: FemaleG
-  FemaleH: FemaleH
-  FemaleI: FemaleI
-  FemaleJ: FemaleJ
-  FemaleK: FemaleK
-  FemaleL: FemaleL
-  FemaleM: FemaleM
-  FemaleN: FemaleN
-  FemaleO: FemaleO
 --- !u!114 &1581545400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9904,7 +9115,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1954162599}
+      - m_Target: {fileID: 346245825}
         m_MethodName: funcFemaleN
         m_Mode: 1
         m_Arguments:
@@ -10357,6 +9568,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: NetworkSpawner
       objectReference: {fileID: 0}
+    - target: {fileID: 1077244156527401298, guid: 161141714d5d74a4b98e0e98efff639f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6950254835616609468, guid: 161141714d5d74a4b98e0e98efff639f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10426,7 +9642,6 @@ GameObject:
   - component: {fileID: 1691489362}
   - component: {fileID: 1691489361}
   - component: {fileID: 1691489360}
-  - component: {fileID: 1691489359}
   m_Layer: 5
   m_Name: FemaleH
   m_TagString: Female
@@ -10455,48 +9670,6 @@ RectTransform:
   m_AnchoredPosition: {x: 790, y: -523.5}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1691489359
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1691489357}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4715693f7dae27945b997d5be778ddc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaleA: MaleA
-  MaleB: MaleB
-  MaleC: MaleC
-  MaleD: MaleD
-  MaleE: MaleE
-  MaleF: MaleF
-  MaleG: MaleG
-  MaleH: MaleH
-  MaleI: MaleI
-  MaleJ: MaleJ
-  MaleK: MaleK
-  MaleL: MaleL
-  MaleM: MaleM
-  MaleN: MaleN
-  MaleO: MaleO
-  FemaleA: FemaleA
-  FemaleB: FemaleB
-  FemaleC: FemaleC
-  FemaleD: FemaleD
-  FemaleE: FemaleE
-  FemaleF: FemaleF
-  FemaleG: FemaleG
-  FemaleH: FemaleH
-  FemaleI: FemaleI
-  FemaleJ: FemaleJ
-  FemaleK: FemaleK
-  FemaleL: FemaleL
-  FemaleM: FemaleM
-  FemaleN: FemaleN
-  FemaleO: FemaleO
 --- !u!114 &1691489360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10540,7 +9713,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1718252732}
+      - m_Target: {fileID: 346245825}
         m_MethodName: funcFemaleH
         m_Mode: 1
         m_Arguments:
@@ -10610,7 +9783,6 @@ GameObject:
   - component: {fileID: 1694019127}
   - component: {fileID: 1694019126}
   - component: {fileID: 1694019125}
-  - component: {fileID: 1694019124}
   m_Layer: 5
   m_Name: FemaleM
   m_TagString: Female
@@ -10639,48 +9811,6 @@ RectTransform:
   m_AnchoredPosition: {x: 790, y: -523.5}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1694019124
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1694019122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4715693f7dae27945b997d5be778ddc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaleA: MaleA
-  MaleB: MaleB
-  MaleC: MaleC
-  MaleD: MaleD
-  MaleE: MaleE
-  MaleF: MaleF
-  MaleG: MaleG
-  MaleH: MaleH
-  MaleI: MaleI
-  MaleJ: MaleJ
-  MaleK: MaleK
-  MaleL: MaleL
-  MaleM: MaleM
-  MaleN: MaleN
-  MaleO: MaleO
-  FemaleA: FemaleA
-  FemaleB: FemaleB
-  FemaleC: FemaleC
-  FemaleD: FemaleD
-  FemaleE: FemaleE
-  FemaleF: FemaleF
-  FemaleG: FemaleG
-  FemaleH: FemaleH
-  FemaleI: FemaleI
-  FemaleJ: FemaleJ
-  FemaleK: FemaleK
-  FemaleL: FemaleL
-  FemaleM: FemaleM
-  FemaleN: FemaleN
-  FemaleO: FemaleO
 --- !u!114 &1694019125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10724,7 +9854,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1954162599}
+      - m_Target: {fileID: 346245825}
         m_MethodName: funcFemaleM
         m_Mode: 1
         m_Arguments:
@@ -10794,7 +9924,6 @@ GameObject:
   - component: {fileID: 1718252735}
   - component: {fileID: 1718252734}
   - component: {fileID: 1718252733}
-  - component: {fileID: 1718252732}
   m_Layer: 5
   m_Name: MaleJ
   m_TagString: Male
@@ -10802,48 +9931,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1718252732
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1718252731}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4715693f7dae27945b997d5be778ddc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaleA: MaleA
-  MaleB: MaleB
-  MaleC: MaleC
-  MaleD: MaleD
-  MaleE: MaleE
-  MaleF: MaleF
-  MaleG: MaleG
-  MaleH: MaleH
-  MaleI: MaleI
-  MaleJ: MaleJ
-  MaleK: MaleK
-  MaleL: MaleL
-  MaleM: MaleM
-  MaleN: MaleN
-  MaleO: MaleO
-  FemaleA: FemaleA
-  FemaleB: FemaleB
-  FemaleC: FemaleC
-  FemaleD: FemaleD
-  FemaleE: FemaleE
-  FemaleF: FemaleF
-  FemaleG: FemaleG
-  FemaleH: FemaleH
-  FemaleI: FemaleI
-  FemaleJ: FemaleJ
-  FemaleK: FemaleK
-  FemaleL: FemaleL
-  FemaleM: FemaleM
-  FemaleN: FemaleN
-  FemaleO: FemaleO
 --- !u!114 &1718252733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10887,7 +9974,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1718252732}
+      - m_Target: {fileID: 346245825}
         m_MethodName: funcMaleJ
         m_Mode: 1
         m_Arguments:
@@ -10978,7 +10065,6 @@ GameObject:
   - component: {fileID: 1731889523}
   - component: {fileID: 1731889522}
   - component: {fileID: 1731889521}
-  - component: {fileID: 1731889524}
   m_Layer: 5
   m_Name: FemaleD
   m_TagString: Female
@@ -11050,7 +10136,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 889944497}
+      - m_Target: {fileID: 346245825}
         m_MethodName: funcFemaleD
         m_Mode: 1
         m_Arguments:
@@ -11108,48 +10194,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1731889519}
   m_CullTransparentMesh: 0
---- !u!114 &1731889524
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1731889519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4715693f7dae27945b997d5be778ddc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaleA: MaleA
-  MaleB: MaleB
-  MaleC: MaleC
-  MaleD: MaleD
-  MaleE: MaleE
-  MaleF: MaleF
-  MaleG: MaleG
-  MaleH: MaleH
-  MaleI: MaleI
-  MaleJ: MaleJ
-  MaleK: MaleK
-  MaleL: MaleL
-  MaleM: MaleM
-  MaleN: MaleN
-  MaleO: MaleO
-  FemaleA: FemaleA
-  FemaleB: FemaleB
-  FemaleC: FemaleC
-  FemaleD: FemaleD
-  FemaleE: FemaleE
-  FemaleF: FemaleF
-  FemaleG: FemaleG
-  FemaleH: FemaleH
-  FemaleI: FemaleI
-  FemaleJ: FemaleJ
-  FemaleK: FemaleK
-  FemaleL: FemaleL
-  FemaleM: FemaleM
-  FemaleN: FemaleN
-  FemaleO: FemaleO
 --- !u!1 &1746706894
 GameObject:
   m_ObjectHideFlags: 0
@@ -11431,7 +10475,6 @@ GameObject:
   - component: {fileID: 1750276377}
   - component: {fileID: 1750276376}
   - component: {fileID: 1750276375}
-  - component: {fileID: 1750276378}
   m_Layer: 5
   m_Name: FemaleA
   m_TagString: Female
@@ -11503,7 +10546,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 889944497}
+      - m_Target: {fileID: 346245825}
         m_MethodName: funcFemaleA
         m_Mode: 1
         m_Arguments:
@@ -11561,48 +10604,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1750276373}
   m_CullTransparentMesh: 0
---- !u!114 &1750276378
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1750276373}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4715693f7dae27945b997d5be778ddc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaleA: MaleA
-  MaleB: MaleB
-  MaleC: MaleC
-  MaleD: MaleD
-  MaleE: MaleE
-  MaleF: MaleF
-  MaleG: MaleG
-  MaleH: MaleH
-  MaleI: MaleI
-  MaleJ: MaleJ
-  MaleK: MaleK
-  MaleL: MaleL
-  MaleM: MaleM
-  MaleN: MaleN
-  MaleO: MaleO
-  FemaleA: FemaleA
-  FemaleB: FemaleB
-  FemaleC: FemaleC
-  FemaleD: FemaleD
-  FemaleE: FemaleE
-  FemaleF: FemaleF
-  FemaleG: FemaleG
-  FemaleH: FemaleH
-  FemaleI: FemaleI
-  FemaleJ: FemaleJ
-  FemaleK: FemaleK
-  FemaleL: FemaleL
-  FemaleM: FemaleM
-  FemaleN: FemaleN
-  FemaleO: FemaleO
 --- !u!1 &1765328635
 GameObject:
   m_ObjectHideFlags: 0
@@ -11960,7 +10961,6 @@ GameObject:
   - component: {fileID: 1832387131}
   - component: {fileID: 1832387130}
   - component: {fileID: 1832387129}
-  - component: {fileID: 1832387132}
   m_Layer: 5
   m_Name: MaleD
   m_TagString: Male
@@ -12032,7 +11032,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 889944497}
+      - m_Target: {fileID: 346245825}
         m_MethodName: funcMaleD
         m_Mode: 1
         m_Arguments:
@@ -12090,48 +11090,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1832387127}
   m_CullTransparentMesh: 0
---- !u!114 &1832387132
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1832387127}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4715693f7dae27945b997d5be778ddc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaleA: MaleA
-  MaleB: MaleB
-  MaleC: MaleC
-  MaleD: MaleD
-  MaleE: MaleE
-  MaleF: MaleF
-  MaleG: MaleG
-  MaleH: MaleH
-  MaleI: MaleI
-  MaleJ: MaleJ
-  MaleK: MaleK
-  MaleL: MaleL
-  MaleM: MaleM
-  MaleN: MaleN
-  MaleO: MaleO
-  FemaleA: FemaleA
-  FemaleB: FemaleB
-  FemaleC: FemaleC
-  FemaleD: FemaleD
-  FemaleE: FemaleE
-  FemaleF: FemaleF
-  FemaleG: FemaleG
-  FemaleH: FemaleH
-  FemaleI: FemaleI
-  FemaleJ: FemaleJ
-  FemaleK: FemaleK
-  FemaleL: FemaleL
-  FemaleM: FemaleM
-  FemaleN: FemaleN
-  FemaleO: FemaleO
 --- !u!1 &1836827081
 GameObject:
   m_ObjectHideFlags: 0
@@ -12280,7 +11238,6 @@ GameObject:
   - component: {fileID: 1850512838}
   - component: {fileID: 1850512837}
   - component: {fileID: 1850512836}
-  - component: {fileID: 1850512839}
   m_Layer: 5
   m_Name: FemaleC
   m_TagString: Female
@@ -12352,7 +11309,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 889944497}
+      - m_Target: {fileID: 346245825}
         m_MethodName: funcFemaleC
         m_Mode: 1
         m_Arguments:
@@ -12410,48 +11367,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1850512834}
   m_CullTransparentMesh: 0
---- !u!114 &1850512839
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1850512834}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4715693f7dae27945b997d5be778ddc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaleA: MaleA
-  MaleB: MaleB
-  MaleC: MaleC
-  MaleD: MaleD
-  MaleE: MaleE
-  MaleF: MaleF
-  MaleG: MaleG
-  MaleH: MaleH
-  MaleI: MaleI
-  MaleJ: MaleJ
-  MaleK: MaleK
-  MaleL: MaleL
-  MaleM: MaleM
-  MaleN: MaleN
-  MaleO: MaleO
-  FemaleA: FemaleA
-  FemaleB: FemaleB
-  FemaleC: FemaleC
-  FemaleD: FemaleD
-  FemaleE: FemaleE
-  FemaleF: FemaleF
-  FemaleG: FemaleG
-  FemaleH: FemaleH
-  FemaleI: FemaleI
-  FemaleJ: FemaleJ
-  FemaleK: FemaleK
-  FemaleL: FemaleL
-  FemaleM: FemaleM
-  FemaleN: FemaleN
-  FemaleO: FemaleO
 --- !u!1 &1883194011
 GameObject:
   m_ObjectHideFlags: 0
@@ -12720,7 +11635,6 @@ GameObject:
   - component: {fileID: 1954162602}
   - component: {fileID: 1954162601}
   - component: {fileID: 1954162600}
-  - component: {fileID: 1954162599}
   m_Layer: 5
   m_Name: MaleO
   m_TagString: Male
@@ -12728,48 +11642,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1954162599
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1954162598}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4715693f7dae27945b997d5be778ddc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaleA: MaleA
-  MaleB: MaleB
-  MaleC: MaleC
-  MaleD: MaleD
-  MaleE: MaleE
-  MaleF: MaleF
-  MaleG: MaleG
-  MaleH: MaleH
-  MaleI: MaleI
-  MaleJ: MaleJ
-  MaleK: MaleK
-  MaleL: MaleL
-  MaleM: MaleM
-  MaleN: MaleN
-  MaleO: MaleO
-  FemaleA: FemaleA
-  FemaleB: FemaleB
-  FemaleC: FemaleC
-  FemaleD: FemaleD
-  FemaleE: FemaleE
-  FemaleF: FemaleF
-  FemaleG: FemaleG
-  FemaleH: FemaleH
-  FemaleI: FemaleI
-  FemaleJ: FemaleJ
-  FemaleK: FemaleK
-  FemaleL: FemaleL
-  FemaleM: FemaleM
-  FemaleN: FemaleN
-  FemaleO: FemaleO
 --- !u!114 &1954162600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12813,7 +11685,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1954162599}
+      - m_Target: {fileID: 346245825}
         m_MethodName: funcMaleO
         m_Mode: 1
         m_Arguments:
@@ -13924,7 +12796,6 @@ GameObject:
   - component: {fileID: 2100489817}
   - component: {fileID: 2100489816}
   - component: {fileID: 2100489815}
-  - component: {fileID: 2100489818}
   m_Layer: 5
   m_Name: FemaleE
   m_TagString: Female
@@ -13996,7 +12867,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 889944497}
+      - m_Target: {fileID: 346245825}
         m_MethodName: funcFemaleE
         m_Mode: 1
         m_Arguments:
@@ -14054,48 +12925,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2100489813}
   m_CullTransparentMesh: 0
---- !u!114 &2100489818
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2100489813}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4715693f7dae27945b997d5be778ddc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaleA: MaleA
-  MaleB: MaleB
-  MaleC: MaleC
-  MaleD: MaleD
-  MaleE: MaleE
-  MaleF: MaleF
-  MaleG: MaleG
-  MaleH: MaleH
-  MaleI: MaleI
-  MaleJ: MaleJ
-  MaleK: MaleK
-  MaleL: MaleL
-  MaleM: MaleM
-  MaleN: MaleN
-  MaleO: MaleO
-  FemaleA: FemaleA
-  FemaleB: FemaleB
-  FemaleC: FemaleC
-  FemaleD: FemaleD
-  FemaleE: FemaleE
-  FemaleF: FemaleF
-  FemaleG: FemaleG
-  FemaleH: FemaleH
-  FemaleI: FemaleI
-  FemaleJ: FemaleJ
-  FemaleK: FemaleK
-  FemaleL: FemaleL
-  FemaleM: FemaleM
-  FemaleN: FemaleN
-  FemaleO: FemaleO
 --- !u!1 &2132909716
 GameObject:
   m_ObjectHideFlags: 0
@@ -14108,7 +12937,6 @@ GameObject:
   - component: {fileID: 2132909720}
   - component: {fileID: 2132909719}
   - component: {fileID: 2132909718}
-  - component: {fileID: 2132909721}
   m_Layer: 5
   m_Name: MaleC
   m_TagString: Male
@@ -14180,7 +13008,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 889944497}
+      - m_Target: {fileID: 346245825}
         m_MethodName: funcMaleC
         m_Mode: 1
         m_Arguments:
@@ -14238,48 +13066,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2132909716}
   m_CullTransparentMesh: 0
---- !u!114 &2132909721
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2132909716}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4715693f7dae27945b997d5be778ddc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaleA: MaleA
-  MaleB: MaleB
-  MaleC: MaleC
-  MaleD: MaleD
-  MaleE: MaleE
-  MaleF: MaleF
-  MaleG: MaleG
-  MaleH: MaleH
-  MaleI: MaleI
-  MaleJ: MaleJ
-  MaleK: MaleK
-  MaleL: MaleL
-  MaleM: MaleM
-  MaleN: MaleN
-  MaleO: MaleO
-  FemaleA: FemaleA
-  FemaleB: FemaleB
-  FemaleC: FemaleC
-  FemaleD: FemaleD
-  FemaleE: FemaleE
-  FemaleF: FemaleF
-  FemaleG: FemaleG
-  FemaleH: FemaleH
-  FemaleI: FemaleI
-  FemaleJ: FemaleJ
-  FemaleK: FemaleK
-  FemaleL: FemaleL
-  FemaleM: FemaleM
-  FemaleN: FemaleN
-  FemaleO: FemaleO
 --- !u!1 &2145018973
 GameObject:
   m_ObjectHideFlags: 0

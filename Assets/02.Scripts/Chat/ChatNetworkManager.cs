@@ -17,6 +17,8 @@ public class ChatNetworkManager : MonoBehaviourPunCallbacks
 
     public PhotonView PV;
 
+    private float time;
+
     public void ChatOpen()
     {
         ChatPanel.SetActive(true);
@@ -49,8 +51,23 @@ public class ChatNetworkManager : MonoBehaviourPunCallbacks
             ChatInput.ActivateInputField();
             ChatInput.Select();
         }
-    }
 
+        for (int i = 0; i < ChatText.Length; i++)
+            if (ChatText[i].text != "")
+            {
+                time += Time.deltaTime;
+
+                if (time > 8f)
+                {
+                    for (int j = 1; j < ChatText.Length; j++)
+                    {
+                        ChatText[j - 1].text = ChatText[j].text;
+                        time = 0f;
+                        ChatText[j].text = "";
+                    }
+                }
+            }
+    }
 
     #region 채팅
     public void Send()

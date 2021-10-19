@@ -25,8 +25,12 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     public Text NameText;
 
+    public string choiceCharacter;
+    private GameObject spawnedPlayerPrefab;
+
     void Start()
     {
+        DontDestroyOnLoad(gameObject);
         PhotonNetwork.GameVersion = "2.0";
         //PhotonNetwork.AutomaticallySyncScene = false; // 마스터 클라이언트로 동기화
     }
@@ -83,6 +87,11 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     {
         Debug.Log("방에 입장하였습니다.");
         base.OnJoinedRoom();
+
+        Vector3 pos = new Vector3(-40f, 0f, -15f);
+        Vector3 randPos = pos + Random.insideUnitSphere * 5;
+        randPos.y = 0;
+        spawnedPlayerPrefab = PhotonNetwork.Instantiate(choiceCharacter, randPos, Quaternion.identity);
     }
 
     public override void OnPlayerEnteredRoom(Player newPlayer)
@@ -95,5 +104,11 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     {
         Debug.Log("방 입장에 실패하였습니다.");
         base.OnJoinRandomFailed(returnCode, message);
+    }
+
+    public override void OnLeftRoom()
+    {
+        base.OnLeftRoom();
+        PhotonNetwork.Destroy(spawnedPlayerPrefab);
     }
 }

@@ -18,19 +18,17 @@ public class GameManager : MonoBehaviour
 
     public bool IsToggle1;
 
+    public string choiceCharacter;
+
     private void Awake()
     {
-     
         DontDestroyOnLoad(gameObject);
     }
-
     
     void Start()
     {
         PlayerPrefs.DeleteKey("Name");
         netManager = FindObjectOfType<NetworkManager>();
-       
-      
     }
 
     public void CheckToggle1()
