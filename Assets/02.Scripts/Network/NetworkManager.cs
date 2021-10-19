@@ -21,7 +21,8 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     void Start()
     {
         PhotonNetwork.GameVersion = "2.0";
-        ConnectToServer();
+
+        //ConnectToServer();
         DontDestroyOnLoad(gameObject);
     }
 
@@ -80,7 +81,8 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         Vector3 pos = new Vector3(-40f, 0f, -15f);
         Vector3 randPos = pos + Random.insideUnitSphere * 5;
         randPos.y = 0;
-        spawnedPlayerPrefab = PhotonNetwork.Instantiate(ChoiceCharacter.choiceCharacter, randPos, Quaternion.identity);
+
+        spawnedPlayerPrefab = PhotonNetwork.Instantiate(ChoiceCharacter.instance.currentCharacter.ToString(), randPos, Quaternion.identity);
     }
 
     public override void OnLeftRoom()
