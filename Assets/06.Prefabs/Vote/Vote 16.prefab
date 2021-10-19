@@ -195,7 +195,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4805326454992264240}
         m_MethodName: VoteBtn
         m_Mode: 1
         m_Arguments:
