@@ -76,6 +76,24 @@ MonoBehaviour:
   - ChatRPC8
   - ChatRPC9
   - VoteRPC
+  - VoteRPC1
+  - VoteRPC10
+  - VoteRPC11
+  - VoteRPC12
+  - VoteRPC13
+  - VoteRPC14
+  - VoteRPC15
+  - VoteRPC16
+  - VoteRPC17
+  - VoteRPC18
+  - VoteRPC2
+  - VoteRPC3
+  - VoteRPC4
+  - VoteRPC6
+  - VoteRPC7
+  - VoteRPC8
+  - VoteRPC9
+  - VoteRPC5
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1
