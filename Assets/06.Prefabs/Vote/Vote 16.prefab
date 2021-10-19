@@ -321,7 +321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11153260864c53f4082fdf51cb025904, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  VoteLive: {fileID: 4836986766282619579}
+  VoteLive: {fileID: 4836986767510252387}
   Already: {fileID: 7716375008143452983}
 --- !u!1 &6508060464654942551
 GameObject:
