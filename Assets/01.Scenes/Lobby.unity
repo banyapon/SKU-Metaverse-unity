@@ -6282,6 +6282,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Network Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 2573689294645802759, guid: 2b0c06895d2ef2d43979bee933edb805,
+        type: 3}
+      propertyPath: defaultRooms.Array.data[0].Name
+      value: miso
+      objectReference: {fileID: 0}
     - target: {fileID: 2573689294645802808, guid: 2b0c06895d2ef2d43979bee933edb805,
         type: 3}
       propertyPath: m_LocalPosition.x
