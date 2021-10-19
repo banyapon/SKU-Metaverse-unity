@@ -12,18 +12,7 @@ public class BoardText : MonoBehaviour
     string ChectText;
     string Chect2Text;
     string[] split_text;
-    int num = 0;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    //int num = 0;
 
     public void OnClickInputButton()
     {

@@ -35,191 +35,190 @@ public class ChoiceCharacter : MonoBehaviour
     public string FemaleN = "FemaleN";
     public string FemaleO = "FemaleO";
 
-    private NetworkManager netPlayer;
+    public static string choiceCharacter;
 
-    void Start()
+    private void Awake()
     {
         DontDestroyOnLoad(gameObject);
-        netPlayer = FindObjectOfType<NetworkManager>();
     }
 
     public void funcMaleA()
     {
-        netPlayer.choiceCharacter = MaleA;
-        Debug.Log(netPlayer.choiceCharacter);
+        choiceCharacter = MaleA;
+        Debug.Log(choiceCharacter);
     }
 
     public void funcMaleB()
     {
-        netPlayer.choiceCharacter = MaleB;
-        Debug.Log(netPlayer.choiceCharacter);
+        choiceCharacter = MaleB;
+        Debug.Log(choiceCharacter);
     }
 
     public void funcMaleC()
     {
-        netPlayer.choiceCharacter = MaleC;
-        Debug.Log(netPlayer.choiceCharacter);
+        choiceCharacter = MaleC;
+        Debug.Log(choiceCharacter);
     }
 
     public void funcMaleD()
     {
-        netPlayer.choiceCharacter = MaleD;
-        Debug.Log(netPlayer.choiceCharacter);
+        choiceCharacter = MaleD;
+        Debug.Log(choiceCharacter);
     }
 
     public void funcMaleE()
     {
-        netPlayer.choiceCharacter = MaleE;
-        Debug.Log(netPlayer.choiceCharacter);
+        choiceCharacter = MaleE;
+        Debug.Log(choiceCharacter);
     }
 
     public void funcMaleF()
     {
-        netPlayer.choiceCharacter = MaleF;
-        Debug.Log(netPlayer.choiceCharacter);
+        choiceCharacter = MaleF;
+        Debug.Log(choiceCharacter);
     }
 
     public void funcMaleG()
     {
-        netPlayer.choiceCharacter = MaleG;
-        Debug.Log(netPlayer.choiceCharacter);
+        choiceCharacter = MaleG;
+        Debug.Log(choiceCharacter);
     }
 
     public void funcMaleH()
     {
-        netPlayer.choiceCharacter = MaleH;
-        Debug.Log(netPlayer.choiceCharacter);
+        choiceCharacter = MaleH;
+        Debug.Log(choiceCharacter);
     }
 
     public void funcMaleI()
     {
-        netPlayer.choiceCharacter = MaleI;
-        Debug.Log(netPlayer.choiceCharacter);
+        choiceCharacter = MaleI;
+        Debug.Log(choiceCharacter);
     }
 
     public void funcMaleJ()
     {
-        netPlayer.choiceCharacter = MaleJ;
-        Debug.Log(netPlayer.choiceCharacter);
+        choiceCharacter = MaleJ;
+        Debug.Log(choiceCharacter);
     }
 
     public void funcMaleK()
     {
-        netPlayer.choiceCharacter = MaleK;
-        Debug.Log(netPlayer.choiceCharacter);
+        choiceCharacter = MaleK;
+        Debug.Log(choiceCharacter);
     }
 
     public void funcMaleL()
     {
-        netPlayer.choiceCharacter = MaleL;
-        Debug.Log(netPlayer.choiceCharacter);
+        choiceCharacter = MaleL;
+        Debug.Log(choiceCharacter);
     }
 
     public void funcMaleM()
     {
-        netPlayer.choiceCharacter = MaleM;
-        Debug.Log(netPlayer.choiceCharacter);
+        choiceCharacter = MaleM;
+        Debug.Log(choiceCharacter);
     }
 
     public void funcMaleN()
     {
-        netPlayer.choiceCharacter = MaleN;
-        Debug.Log(netPlayer.choiceCharacter);
+        choiceCharacter = MaleN;
+        Debug.Log(choiceCharacter);
     }
 
     public void funcMaleO()
     {
-        netPlayer.choiceCharacter = MaleO;
-        Debug.Log(netPlayer.choiceCharacter);
+        choiceCharacter = MaleO;
+        Debug.Log(choiceCharacter);
     }
 
     public void funcFemaleA()
     {
-        netPlayer.choiceCharacter = FemaleA;
-        Debug.Log(netPlayer.choiceCharacter);
+        choiceCharacter = FemaleA;
+        Debug.Log(choiceCharacter);
     }
 
     public void funcFemaleB()
     {
-        netPlayer.choiceCharacter = FemaleB;
-        Debug.Log(netPlayer.choiceCharacter);
+        choiceCharacter = FemaleB;
+        Debug.Log(choiceCharacter);
     }
 
     public void funcFemaleC()
     {
-        netPlayer.choiceCharacter = FemaleC;
-        Debug.Log(netPlayer.choiceCharacter);
+        choiceCharacter = FemaleC;
+        Debug.Log(choiceCharacter);
     }
 
     public void funcFemaleD()
     {
-        netPlayer.choiceCharacter = FemaleD;
-        Debug.Log(netPlayer.choiceCharacter);
+        choiceCharacter = FemaleD;
+        Debug.Log(choiceCharacter);
     }
 
     public void funcFemaleE()
     {
-        netPlayer.choiceCharacter = FemaleE;
-        Debug.Log(netPlayer.choiceCharacter);
+        choiceCharacter = FemaleE;
+        Debug.Log(choiceCharacter);
     }
 
     public void funcFemaleF()
     {
-        netPlayer.choiceCharacter = FemaleF;
-        Debug.Log(netPlayer.choiceCharacter);
+        choiceCharacter = FemaleF;
+        Debug.Log(choiceCharacter);
     }
 
     public void funcFemaleG()
     {
-        netPlayer.choiceCharacter = FemaleG;
-        Debug.Log(netPlayer.choiceCharacter);
+        choiceCharacter = FemaleG;
+        Debug.Log(choiceCharacter);
     }
 
     public void funcFemaleH()
     {
-        netPlayer.choiceCharacter = FemaleH;
-        Debug.Log(netPlayer.choiceCharacter);
+        choiceCharacter = FemaleH;
+        Debug.Log(choiceCharacter);
     }
 
     public void funcFemaleI()
     {
-        netPlayer.choiceCharacter = FemaleI;
-        Debug.Log(netPlayer.choiceCharacter);
+        choiceCharacter = FemaleI;
+        Debug.Log(choiceCharacter);
     }
 
     public void funcFemaleJ()
     {
-        netPlayer.choiceCharacter = FemaleJ;
-        Debug.Log(netPlayer.choiceCharacter);
+        choiceCharacter = FemaleJ;
+        Debug.Log(choiceCharacter);
     }
 
     public void funcFemaleK()
     {
-        netPlayer.choiceCharacter = FemaleK;
-        Debug.Log(netPlayer.choiceCharacter);
+        choiceCharacter = FemaleK;
+        Debug.Log(choiceCharacter);
     }
 
     public void funcFemaleL()
     {
-        netPlayer.choiceCharacter = FemaleL;
-        Debug.Log(netPlayer.choiceCharacter);
+        choiceCharacter = FemaleL;
+        Debug.Log(choiceCharacter);
     }
 
     public void funcFemaleM()
     {
-        netPlayer.choiceCharacter = FemaleM;
-        Debug.Log(netPlayer.choiceCharacter);
+        choiceCharacter = FemaleM;
+        Debug.Log(choiceCharacter);
     }
 
     public void funcFemaleN()
     {
-        netPlayer.choiceCharacter = FemaleN;
-        Debug.Log(netPlayer.choiceCharacter);
+        choiceCharacter = FemaleN;
+        Debug.Log(choiceCharacter);
     }
 
     public void funcFemaleO()
     {
-        netPlayer.choiceCharacter = FemaleO;
-        Debug.Log(netPlayer.choiceCharacter);
+        choiceCharacter = FemaleO;
+        Debug.Log(choiceCharacter);
     }
 }

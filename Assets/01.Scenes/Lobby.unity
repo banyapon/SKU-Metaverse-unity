@@ -362,9 +362,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 219261919}
-        m_MethodName: InitiliazeRoom
-        m_Mode: 3
+      - m_Target: {fileID: 346245827}
+        m_MethodName: LoadAsynScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -999,7 +999,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 346245825}
-        m_MethodName: funcMaleM
+        m_MethodName: funcMaleK
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1009,9 +1009,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 219261919}
-        m_MethodName: InitiliazeRoom
-        m_Mode: 3
+      - m_Target: {fileID: 346245827}
+        m_MethodName: LoadAsynScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1133,59 +1133,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 155205845}
   m_CullTransparentMesh: 0
---- !u!1 &219261918
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 219261920}
-  - component: {fileID: 219261919}
-  m_Layer: 0
-  m_Name: NetworkManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &219261919
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 219261918}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc4cabfb5b930894c9667313cff97032, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defaultRooms:
-  - Name: Room1
-    sceneName: LoadingScene
-    maxPlayer: 500
-  roomUI: {fileID: 1783652546}
-  InputField: {fileID: 1296458271}
-  toggleGroup: {fileID: 400009439}
-  BackButton: {fileID: 789607239}
-  NextButton: {fileID: 2042695826}
-  NameText: {fileID: 2095490332}
---- !u!4 &219261920
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 219261918}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.4733095, y: -0.3836484, z: 0.9854081}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &260064600
 GameObject:
   m_ObjectHideFlags: 0
@@ -1511,9 +1458,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 219261919}
-        m_MethodName: InitiliazeRoom
-        m_Mode: 3
+      - m_Target: {fileID: 346245827}
+        m_MethodName: LoadAsynScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1869,9 +1816,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 219261919}
-        m_MethodName: InitiliazeRoom
-        m_Mode: 3
+      - m_Target: {fileID: 346245827}
+        m_MethodName: LoadAsynScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2000,7 +1947,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 346245825}
-        m_MethodName: funcMaleL
+        m_MethodName: funcMaleK
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2010,9 +1957,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 219261919}
-        m_MethodName: InitiliazeRoom
-        m_Mode: 3
+      - m_Target: {fileID: 346245827}
+        m_MethodName: LoadAsynScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2380,8 +2327,9 @@ GameObject:
   m_Component:
   - component: {fileID: 346245826}
   - component: {fileID: 346245825}
+  - component: {fileID: 346245827}
   m_Layer: 0
-  m_Name: ChoiceChracter
+  m_Name: Chracter Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2441,8 +2389,20 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &346245827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346245824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 259f5d1c627459947b9b3f425bb25ec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &358644871
 GameObject:
   m_ObjectHideFlags: 0
@@ -2953,7 +2913,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 346245825}
-        m_MethodName: funcFemaleJ
+        m_MethodName: funcMaleI
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2963,9 +2923,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 219261919}
-        m_MethodName: InitiliazeRoom
-        m_Mode: 3
+      - m_Target: {fileID: 346245827}
+        m_MethodName: LoadAsynScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3463,12 +3423,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a36dc8f7e62f0f4d960ef7ebe7fdadc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: {fileID: 0}
+  Lobby: {fileID: 1783652546}
   InputField: {fileID: 1296458271}
-  ConnerctedServer: {fileID: 1748744330}
+  toggleGroup: {fileID: 400009439}
   NameText: {fileID: 2095490332}
   User: {fileID: 2145018975}
-  IsToggle1: 0
 --- !u!4 &590414778
 Transform:
   m_ObjectHideFlags: 0
@@ -4001,7 +3960,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 346245825}
-        m_MethodName: funcFemaleO
+        m_MethodName: funcMaleK
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4011,9 +3970,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 219261919}
-        m_MethodName: InitiliazeRoom
-        m_Mode: 3
+      - m_Target: {fileID: 346245827}
+        m_MethodName: LoadAsynScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4285,7 +4244,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 346245825}
-        m_MethodName: funcMaleF
+        m_MethodName: funcMaleI
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4295,9 +4254,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 219261919}
-        m_MethodName: InitiliazeRoom
-        m_Mode: 3
+      - m_Target: {fileID: 346245827}
+        m_MethodName: LoadAsynScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4426,7 +4385,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 346245825}
-        m_MethodName: funcMaleN
+        m_MethodName: funcMaleK
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4436,9 +4395,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 219261919}
-        m_MethodName: InitiliazeRoom
-        m_Mode: 3
+      - m_Target: {fileID: 346245827}
+        m_MethodName: LoadAsynScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4861,7 +4820,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 346245825}
-        m_MethodName: funcFemaleG
+        m_MethodName: funcMaleI
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4871,9 +4830,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 219261919}
-        m_MethodName: InitiliazeRoom
-        m_Mode: 3
+      - m_Target: {fileID: 346245827}
+        m_MethodName: LoadAsynScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5153,7 +5112,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 346245825}
-        m_MethodName: funcFemaleF
+        m_MethodName: funcMaleI
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5163,9 +5122,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 219261919}
-        m_MethodName: InitiliazeRoom
-        m_Mode: 3
+      - m_Target: {fileID: 346245827}
+        m_MethodName: LoadAsynScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5294,7 +5253,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 346245825}
-        m_MethodName: funcMaleG
+        m_MethodName: funcMaleI
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5304,9 +5263,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 219261919}
-        m_MethodName: InitiliazeRoom
-        m_Mode: 3
+      - m_Target: {fileID: 346245827}
+        m_MethodName: LoadAsynScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5512,7 +5471,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 346245825}
-        m_MethodName: funcMaleE
+        m_MethodName: funcMaleB
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5522,9 +5481,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 219261919}
-        m_MethodName: InitiliazeRoom
-        m_Mode: 3
+      - m_Target: {fileID: 346245827}
+        m_MethodName: LoadAsynScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5653,7 +5612,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 346245825}
-        m_MethodName: funcMaleA
+        m_MethodName: funcMaleB
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5663,12 +5622,23 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 219261919}
-        m_MethodName: InitiliazeRoom
-        m_Mode: 3
+      - m_Target: {fileID: 346245827}
+        m_MethodName: LoadAsynScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -5821,7 +5791,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &938000821
 GameObject:
@@ -6485,7 +6455,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 346245825}
-        m_MethodName: funcFemaleL
+        m_MethodName: funcMaleK
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6495,9 +6465,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 219261919}
-        m_MethodName: InitiliazeRoom
-        m_Mode: 3
+      - m_Target: {fileID: 346245827}
+        m_MethodName: LoadAsynScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -7303,7 +7273,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 346245825}
-        m_MethodName: funcMaleH
+        m_MethodName: funcMaleI
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7313,9 +7283,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 219261919}
-        m_MethodName: InitiliazeRoom
-        m_Mode: 3
+      - m_Target: {fileID: 346245827}
+        m_MethodName: LoadAsynScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -8322,7 +8292,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 346245825}
-        m_MethodName: funcFemaleI
+        m_MethodName: funcMaleI
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8332,9 +8302,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 219261919}
-        m_MethodName: InitiliazeRoom
-        m_Mode: 3
+      - m_Target: {fileID: 346245827}
+        m_MethodName: LoadAsynScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -8694,7 +8664,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 346245825}
-        m_MethodName: funcFemaleB
+        m_MethodName: funcMaleB
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8704,9 +8674,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 219261919}
-        m_MethodName: InitiliazeRoom
-        m_Mode: 3
+      - m_Target: {fileID: 346245827}
+        m_MethodName: LoadAsynScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -8905,7 +8875,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 346245825}
-        m_MethodName: funcFemaleK
+        m_MethodName: funcMaleK
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8915,9 +8885,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 219261919}
-        m_MethodName: InitiliazeRoom
-        m_Mode: 3
+      - m_Target: {fileID: 346245827}
+        m_MethodName: LoadAsynScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -9116,7 +9086,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 346245825}
-        m_MethodName: funcFemaleN
+        m_MethodName: funcMaleK
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9126,9 +9096,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 219261919}
-        m_MethodName: InitiliazeRoom
-        m_Mode: 3
+      - m_Target: {fileID: 346245827}
+        m_MethodName: LoadAsynScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -9556,80 +9526,6 @@ MonoBehaviour:
   m_Spacing: {x: 20, y: 353.5}
   m_Constraint: 2
   m_ConstraintCount: 2
---- !u!1001 &1674079884
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1077244156527401298, guid: 161141714d5d74a4b98e0e98efff639f,
-        type: 3}
-      propertyPath: m_Name
-      value: NetworkSpawner
-      objectReference: {fileID: 0}
-    - target: {fileID: 1077244156527401298, guid: 161141714d5d74a4b98e0e98efff639f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6950254835616609468, guid: 161141714d5d74a4b98e0e98efff639f,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6950254835616609468, guid: 161141714d5d74a4b98e0e98efff639f,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6950254835616609468, guid: 161141714d5d74a4b98e0e98efff639f,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6950254835616609468, guid: 161141714d5d74a4b98e0e98efff639f,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6950254835616609468, guid: 161141714d5d74a4b98e0e98efff639f,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6950254835616609468, guid: 161141714d5d74a4b98e0e98efff639f,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6950254835616609468, guid: 161141714d5d74a4b98e0e98efff639f,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6950254835616609468, guid: 161141714d5d74a4b98e0e98efff639f,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6950254835616609468, guid: 161141714d5d74a4b98e0e98efff639f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6950254835616609468, guid: 161141714d5d74a4b98e0e98efff639f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6950254835616609468, guid: 161141714d5d74a4b98e0e98efff639f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 161141714d5d74a4b98e0e98efff639f, type: 3}
 --- !u!1 &1691489357
 GameObject:
   m_ObjectHideFlags: 0
@@ -9714,7 +9610,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 346245825}
-        m_MethodName: funcFemaleH
+        m_MethodName: funcMaleI
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9724,9 +9620,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 219261919}
-        m_MethodName: InitiliazeRoom
-        m_Mode: 3
+      - m_Target: {fileID: 346245827}
+        m_MethodName: LoadAsynScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -9855,7 +9751,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 346245825}
-        m_MethodName: funcFemaleM
+        m_MethodName: funcMaleK
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9865,9 +9761,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 219261919}
-        m_MethodName: InitiliazeRoom
-        m_Mode: 3
+      - m_Target: {fileID: 346245827}
+        m_MethodName: LoadAsynScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -9975,7 +9871,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 346245825}
-        m_MethodName: funcMaleJ
+        m_MethodName: funcMaleI
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9985,9 +9881,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 219261919}
-        m_MethodName: InitiliazeRoom
-        m_Mode: 3
+      - m_Target: {fileID: 346245827}
+        m_MethodName: LoadAsynScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -10137,7 +10033,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 346245825}
-        m_MethodName: funcFemaleD
+        m_MethodName: funcMaleB
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10147,9 +10043,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 219261919}
-        m_MethodName: InitiliazeRoom
-        m_Mode: 3
+      - m_Target: {fileID: 346245827}
+        m_MethodName: LoadAsynScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -10547,7 +10443,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 346245825}
-        m_MethodName: funcFemaleA
+        m_MethodName: funcMaleB
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10557,9 +10453,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 219261919}
-        m_MethodName: InitiliazeRoom
-        m_Mode: 3
+      - m_Target: {fileID: 346245827}
+        m_MethodName: LoadAsynScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -11033,7 +10929,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 346245825}
-        m_MethodName: funcMaleD
+        m_MethodName: funcMaleB
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11043,9 +10939,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 219261919}
-        m_MethodName: InitiliazeRoom
-        m_Mode: 3
+      - m_Target: {fileID: 346245827}
+        m_MethodName: LoadAsynScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -11154,7 +11050,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1845114545
 GameObject:
@@ -11310,7 +11206,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 346245825}
-        m_MethodName: funcFemaleC
+        m_MethodName: funcMaleB
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11320,9 +11216,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 219261919}
-        m_MethodName: InitiliazeRoom
-        m_Mode: 3
+      - m_Target: {fileID: 346245827}
+        m_MethodName: LoadAsynScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -11686,7 +11582,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 346245825}
-        m_MethodName: funcMaleO
+        m_MethodName: funcMaleK
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11696,9 +11592,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 219261919}
-        m_MethodName: InitiliazeRoom
-        m_Mode: 3
+      - m_Target: {fileID: 346245827}
+        m_MethodName: LoadAsynScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -12033,7 +11929,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2042695826
 GameObject:
@@ -12868,7 +12764,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 346245825}
-        m_MethodName: funcFemaleE
+        m_MethodName: funcMaleB
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12878,9 +12774,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 219261919}
-        m_MethodName: InitiliazeRoom
-        m_Mode: 3
+      - m_Target: {fileID: 346245827}
+        m_MethodName: LoadAsynScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -13009,7 +12905,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 346245825}
-        m_MethodName: funcMaleC
+        m_MethodName: funcMaleB
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13019,9 +12915,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 219261919}
-        m_MethodName: InitiliazeRoom
-        m_Mode: 3
+      - m_Target: {fileID: 346245827}
+        m_MethodName: LoadAsynScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

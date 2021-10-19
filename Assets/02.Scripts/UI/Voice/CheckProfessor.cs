@@ -12,7 +12,7 @@ public class CheckProfessor : MonoBehaviourPunCallbacks
     {
         if (PhotonNetwork.IsConnected)
         {
-            if (FindObjectOfType<GameManager>().IsToggle1 == true)
+            if (GameManager.IsToggle1 == true)
             {
                 micButton.SetActive(true);
                 controlButton.SetActive(true);
