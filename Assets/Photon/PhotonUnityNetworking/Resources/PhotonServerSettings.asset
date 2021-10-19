@@ -75,6 +75,7 @@ MonoBehaviour:
   - ChatRPC7
   - ChatRPC8
   - ChatRPC9
+  - VoteRPC
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1
