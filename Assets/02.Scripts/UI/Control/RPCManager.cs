@@ -122,102 +122,117 @@ public class RPCManager : MonoBehaviourPun
     {
         photonView.RPC("VideoRPC", RpcTarget.AllViaServer, 2);
     }
+
+    public void Team4()
+    {
+        photonView.RPC("VideoRPC", RpcTarget.AllViaServer, 3);
+    }
     #endregion
 
     #region TeamImage
+    public void main_image()
+    {
+        photonView.RPC("ImageRPC", RpcTarget.AllBufferedViaServer, 19);
+    }
+
+    public void timetable_image()
+    {
+        photonView.RPC("ImageRPC", RpcTarget.AllBufferedViaServer, 20);
+    }
+
     public void Image_Team1()
     {
-        photonView.RPC("ImageRPC", RpcTarget.AllViaServer, 0);
+        photonView.RPC("ImageRPC", RpcTarget.AllBufferedViaServer, 0);
     }
 
     public void Image_Team2()
     {
-        photonView.RPC("ImageRPC", RpcTarget.AllViaServer, 1);
+        photonView.RPC("ImageRPC", RpcTarget.AllBufferedViaServer, 1);
     }
 
     public void Image_Team3()
     {
-        photonView.RPC("ImageRPC", RpcTarget.AllViaServer, 2);
+        photonView.RPC("ImageRPC", RpcTarget.AllBufferedViaServer, 2);
     }
 
     public void Image_Team4()
     {
-        photonView.RPC("ImageRPC", RpcTarget.AllViaServer, 3);
+        photonView.RPC("ImageRPC", RpcTarget.AllBufferedViaServer, 3);
     }
 
     public void Image_Team5()
     {
-        photonView.RPC("ImageRPC", RpcTarget.AllViaServer, 4);
+        photonView.RPC("ImageRPC", RpcTarget.AllBufferedViaServer, 4);
     }
 
     public void Image_Team6()
     {
-        photonView.RPC("ImageRPC", RpcTarget.AllViaServer, 5);
+        photonView.RPC("ImageRPC", RpcTarget.AllBufferedViaServer, 5);
     }
 
     public void Image_Team7()
     {
-        photonView.RPC("ImageRPC", RpcTarget.AllViaServer, 6);
+        photonView.RPC("ImageRPC", RpcTarget.AllBufferedViaServer, 6);
     }
 
     public void Image_Team8()
     {
-        photonView.RPC("ImageRPC", RpcTarget.AllViaServer, 7);
+        photonView.RPC("ImageRPC", RpcTarget.AllBufferedViaServer, 7);
     }
 
     public void Image_Team9()
     {
-        photonView.RPC("ImageRPC", RpcTarget.AllViaServer, 8);
+        photonView.RPC("ImageRPC", RpcTarget.AllBufferedViaServer, 8);
     }
 
     public void Image_Team10()
     {
-        photonView.RPC("ImageRPC", RpcTarget.AllViaServer, 9);
+        photonView.RPC("ImageRPC", RpcTarget.AllBufferedViaServer, 9);
     }
 
     public void Image_Team11()
     {
-        photonView.RPC("ImageRPC", RpcTarget.AllViaServer, 10);
+        photonView.RPC("ImageRPC", RpcTarget.AllBufferedViaServer, 10);
     }
 
     public void Image_Team12()
     {
-        photonView.RPC("ImageRPC", RpcTarget.AllViaServer, 11);
+        photonView.RPC("ImageRPC", RpcTarget.AllBufferedViaServer, 11);
     }
 
     public void Image_Team13()
     {
-        photonView.RPC("ImageRPC", RpcTarget.AllViaServer, 12);
+        photonView.RPC("ImageRPC", RpcTarget.AllBufferedViaServer, 12);
     }
 
     public void Image_Team14()
     {
-        photonView.RPC("ImageRPC", RpcTarget.AllViaServer, 13);
+        photonView.RPC("ImageRPC", RpcTarget.AllBufferedViaServer, 13);
     }
 
     public void Image_Team15()
     {
-        photonView.RPC("ImageRPC", RpcTarget.AllViaServer, 14);
+        photonView.RPC("ImageRPC", RpcTarget.AllBufferedViaServer, 14);
     }
 
     public void Image_Team16()
     {
-        photonView.RPC("ImageRPC", RpcTarget.AllViaServer, 15);
+        photonView.RPC("ImageRPC", RpcTarget.AllBufferedViaServer, 15);
     }
 
     public void Image_Team17()
     {
-        photonView.RPC("ImageRPC", RpcTarget.AllViaServer, 16);
+        photonView.RPC("ImageRPC", RpcTarget.AllBufferedViaServer, 16);
     }
 
     public void Image_Team18()
     {
-        photonView.RPC("ImageRPC", RpcTarget.AllViaServer, 17);
+        photonView.RPC("ImageRPC", RpcTarget.AllBufferedViaServer, 17);
     }
 
     public void Image_Team19()
     {
-        photonView.RPC("ImageRPC", RpcTarget.AllViaServer, 18);
+        photonView.RPC("ImageRPC", RpcTarget.AllBufferedViaServer, 18);
     }
     #endregion
 
