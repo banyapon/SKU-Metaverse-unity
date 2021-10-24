@@ -122,11 +122,6 @@ public class RPCManager : MonoBehaviourPun
     {
         photonView.RPC("VideoRPC", RpcTarget.AllViaServer, 2);
     }
-
-    public void Team4()
-    {
-        photonView.RPC("VideoRPC", RpcTarget.AllViaServer, 3);
-    }
     #endregion
 
     #region TeamImage

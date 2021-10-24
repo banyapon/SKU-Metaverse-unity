@@ -10,7 +10,6 @@ public class BoothVideo : MonoBehaviour
     public void VideoPlay()
     {
         VideoPlayer.Play();
-        VideoPlayer.SetDirectAudioVolume(0, 0.1f);
     }
 
     public void VideoStop()

@@ -46,7 +46,8 @@ public class InputFieldMove : MonoBehaviourPunCallbacks
 
         else
         {
-            FindObjectOfType<TPCharacterController3D>().enabled = true;
+            if (FindObjectOfType<TPCharacterController3D>() != null)
+                FindObjectOfType<TPCharacterController3D>().enabled = true;
         }
     }
 
@@ -61,7 +62,8 @@ public class InputFieldMove : MonoBehaviourPunCallbacks
 
             else
             {
-                FindObjectOfType<TPCharacterController3D>().enabled = true;
+                if (FindObjectOfType<TPCharacterController3D>() != null)
+                    FindObjectOfType<TPCharacterController3D>().enabled = true;
             }
         }
     }
@@ -93,7 +95,8 @@ public class InputFieldMove : MonoBehaviourPunCallbacks
 
         else
         {
-            FindObjectOfType<TPCharacterController3D>().enabled = true;
+            if (FindObjectOfType<TPCharacterController3D>() != null)
+                FindObjectOfType<TPCharacterController3D>().enabled = true;
         }
     }
 

@@ -11,8 +11,6 @@ public class ChatNetworkManager : MonoBehaviourPunCallbacks
     public Text[] ChatText;
     public InputField ChatInput;
 
-    public GameObject SendBtn;
-
     public GameObject mainInputField;
 
     public PhotonView PV;
@@ -35,14 +33,12 @@ public class ChatNetworkManager : MonoBehaviourPunCallbacks
         {
             mainInputField.GetComponent<Image>().color = new Color(255, 255, 255, 1.0f);
             ChatInput.placeholder.color = new Color(50, 50, 50, 0.5f);
-            SendBtn.SetActive(true);
         }
 
         else
         {
             mainInputField.GetComponent<Image>().color = new Color(255, 255, 255, 0.0f);
             ChatInput.placeholder.color = new Color(50, 50, 50, 0.0f);
-            SendBtn.SetActive(false);
         }
 
         if (Input.GetKeyDown(KeyCode.Return))
