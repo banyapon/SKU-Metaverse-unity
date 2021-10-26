@@ -115,7 +115,7 @@ public class RPCManager : MonoBehaviourPun
 
     public void Team2()
     {
-        photonView.RPC("VideoRPC", RpcTarget.AllViaServer, 1);
+        photonView.RPC("VideoURLRPC", RpcTarget.AllViaServer);
     }
 
     public void Team3()
@@ -128,11 +128,6 @@ public class RPCManager : MonoBehaviourPun
     public void main_image()
     {
         photonView.RPC("ImageRPC", RpcTarget.AllBufferedViaServer, 19);
-    }
-
-    public void timetable_image()
-    {
-        photonView.RPC("ImageRPC", RpcTarget.AllBufferedViaServer, 20);
     }
 
     public void Image_Team1()
@@ -258,6 +253,15 @@ public class RPCManager : MonoBehaviourPun
 
 
     #region RPC_VideoControl
+    [PunRPC]
+    public void VideoURLRPC()
+    {
+        VideoPlayer.url = "https://sangwookyoo.github.io/assets/sku.mp4";
+        ImagePlayer.enabled = false;
+        VideoPlayer.Play();
+        VideoPlayer.SetDirectAudioVolume(0, 0.1f);
+    }
+
     [PunRPC]
     public void VideoRPC(int num)
     {
