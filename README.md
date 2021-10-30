@@ -7,6 +7,7 @@
 </p>
 
 ![main](https://user-images.githubusercontent.com/61134850/138872276-69237784-3eb8-4010-8133-a1232bc6112c.jpg)
+![main2](https://user-images.githubusercontent.com/61134850/139530596-5a0e9d78-153b-48e6-9179-77f717974ffe.png)
 
 ## ⚙ Development Environment
  * OS : Windows 10
