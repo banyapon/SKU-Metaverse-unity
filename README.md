@@ -11,7 +11,8 @@
 
 ## ⚙ Development Environment
  * OS : Windows 10
- * Tool : Unity 3D 2019.3.5
+ * Tool : Unity 3D 2019.3.5 (IL2CPP)
+ * IDE: Visual Studio 2019 (Windows 10 SDK 10.0.18362.0)
  * Framework : PUN 2.32.0, Photon Voice 2.25.1
 
 ## ⚙ Metaverse 5C
