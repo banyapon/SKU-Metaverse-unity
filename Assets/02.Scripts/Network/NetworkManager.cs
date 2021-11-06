@@ -9,7 +9,6 @@ using UnityEngine.SceneManagement;
 [System.Serializable]
 public class DefaultRoom
 {
-    public string Name;
     public int maxPlayer;
 }
 
@@ -17,6 +16,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 {
     public List<DefaultRoom> defaultRooms;
     private GameObject spawnedPlayerPrefab;
+    public string Name;
 
     void Start()
     {
@@ -59,8 +59,9 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         roomOptions.IsVisible = true;
         roomOptions.IsOpen = true;
 
-        PhotonNetwork.JoinOrCreateRoom(roomSettings.Name, roomOptions, TypedLobby.Default);
+        PhotonNetwork.JoinOrCreateRoom(Name, roomOptions, TypedLobby.Default);
         SceneManager.LoadScene("Main");
+        Debug.Log(Name + "룸으로 이동합니다.");
     }
 
     public override void OnJoinRandomFailed(short returnCode, string message)

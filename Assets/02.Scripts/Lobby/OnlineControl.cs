@@ -6,34 +6,28 @@ using UnityEngine.UI;
 public class OnlineControl : MonoBehaviour
 {
     public GameObject Password_;
-    public GameObject Fail_;
 
     public GameObject MainPasswordPanel;
     public GameObject audio_;
     public Text hellotext;
-    DefaultRoom defaultroom = new DefaultRoom();
-    NetworkManager networkmanager = new NetworkManager();
-    GameObject obj;
+
+    public DefaultRoom privateRoom;
+    private NetworkManager netManager;
 
     public InputField PwdText;
 
-    private string password = "20211105";
+    private void Start()
+    {
+        netManager = FindObjectOfType<NetworkManager>();
+    }
 
     public void OnClickPwdButton_main()
     {
-        if (PwdText.text == password)
+        if (PwdText.text != null)
         {
-            obj = GameObject.Find("Network Manager");
-            //Debug.Log("방 이름 확인: " + obj.GetComponent<NetworkManager>().defaultRooms[0].Name);
-            obj.GetComponent<NetworkManager>().defaultRooms[0].Name = password;
+            netManager.Name = PwdText.text;
             Password_.SetActive(false);
-            PwdText.text = "";
             Invoke("CoroutineStart", 0.8f);
-        }
-        else
-        {
-            Fail_.SetActive(true);
-            PwdText.text = "";
         }
     }
 
