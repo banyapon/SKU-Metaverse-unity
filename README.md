@@ -20,7 +20,7 @@
 | Creator | Faculty member, Student, Guest etc. |
 | Currency | Vote |
 | Continuity | Graduation project, IG Screenshot, Mission |
-| Connectivity | Multiplayer (Cloud, Vocie) |
+| Connectivity | Multiplayer (Cloud, Voice) |
 
 ## 🚀 Feature
  * Screen for graduation project presentation (Presentation video by graduation project team)
