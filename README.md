@@ -29,4 +29,4 @@
  * Additional functions (Notice, IG screenshot, Mission, Vote)
 
 ## ✔ License
-Copyright © 2021 Dept. of Media Software, Sungkyul University.
+Copyright © 2021-present Dept. of Media Software, Sungkyul University.
