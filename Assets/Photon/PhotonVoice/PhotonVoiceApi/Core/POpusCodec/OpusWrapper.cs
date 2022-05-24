@@ -2,7 +2,7 @@
 #define DLL_IMPORT_INTERNAL
 #endif
 
-#if NEEDED//UNITY_EDITOR_WIN || UNITY_STANDALONE_WIN || UNITY_WSA
+#if NONE //UNITY_EDITOR_WIN || UNITY_STANDALONE_WIN || UNITY_WSA
 // opus.* lib built from original opus repo 
 #else
 #define OPUS_EGPV // opus_egpv.* lib with interop helpers (we still may use such libs for the platforms where helpers are not required)
@@ -16,16 +16,23 @@
 #define OPUS_EGPV_INTEROP_HELPER_EXTERNAL
 #endif
 
+// Interop helpers required also for Apple Silicon (ARM64)
+
+#if UNITY_EDITOR_OSX || UNITY_STANDALONE_OSX
 // use interop helpers built into opus_egpv.* lib (works for any platform but requires opus lib compiled from customized sources)
-// #define OPUS_EGPV_INTEROP_HELPER_BUILTIN
-// #define OPUS_EGPV
+#define OPUS_EGPV_INTEROP_HELPER_BUILTIN
+#define OPUS_EGPV
+#endif
+
+#if UNITY_WEBGL && !UNITY_EDITOR
+#define DLL_IMPORT_INTERNAL
+#define OPUS_EGPV_INTEROP_HELPER_BUILTIN
+#endif
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Runtime.InteropServices;
 using POpusCodec.Enums;
+using Photon.Voice;
 
 namespace POpusCodec
 {
@@ -85,10 +92,10 @@ namespace POpusCodec
         private static extern OpusStatusCode opus_decoder_init(IntPtr st, SamplingRate Fs, Channels channels);
 
         [DllImport(lib_name, CallingConvention = CallingConvention.Cdecl, CharSet = CharSet.Ansi)]
-        private static extern int opus_decode(IntPtr st, byte[] data, int len, short[] pcm, int frame_size, int decode_fec);
+        private static extern int opus_decode(IntPtr st, IntPtr data, int len, short[] pcm, int frame_size, int decode_fec);
 
         [DllImport(lib_name, CallingConvention = CallingConvention.Cdecl, CharSet = CharSet.Ansi)]
-        private static extern int opus_decode_float(IntPtr st, byte[] data, int len, float[] pcm, int frame_size, int decode_fec);
+        private static extern int opus_decode_float(IntPtr st, IntPtr data, int len, float[] pcm, int frame_size, int decode_fec);
 
         //        [DllImport(import_name, CallingConvention = CallingConvention.Cdecl, CharSet = CharSet.Ansi)]
         //        private static extern int opus_decode(IntPtr st, IntPtr data, int len, short[] pcm, int frame_size, int decode_fec);
@@ -97,7 +104,7 @@ namespace POpusCodec
         //        private static extern int opus_decode_float(IntPtr st, IntPtr data, int len, float[] pcm, int frame_size, int decode_fec);
 
         [DllImport(lib_name, CallingConvention = CallingConvention.Cdecl, CharSet = CharSet.Ansi)]
-        public static extern int opus_packet_get_bandwidth(byte[] data);
+        public static extern int opus_packet_get_bandwidth(IntPtr data);
 
         [DllImport(lib_name, CallingConvention = CallingConvention.Cdecl, CharSet = CharSet.Ansi)]
         public static extern int opus_packet_get_nb_channels(byte[] data);
@@ -115,7 +122,7 @@ namespace POpusCodec
 
             try
             {
-                HandleStatusCode(statusCode);
+                HandleStatusCode(statusCode, "opus_encoder_create/opus_encoder_init", Fs, channels, application);
             }
             catch (Exception ex)
             {
@@ -141,7 +148,7 @@ namespace POpusCodec
 
             if (payloadLength <= 0)
             {
-                HandleStatusCode((OpusStatusCode)payloadLength);
+                HandleStatusCode((OpusStatusCode)payloadLength, "opus_encode/short", frame_size, data.Length);
             }
 
             return payloadLength;
@@ -156,7 +163,7 @@ namespace POpusCodec
 
             if (payloadLength <= 0)
             {
-                HandleStatusCode((OpusStatusCode)payloadLength);
+                HandleStatusCode((OpusStatusCode)payloadLength, "opus_encode/float", frame_size, data.Length);
             }
 
             return payloadLength;
@@ -175,7 +182,7 @@ namespace POpusCodec
             int value = 0;
             OpusStatusCode statusCode = (OpusStatusCode)opus_encoder_ctl_get(st, request, ref value);
 
-            HandleStatusCode(statusCode);
+            HandleStatusCode(statusCode, "opus_encoder_ctl_get", request);
 
             return value;
         }
@@ -187,7 +194,7 @@ namespace POpusCodec
 
             OpusStatusCode statusCode = (OpusStatusCode)opus_encoder_ctl_set(st, request, value);
 
-            HandleStatusCode(statusCode);
+            HandleStatusCode(statusCode, "opus_encoder_ctl_set", request, value);
         }
 
         public static int get_opus_decoder_ctl(IntPtr st, OpusCtlGetRequest request)
@@ -198,7 +205,7 @@ namespace POpusCodec
             int value = 0;
             OpusStatusCode statusCode = (OpusStatusCode)opus_decoder_ctl_get(st, request, ref value);
 
-            HandleStatusCode(statusCode);
+            HandleStatusCode(statusCode, "get_opus_decoder_ctl", request, value);
 
             return value;
         }
@@ -210,7 +217,7 @@ namespace POpusCodec
 
             OpusStatusCode statusCode = (OpusStatusCode)opus_decoder_ctl_set(st, request, value);
 
-            HandleStatusCode(statusCode);
+            HandleStatusCode(statusCode, "set_opus_decoder_ctl", request, value);
         }
         public static IntPtr opus_decoder_create(SamplingRate Fs, Channels channels)
         {
@@ -221,7 +228,7 @@ namespace POpusCodec
 
             try
             {
-                HandleStatusCode(statusCode);
+                HandleStatusCode(statusCode, "opus_decoder_create", Fs, channels);
             }
             catch (Exception ex)
             {
@@ -242,65 +249,49 @@ namespace POpusCodec
             Marshal.FreeHGlobal(st);
         }
 
-        public static int opus_decode(IntPtr st, byte[] data, short[] pcm, int decode_fec, int channels)
+        public static int opus_decode(IntPtr st, FrameBuffer data, short[] pcm, int decode_fec, int channels)
         {
             if (st == IntPtr.Zero)
                 throw new ObjectDisposedException("OpusDecoder");
 
-            int numSamplesDecoded = 0;
-
-            if (data != null)
-            {
-                numSamplesDecoded = opus_decode(st, data, data.Length, pcm, pcm.Length / channels, decode_fec);
-            }
-            else
-            {
-                numSamplesDecoded = opus_decode(st, null, 0, pcm, pcm.Length / channels, decode_fec);
-            }
+            int numSamplesDecoded = opus_decode(st, data.Ptr, data.Length, pcm, pcm.Length / channels, decode_fec);
 
             if (numSamplesDecoded == (int)OpusStatusCode.InvalidPacket)
                 return 0;
 
             if (numSamplesDecoded <= 0)
             {
-                HandleStatusCode((OpusStatusCode)numSamplesDecoded);
+                HandleStatusCode((OpusStatusCode)numSamplesDecoded, "opus_decode/short", data.Length, pcm.Length, decode_fec, channels);
             }
 
             return numSamplesDecoded;
         }
 
-        public static int opus_decode(IntPtr st, byte[] data, float[] pcm, int decode_fec, int channels)
+        public static int opus_decode(IntPtr st, FrameBuffer data, float[] pcm, int decode_fec, int channels)
         {
             if (st == IntPtr.Zero)
                 throw new ObjectDisposedException("OpusDecoder");
 
-            int numSamplesDecoded = 0;
-
-            if (data != null)
-            {
-                numSamplesDecoded = opus_decode_float(st, data, data.Length, pcm, pcm.Length / channels, decode_fec);
-            }
-            else
-            {
-                numSamplesDecoded = opus_decode_float(st, null, 0, pcm, pcm.Length / channels, decode_fec);
-            }
+            int numSamplesDecoded = opus_decode_float(st, data.Ptr, data.Length, pcm, pcm.Length / channels, decode_fec);
 
             if (numSamplesDecoded == (int)OpusStatusCode.InvalidPacket)
                 return 0;
 
             if (numSamplesDecoded <= 0)
             {
-                HandleStatusCode((OpusStatusCode)numSamplesDecoded);
+                HandleStatusCode((OpusStatusCode)numSamplesDecoded, "opus_decode/float", data.Length, pcm.Length, decode_fec, channels);
             }
 
             return numSamplesDecoded;
         }
 
-        private static void HandleStatusCode(OpusStatusCode statusCode)
+        private static void HandleStatusCode(OpusStatusCode statusCode, params object[] info)
         {
             if (statusCode != OpusStatusCode.OK)
             {
-                throw new OpusException(statusCode, Marshal.PtrToStringAnsi(opus_strerror(statusCode)));
+                var infoMsg = "";
+                foreach (var i in info) infoMsg += i.ToString() + ":";
+                throw new OpusException(statusCode, infoMsg  + Marshal.PtrToStringAnsi(opus_strerror(statusCode)));
             }
         }
     }

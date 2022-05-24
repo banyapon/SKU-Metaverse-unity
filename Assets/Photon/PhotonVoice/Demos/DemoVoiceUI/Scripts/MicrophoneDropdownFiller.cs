@@ -83,6 +83,21 @@ namespace Photon.Voice.Unity.Demos.DemoVoiceUI
             this.RefreshMicrophones();
         }
 
+        private void OnEnable()
+        {
+            UtilityScripts.MicrophonePermission.MicrophonePermissionCallback += this.OnMicrophonePermissionCallback;
+        }
+
+        private void OnMicrophonePermissionCallback(bool granted)
+        {
+            this.RefreshMicrophones();
+        }
+
+        private void OnDisable()
+        {
+            UtilityScripts.MicrophonePermission.MicrophonePermissionCallback -= this.OnMicrophonePermissionCallback;
+        }
+
         private void SetupMicDropdown()
         {
             this.micDropdown.ClearOptions();
@@ -101,7 +116,7 @@ namespace Photon.Voice.Unity.Demos.DemoVoiceUI
             if (this.recorder.MicrophonesEnumerator.IsSupported)
             {
                 int i = 0;
-                foreach (DeviceInfo deviceInfo in this.recorder.MicrophonesEnumerator.Devices)
+                foreach (DeviceInfo deviceInfo in this.recorder.MicrophonesEnumerator)
                 {
                     string n = deviceInfo.Name;
                     #if PHOTON_MICROPHONE_WSA

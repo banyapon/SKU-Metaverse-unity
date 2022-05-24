@@ -1,4 +1,4 @@
-﻿#if UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN
+﻿#if PHOTON_VOICE_WINDOWS || UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN
 using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
@@ -99,6 +99,9 @@ namespace Photon.Voice.Windows
 
         public int Channels { get { return 1; } }
 
+        // Hardcoded in AudioInAec.cpp
+        // Supported sample rates: 8000, 11025, 16000, 22050
+        // https://docs.microsoft.com/en-us/windows/win32/medfound/voicecapturedmo?redirectedfrom=MSDN (Voice Capture DSP)
         public int SamplingRate { get { return 16000; } }
 
         public string Error { get; private set; }

@@ -34,7 +34,7 @@ namespace Photon.Voice.MacOS
         }
         public int Channels { get { return 1; } }
 
-        public int SamplingRate { get { return 48000; } }
+        public int SamplingRate { get { return 44100; } }
 
         public string Error { get; private set; }
 
@@ -49,7 +49,7 @@ namespace Photon.Voice.MacOS
 
         public bool Read(float[] buf)
         {
-            return audioIn != IntPtr.Zero && Photon_Audio_In_Read(audioIn, buf, buf.Length);            
+            return audioIn != IntPtr.Zero && Photon_Audio_In_Read(audioIn, buf, buf.Length);
         }
     }
 }

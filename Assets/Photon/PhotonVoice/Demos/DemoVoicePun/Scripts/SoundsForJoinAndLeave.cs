@@ -1,28 +1,41 @@
-﻿using Photon.Pun;
-using Photon.Realtime;
-using UnityEngine;
+﻿// ----------------------------------------------------------------------------
+// <copyright file="SoundsForJoinAndLeave.cs" company="Exit Games GmbH">
+// Photon Voice Demo for PUN- Copyright (C) 2016 Exit Games GmbH
+// </copyright>
+// <summary>
+// Script to play sound when player joins or leaves room.
+// </summary>
+// <author>developer@photonengine.com</author>
+// ----------------------------------------------------------------------------
 
-public class SoundsForJoinAndLeave : MonoBehaviourPunCallbacks
+namespace ExitGames.Demos.DemoPunVoice
 {
-    public AudioClip JoinClip;
-    public AudioClip LeaveClip;
-    private AudioSource source;
+    using Photon.Pun;
+    using UnityEngine;
+    using Player = Photon.Realtime.Player;
 
-    public override void OnPlayerEnteredRoom(Player newPlayer)
+    public class SoundsForJoinAndLeave : MonoBehaviourPunCallbacks
     {
-        if (this.JoinClip != null)
+        public AudioClip JoinClip;
+        public AudioClip LeaveClip;
+        private AudioSource source;
+
+        public override void OnPlayerEnteredRoom(Player newPlayer)
         {
-            if (this.source == null) this.source = FindObjectOfType<AudioSource>();
-            this.source.PlayOneShot(this.JoinClip);
+            if (this.JoinClip != null)
+            {
+                if (this.source == null) this.source = FindObjectOfType<AudioSource>();
+                this.source.PlayOneShot(this.JoinClip);
+            }
         }
-    }
 
-    public override void OnPlayerLeftRoom(Player otherPlayer)
-    {
-        if (this.LeaveClip != null)
+        public override void OnPlayerLeftRoom(Player otherPlayer)
         {
-            if (this.source == null) this.source = FindObjectOfType<AudioSource>();
-            this.source.PlayOneShot(this.LeaveClip);
+            if (this.LeaveClip != null)
+            {
+                if (this.source == null) this.source = FindObjectOfType<AudioSource>();
+                this.source.PlayOneShot(this.LeaveClip);
+            }
         }
     }
 }

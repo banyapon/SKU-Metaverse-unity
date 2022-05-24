@@ -49,7 +49,7 @@ namespace Photon.Voice
             foreach (var v in voicesToSend)
             {
                 infos[i] = new Dictionary<byte, object>() {
-                    { (byte)EventParam.VoiceId, v.id },
+                    { (byte)EventParam.VoiceId, v.ID },
                     { (byte)EventParam.Codec, v.Info.Codec },
                     { (byte)EventParam.SamplingRate, v.Info.SamplingRate },
                     { (byte)EventParam.Channels, v.Info.Channels },
@@ -60,14 +60,13 @@ namespace Photon.Voice
                     { (byte)EventParam.FPS, v.Info.FPS },
                     { (byte)EventParam.KeyFrameInt, v.Info.KeyFrameInt },
                     { (byte)EventParam.UserData, v.Info.UserData },
-                    { (byte)EventParam.EventNumber, v.evNumber }
-
+                    { (byte)EventParam.EventNumber, v.EvNumber }
                 };
                 i++;
 
                 if (logInfo)
                 {
-                    logger.LogInfo(v.LogPrefix + " Sending info: " + v.Info.ToString() + " ev=" + v.evNumber);
+                    logger.LogInfo(v.LogPrefix + " Sending info: " + v.Info.ToString() + " ev=" + v.EvNumber);
                 }
             }
             return content;
@@ -75,7 +74,7 @@ namespace Photon.Voice
 
         internal object[] buildVoiceRemoveMessage(LocalVoice v)
         {
-            byte[] ids = new byte[] { v.id };
+            byte[] ids = new byte[] { v.ID };
 
             object[] content = new object[] { (byte)0, EventSubcode.VoiceRemove, ids };
 
@@ -89,7 +88,8 @@ namespace Photon.Voice
             return new object[] { voiceId, evNumber, data, (byte)flags };
         }
 
-        internal void onVoiceEvent(object content0, int channelId, int playerId, int localPlayerId)
+        // isLocalPlayer is required only for VoiceClient.RoundTripTime calculation
+        internal void onVoiceEvent(object content0, int channelId, int playerId, bool isLocalPlayer)
         {
             object[] content = (object[])content0;
             if ((byte)content[0] == (byte)0)
@@ -117,7 +117,9 @@ namespace Photon.Voice
                 {
                     flags = (FrameFlags)content[3];
                 }
-                this.voiceClient.onFrame(channelId, playerId, voiceId, evNumber, new FrameBuffer(receivedBytes, flags), playerId == localPlayerId);
+                var buffer = new FrameBuffer(receivedBytes, flags);
+                this.voiceClient.onFrame(channelId, playerId, voiceId, evNumber, ref buffer, isLocalPlayer);
+                buffer.Release();
             }
         }
 

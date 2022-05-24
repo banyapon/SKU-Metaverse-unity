@@ -80,11 +80,15 @@
         /// </summary>
         public static void DestroyChildren(this Transform transform)
         {
-            if (transform && transform != null)
+            if (!ReferenceEquals(null, transform) && transform)
             {
                 for (int i = transform.childCount - 1; i >= 0; --i)
                 {
-                    Object.Destroy(transform.GetChild(i).gameObject);
+                    Transform child = transform.GetChild(i);
+                    if (child && child.gameObject)
+                    {
+                        Object.Destroy(child.gameObject);
+                    }
                 }
                 transform.DetachChildren();
             }

@@ -8,6 +8,7 @@
 
 namespace Photon.Voice.Unity.Editor
 {
+    using POpusCodec.Enums;
     using System;
     using System.Linq;
     using Unity;
@@ -35,7 +36,6 @@ namespace Photon.Voice.Unity.Editor
         private SerializedProperty voiceDetectionSp;
         private SerializedProperty voiceDetectionThresholdSp;
         private SerializedProperty voiceDetectionDelayMsSp;
-        private SerializedProperty unityMicrophoneDeviceSp;
         private SerializedProperty photonMicrophoneDeviceIdSp;
         private SerializedProperty interestGroupSp;
         private SerializedProperty debugEchoModeSp;
@@ -81,7 +81,6 @@ namespace Photon.Voice.Unity.Editor
             this.voiceDetectionSp = this.serializedObject.FindProperty("voiceDetection");
             this.voiceDetectionThresholdSp = this.serializedObject.FindProperty("voiceDetectionThreshold");
             this.voiceDetectionDelayMsSp = this.serializedObject.FindProperty("voiceDetectionDelayMs");
-            this.unityMicrophoneDeviceSp = this.serializedObject.FindProperty("unityMicrophoneDevice");
             this.photonMicrophoneDeviceIdSp = this.serializedObject.FindProperty("photonMicrophoneDeviceId");
             this.interestGroupSp = this.serializedObject.FindProperty("interestGroup");
             this.debugEchoModeSp = this.serializedObject.FindProperty("debugEchoMode");
@@ -127,7 +126,10 @@ namespace Photon.Voice.Unity.Editor
             this.serializedObject.UpdateIfRequiredOrScript();
             //serializedObject.Update();
             WebRtcAudioDsp webRtcAudioDsp = this.recorder.GetComponent<WebRtcAudioDsp>();
-            bool webRtcAudioDspAttached = webRtcAudioDsp && webRtcAudioDsp != null && webRtcAudioDsp.enabled;
+            bool webRtcAudioDspAttached = webRtcAudioDsp && webRtcAudioDsp != null;
+            bool webRtcAudioDspAvailable = webRtcAudioDspAttached && webRtcAudioDsp.enabled;
+            AudioChangesHandler audioChangesHandler = this.recorder.GetComponent<AudioChangesHandler>();
+            bool audioChangesHandlerAttached = !ReferenceEquals(null, audioChangesHandler) && audioChangesHandler;
             if (PhotonVoiceEditorUtils.IsInTheSceneInPlayMode(this.recorder.gameObject))
             {
                 if (this.recorder.RequiresRestart)
@@ -148,15 +150,27 @@ namespace Photon.Voice.Unity.Editor
             EditorGUI.BeginChangeCheck();
             if (PhotonVoiceEditorUtils.IsInTheSceneInPlayMode(this.recorder.gameObject))
             {
-                #if !UNITY_ANDROID && !UNITY_IOS
-                this.recorder.ReactOnSystemChanges = EditorGUILayout.Toggle(new GUIContent("React On System Changes", "If true, recording is restarted when Unity detects Audio Config. changes."), this.recorder.ReactOnSystemChanges);
-                if (this.recorder.ReactOnSystemChanges)
+                if (!audioChangesHandlerAttached)
                 {
-                    EditorGUI.indentLevel++;
-                    EditorGUILayout.PropertyField(this.skipDeviceChecksSp, new GUIContent("Skip Device Checks", "If true, restarts recording without checking if audio config/device changes affected recording."));
-                    EditorGUI.indentLevel--;
+                    #if !UNITY_ANDROID && !UNITY_IOS
+                    this.recorder.ReactOnSystemChanges = EditorGUILayout.Toggle(new GUIContent("React On System Changes", "If true, recording is restarted when Unity detects Audio Config. changes."), this.recorder.ReactOnSystemChanges);
+                    if (this.recorder.ReactOnSystemChanges)
+                    {
+                        EditorGUI.indentLevel++;
+                        EditorGUILayout.PropertyField(this.skipDeviceChecksSp, new GUIContent("Skip Device Checks", "If true, restarts recording without checking if audio config/device changes affected recording."));
+                        EditorGUI.indentLevel--;
+                        EditorGUILayout.HelpBox("ReactOnSystemChanges will be deprecated. AudioChangesHandler component is now the preferred solution to handle audio changes.", MessageType.Warning);
+                    }
+                    else
+                    {
+                        EditorGUILayout.HelpBox("ReactOnSystemChanges will be deprecated. AudioChangesHandler component is now the preferred solution to handle audio changes.", MessageType.Info);
+                    }
+                    #endif
+                    if (GUILayout.Button("Add AudioChangesHandler component"))
+                    {
+                        this.recorder.gameObject.AddComponent<AudioChangesHandler>();
+                    }
                 }
-                #endif
                 this.recorder.RecordOnlyWhenJoined = EditorGUILayout.Toggle(new GUIContent("Record Only When Joined", "If true, recording can start only when client is joined to a room. Auto start is also delayed until client is joined to a room."),
                     this.recorder.RecordOnlyWhenJoined);
                 this.recorder.RecordOnlyWhenEnabled = EditorGUILayout.Toggle(new GUIContent("Record Only When Enabled", "If true, component will work only when enabled and active in hierarchy. Auto start is also delayed until these conditions are met."),
@@ -191,12 +205,58 @@ namespace Photon.Voice.Unity.Editor
                 this.recorder.ReliableMode = EditorGUILayout.Toggle(new GUIContent("Reliable Mode", "If true, stream data sent in reliable mode."), this.recorder.ReliableMode);
 
                 EditorGUILayout.LabelField("Codec Parameters", EditorStyles.boldLabel);
-                this.recorder.FrameDuration = (OpusCodec.FrameDuration)EditorGUILayout.EnumPopup(new GUIContent("Frame Duration", "Outgoing audio stream encoder delay."), this.recorder.FrameDuration);
-                this.recorder.SamplingRate = (POpusCodec.Enums.SamplingRate)EditorGUILayout.EnumPopup(
-                    new GUIContent("Sampling Rate", "Outgoing audio stream sampling rate."), this.recorder.SamplingRate);
-                this.recorder.Bitrate = EditorGUILayout.IntField(new GUIContent("Bitrate", "Outgoing audio stream bitrate."),
-                    this.recorder.Bitrate);
-
+                OpusCodec.FrameDuration frameDuration = (OpusCodec.FrameDuration)EditorGUILayout.EnumPopup(new GUIContent("Frame Duration", "Outgoing audio stream encoder delay."), this.recorder.FrameDuration);
+                if (webRtcAudioDspAvailable)
+                {
+                    switch (frameDuration)
+                    {
+                        case OpusCodec.FrameDuration.Frame2dot5ms:
+                        case OpusCodec.FrameDuration.Frame5ms:
+                            if (this.recorder.FrameDuration == OpusCodec.FrameDuration.Frame10ms)
+                            {
+                                Debug.LogWarningFormat("Frame duration requested ({0}ms) is not supported by WebRTC Audio DSP. Ignoring change.", frameDuration);
+                            }
+                            else
+                            {
+                                Debug.LogWarningFormat("Frame duration requested ({0}ms) is not supported by WebRTC Audio DSP (it needs to be N x 10ms), switching to the closest supported value: 10ms.", (int)frameDuration / 1000);
+                            }
+                            frameDuration = OpusCodec.FrameDuration.Frame10ms;
+                            break;
+                    }
+                }
+                SamplingRate samplingRate = (SamplingRate)EditorGUILayout.EnumPopup(new GUIContent("Sampling Rate", "Outgoing audio stream sampling rate."), this.recorder.SamplingRate);
+                if (webRtcAudioDspAvailable)
+                {
+                    int samplingRateInt = (int) samplingRate;
+                    switch (samplingRate)
+                    {
+                        case SamplingRate.Sampling12000:
+                            if (this.recorder.SamplingRate == SamplingRate.Sampling16000)
+                            {
+                                Debug.LogWarningFormat("Sampling rate requested ({0}Hz) is not supported by WebRTC Audio DSP. Ignoring change.", samplingRateInt);
+                            }
+                            else
+                            {
+                                Debug.LogWarningFormat("Sampling rate requested ({0}Hz) is not supported by WebRTC Audio DSP, switching to the closest supported value: {1}Hz.", samplingRateInt, "16k");
+                            }
+                            samplingRate = SamplingRate.Sampling16000;
+                            break;
+                        case SamplingRate.Sampling24000:
+                            if (this.recorder.SamplingRate == SamplingRate.Sampling48000)
+                            {
+                                Debug.LogWarningFormat("Sampling rate requested ({0}Hz) is not supported by WebRTC Audio DSP. Ignoring change.", samplingRateInt);
+                            }
+                            else
+                            {
+                                Debug.LogWarningFormat("Sampling rate requested ({0}Hz) is not supported by WebRTC Audio DSP, switching to the closest supported value: {1}Hz.", samplingRateInt, "48k");
+                            }
+                            samplingRate = SamplingRate.Sampling48000;
+                            break;
+                    }
+                }
+                this.recorder.SamplingRate = samplingRate;
+                this.recorder.FrameDuration = frameDuration;
+                this.recorder.Bitrate = EditorGUILayout.IntSlider(new GUIContent("Bitrate", "Outgoing audio stream bitrate."), this.recorder.Bitrate, Recorder.MIN_OPUS_BITRATE, Recorder.MAX_OPUS_BITRATE);
                 EditorGUILayout.LabelField("Audio Source Settings", EditorStyles.boldLabel);
                 this.recorder.SourceType = (Recorder.InputSourceType) EditorGUILayout.EnumPopup(new GUIContent("Input Source Type", "Input audio data source type"), this.recorder.SourceType);
                 switch (this.recorder.SourceType)
@@ -207,7 +267,6 @@ namespace Photon.Voice.Unity.Editor
                                 "Which microphone API to use when the Source is set to UnityMicrophone."),
                             this.recorder.MicrophoneType);
                         EditorGUILayout.PropertyField(this.useMicrophoneTypeFallbackSp, new GUIContent("Use Fallback", "If true, if recording fails to start with Unity microphone type, Photon microphone type is used -if available- as a fallback and vice versa."));
-                        EditorGUILayout.HelpBox("Devices list and current selection is valid in Unity Editor only. In build, you need to set it via code preferably at runtime.", MessageType.Info);
                         switch (this.recorder.MicrophoneType)
                         {
                             case Recorder.MicType.Unity:
@@ -217,6 +276,7 @@ namespace Photon.Voice.Unity.Editor
                                 }
                                 else
                                 {
+                                    EditorGUILayout.HelpBox("Devices list and current selection is valid in Unity Editor only. In build, you need to set it via code preferably at runtime.", MessageType.Info);
                                     this.unityMicrophoneDeviceIndex = EditorGUILayout.Popup("Microphone Device", this.GetUnityMicrophoneDeviceIndex(), UnityMicrophone.devices);
                                     this.recorder.UnityMicrophoneDevice = UnityMicrophone.devices[this.unityMicrophoneDeviceIndex];
                                     int minFreq, maxFreq;
@@ -228,13 +288,19 @@ namespace Photon.Voice.Unity.Editor
                                 #if PHOTON_MICROPHONE_ENUMERATOR
                                 if (this.recorder.MicrophonesEnumerator.IsSupported)
                                 {
-                                    if (!this.recorder.MicrophonesEnumerator.Devices.Any())
+                                    if (!this.recorder.MicrophonesEnumerator.Any())
                                     {
                                         EditorGUILayout.HelpBox("No microphone device found", MessageType.Error);
                                     }
                                     else
                                     {
+                                        EditorGUILayout.HelpBox("Devices list and current selection is valid in Unity Editor only. In build, you need to set it via code preferably at runtime.", MessageType.Info);
                                         EditorGUILayout.BeginHorizontal();
+                                        if (this.photonDeviceIndex >= this.photonDeviceNames.Length)
+                                        {
+                                            Debug.LogWarningFormat("Unexpected photonDeviceIndex = {0} >= photonDeviceNames.Length = {1}, forcing refresh.", this.photonDeviceIndex, this.photonDeviceNames.Length);
+                                            this.RefreshMicrophones();
+                                        }
                                         this.photonDeviceIndex = EditorGUILayout.Popup("Microphone Device", this.photonDeviceIndex, this.photonDeviceNames);
                                         this.recorder.PhotonMicrophoneDeviceId = this.photonDeviceIDs[this.photonDeviceIndex];
                                         if (GUILayout.Button("Refresh", EditorStyles.miniButton, GUILayout.Width(70)))
@@ -319,7 +385,7 @@ namespace Photon.Voice.Unity.Editor
                         throw new ArgumentOutOfRangeException();
                 }
                 EditorGUILayout.LabelField("Voice Activity Detection (VAD)", EditorStyles.boldLabel);
-                if (webRtcAudioDspAttached)
+                if (webRtcAudioDspAvailable)
                 {
                     if (webRtcAudioDsp.VAD)
                     {
@@ -333,7 +399,7 @@ namespace Photon.Voice.Unity.Editor
                 this.recorder.VoiceDetection = EditorGUILayout.Toggle(new GUIContent("Detect", "If true, voice detection enabled."), this.recorder.VoiceDetection);
                 if (this.recorder.VoiceDetection)
                 {
-                    if (webRtcAudioDspAttached && !webRtcAudioDsp.VAD && GUILayout.Button("Use WebRtcAudioDsp.VAD instead"))
+                    if (webRtcAudioDspAvailable && !webRtcAudioDsp.VAD && GUILayout.Button("Use WebRtcAudioDsp.VAD instead"))
                     {
                         this.recorder.VoiceDetection = false;
                         webRtcAudioDsp.VAD = true;
@@ -364,17 +430,29 @@ namespace Photon.Voice.Unity.Editor
             }
             else
             {
-                #if !UNITY_ANDROID && !UNITY_IOS
-                EditorGUILayout.PropertyField(this.reactOnSystemChangesSp,
-                    new GUIContent("React On System Changes",
-                        "If true, recording is restarted when Unity detects Audio Config. changes."));
-                if (this.reactOnSystemChangesSp.boolValue)
+                if (!audioChangesHandlerAttached)
                 {
-                    EditorGUI.indentLevel++;
-                    EditorGUILayout.PropertyField(this.skipDeviceChecksSp, new GUIContent("Skip Device Checks", "If true, restarts recording without checking if audio config/device changes affected recording."));
-                    EditorGUI.indentLevel--;
+                    #if !UNITY_ANDROID && !UNITY_IOS
+                    EditorGUILayout.PropertyField(this.reactOnSystemChangesSp,
+                        new GUIContent("React On System Changes",
+                            "If true, recording is restarted when Unity detects Audio Config. changes."));
+                    if (this.reactOnSystemChangesSp.boolValue)
+                    {
+                        EditorGUI.indentLevel++;
+                        EditorGUILayout.PropertyField(this.skipDeviceChecksSp, new GUIContent("Skip Device Checks", "If true, restarts recording without checking if audio config/device changes affected recording."));
+                        EditorGUI.indentLevel--;
+                        EditorGUILayout.HelpBox("ReactOnSystemChanges will be deprecated. AudioChangesHandler component is now the preferred solution to handle audio changes.", MessageType.Warning);
+                    }
+                    else
+                    {
+                        EditorGUILayout.HelpBox("ReactOnSystemChanges will be deprecated. AudioChangesHandler component is now the preferred solution to handle audio changes.", MessageType.Info);
+                    }
+                    #endif
+                    if (GUILayout.Button("Add AudioChangesHandler component"))
+                    {
+                        this.recorder.gameObject.AddComponent<AudioChangesHandler>();
+                    }
                 }
-                #endif
                 EditorGUILayout.PropertyField(this.recordOnlyWhenEnabledSp,
                     new GUIContent("Record Only When Enabled",
                         "If true, component will work only when enabled and active in hierarchy."));
@@ -409,11 +487,37 @@ namespace Photon.Voice.Unity.Editor
                 EditorGUILayout.LabelField("Codec Parameters", EditorStyles.boldLabel);
                 EditorGUILayout.PropertyField(this.frameDurationSp,
                     new GUIContent("Frame Duration", "Outgoing audio stream encoder delay."));
+                if (webRtcAudioDspAvailable)
+                {
+                    OpusCodec.FrameDuration frameDuration = (OpusCodec.FrameDuration)Enum.GetValues(typeof(OpusCodec.FrameDuration)).GetValue(this.frameDurationSp.enumValueIndex);
+                    switch (frameDuration)
+                    {
+                        case OpusCodec.FrameDuration.Frame2dot5ms:
+                        case OpusCodec.FrameDuration.Frame5ms:
+                            string warningMessage = string.Format("Frame duration requested ({0}ms) is not supported by WebRTC Audio DSP (it needs to be N x 10ms), switching to the closest supported value: 10ms.", (int)frameDuration / 1000);
+                            EditorGUILayout.HelpBox(warningMessage, MessageType.Warning);
+                            break;
+                    }
+                }
                 EditorGUILayout.PropertyField(this.samplingRateSp,
                     new GUIContent("Sampling Rate", "Outgoing audio stream sampling rate."));
+                if (webRtcAudioDspAvailable)
+                {
+                    SamplingRate samplingRate = (SamplingRate)Enum.GetValues(typeof(SamplingRate)).GetValue(this.samplingRateSp.enumValueIndex);
+                    switch (samplingRate)
+                    {
+                        case SamplingRate.Sampling12000:
+                            string warningMessage = "Sampling rate requested (12kHz) is not supported by WebRTC Audio DSP. When recording starts, this will be automatically switched to the closest supported value: 16kHz.";
+                            EditorGUILayout.HelpBox(warningMessage, MessageType.Warning);
+                            break;
+                        case SamplingRate.Sampling24000:
+                            warningMessage = "Sampling rate requested (24kHz) is not supported by WebRTC Audio DSP. When recording starts, this will be automatically switched to the closest supported value: 48kHz.";
+                            EditorGUILayout.HelpBox(warningMessage, MessageType.Warning);
+                            break;
+                    }
+                }
                 EditorGUILayout.PropertyField(this.bitrateSp,
                     new GUIContent("Bitrate", "Outgoing audio stream bitrate."));
-
                 EditorGUILayout.LabelField("Audio Source Settings", EditorStyles.boldLabel);
                 EditorGUILayout.PropertyField(this.sourceTypeSp,
                     new GUIContent("Input Source Type", "Input audio data source type"));
@@ -423,34 +527,27 @@ namespace Photon.Voice.Unity.Editor
                         EditorGUILayout.PropertyField(this.microphoneTypeSp, new GUIContent("Microphone Type",
                             "Which microphone API to use when the Source is set to UnityMicrophone."));
                         EditorGUILayout.PropertyField(this.useMicrophoneTypeFallbackSp, new GUIContent("Use Fallback", "If true, if recording fails to start with Unity microphone type, Photon microphone type is used -if available- as a fallback and vice versa."));
-                        EditorGUILayout.HelpBox("Devices list and current selection is valid in Unity Editor only. In build, you need to set it via code preferably at runtime.", MessageType.Info);
                         switch (this.recorder.MicrophoneType)
                         {
                             case Recorder.MicType.Unity:
-                                if (UnityMicrophone.devices.Length == 0)
-                                {
-                                    EditorGUILayout.HelpBox("No microphone device found", MessageType.Error);
-                                }
-                                else
-                                {
-                                    this.unityMicrophoneDeviceIndex = EditorGUILayout.Popup("Microphone Device", this.GetUnityMicrophoneDeviceIndex(), UnityMicrophone.devices);
-                                    this.unityMicrophoneDeviceSp.stringValue = UnityMicrophone.devices[this.unityMicrophoneDeviceIndex];
-                                    int minFreq, maxFreq;
-                                    UnityMicrophone.GetDeviceCaps(UnityMicrophone.devices[this.unityMicrophoneDeviceIndex], out minFreq, out maxFreq);
-                                    EditorGUILayout.LabelField("Microphone Device Caps", string.Format("{0}..{1} Hz", minFreq, maxFreq));
-                                }
                                 break;
                             case Recorder.MicType.Photon:
                                 #if PHOTON_MICROPHONE_ENUMERATOR
                                 if (this.recorder.MicrophonesEnumerator.IsSupported)
                                 {
-                                    if (!this.recorder.MicrophonesEnumerator.Devices.Any())
+                                    if (!this.recorder.MicrophonesEnumerator.Any())
                                     {
                                         EditorGUILayout.HelpBox("No microphone device found", MessageType.Error);
                                     }
                                     else
                                     {
+                                        EditorGUILayout.HelpBox("Devices list and current selection is valid in Unity Editor only. In build, you need to set it via code preferably at runtime.", MessageType.Info);
                                         EditorGUILayout.BeginHorizontal();
+                                        if (this.photonDeviceIndex >= this.photonDeviceNames.Length)
+                                        {
+                                            Debug.LogWarningFormat("Unexpected photonDeviceIndex = {0} >= photonDeviceNames.Length = {1}, forcing refresh.", this.photonDeviceIndex, this.photonDeviceNames.Length);
+                                            this.RefreshMicrophones();
+                                        }
                                         this.photonDeviceIndex = EditorGUILayout.Popup("Microphone Device", this.photonDeviceIndex, this.photonDeviceNames);
                                         this.photonMicrophoneDeviceIdSp.intValue = this.photonDeviceIDs[this.photonDeviceIndex];
                                         if (GUILayout.Button("Refresh", EditorStyles.miniButton, GUILayout.Width(70)))
@@ -535,22 +632,22 @@ namespace Photon.Voice.Unity.Editor
                         throw new ArgumentOutOfRangeException();
                 }
                 EditorGUILayout.LabelField("Voice Activity Detection (VAD)", EditorStyles.boldLabel);
-                if (webRtcAudioDspAttached)
+                if (webRtcAudioDspAvailable)
                 {
                     if (webRtcAudioDsp.VAD)
                     {
-                        EditorGUILayout.HelpBox("WebRtcAudioDsp.VAD is already enabled no need to use the built-in Recorder VAD", MessageType.Info);
+                        EditorGUILayout.HelpBox("WebRtcAudioDsp.VAD is already enabled no need to use the built-in Recorder VAD.", MessageType.Info);
                     }
                     else
                     {
-                        EditorGUILayout.HelpBox("It's recommended to use VAD from WebRtcAudioDsp instead of built-in Recorder VAD", MessageType.Info);
+                        EditorGUILayout.HelpBox("It's recommended to use VAD from WebRtcAudioDsp instead of built-in Recorder VAD.", MessageType.Info);
                     }
                 }
                 EditorGUILayout.PropertyField(this.voiceDetectionSp,
                     new GUIContent("Detect", "If true, voice detection enabled."));
                 if (this.voiceDetectionSp.boolValue)
                 {
-                    if (webRtcAudioDspAttached && !webRtcAudioDsp.VAD && GUILayout.Button("Use WebRtcAudioDsp.VAD instead"))
+                    if (webRtcAudioDspAvailable && !webRtcAudioDsp.VAD && GUILayout.Button("Use WebRtcAudioDsp.VAD instead"))
                     {
                         this.recorder.VoiceDetection = false;
                         webRtcAudioDsp.VAD = true;
@@ -564,9 +661,16 @@ namespace Photon.Voice.Unity.Editor
             }
 
             #if WEBRTC_AUDIO_DSP_SUPPORTED_PLATFORMS
-            if (!webRtcAudioDspAttached)
+            if (!webRtcAudioDspAvailable)
             {
-                if (GUILayout.Button("Add WebRtcAudioDsp component"))
+                if (webRtcAudioDspAttached)
+                {
+                    if (GUILayout.Button("Enabled WebRtcAudioDsp component"))
+                    {
+                        webRtcAudioDsp.enabled = true;
+                    }
+                }
+                else if (GUILayout.Button("Add WebRtcAudioDsp component"))
                 {
                     this.recorder.gameObject.AddComponent<WebRtcAudioDsp>();
                 }
@@ -591,7 +695,6 @@ namespace Photon.Voice.Unity.Editor
         {
             if (UnityMicrophone.devices.Length == 0)
             {
-                this.recorder.UnityMicrophoneDevice = null;
                 this.unityMicrophoneDeviceIndex = 0;
             }
             else
@@ -609,7 +712,7 @@ namespace Photon.Voice.Unity.Editor
             if (this.recorder.MicrophonesEnumerator.IsSupported)
             {
                 this.recorder.MicrophonesEnumerator.Refresh();
-                int count = this.recorder.MicrophonesEnumerator.Devices.Count();
+                int count = this.recorder.MicrophonesEnumerator.Count();
                 if (count == 0)
                 {
                     this.recorder.PhotonMicrophoneDeviceId = -1;
@@ -622,10 +725,10 @@ namespace Photon.Voice.Unity.Editor
                     this.photonDeviceNames = new string[count];
                     this.photonDeviceIDs = new int[count];
                     int i = 0;
-                    foreach (DeviceInfo deviceInfo in this.recorder.MicrophonesEnumerator.Devices)
+                    foreach (DeviceInfo deviceInfo in this.recorder.MicrophonesEnumerator)
                     {
                         this.photonDeviceIDs[i] = deviceInfo.IDInt;
-                        this.photonDeviceNames[i] = string.Format("{0} - {1} [{2}]", i, deviceInfo.Name, deviceInfo.IDInt);
+                        this.photonDeviceNames[i] = string.Format("{0} - {1} [{2}]", i, deviceInfo.Name.Replace('/', '_'), deviceInfo.IDInt);
                         i++;
                     }
                     this.photonDeviceIndex = Mathf.Clamp(Array.IndexOf(this.photonDeviceIDs, this.recorder.PhotonMicrophoneDeviceId), 0, count - 1);

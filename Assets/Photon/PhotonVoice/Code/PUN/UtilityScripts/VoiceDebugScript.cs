@@ -43,7 +43,7 @@
             {
                 if (this.TestUsingAudioClip)
                 {
-                    if (!this.TestAudioClip || this.TestAudioClip == null)
+                    if (ReferenceEquals(null, this.TestAudioClip) || !this.TestAudioClip)
                     {
                         Debug.LogError("Set an AudioClip first");
                     }
