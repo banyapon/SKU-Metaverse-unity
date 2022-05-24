@@ -1,93 +1,112 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
-
-[System.Serializable]
-public class DefaultRoom
-{
-    public int maxPlayer;
-}
 
 public class NetworkManager : MonoBehaviourPunCallbacks
 {
-    public List<DefaultRoom> defaultRooms;
-    private GameObject spawnedPlayerPrefab;
-    public string Name;
+    public string roomName = "testRoom";
+    public byte maxPlayer = 16;
+    private string _userName = "hi";
+    private GameObject _networkPlayer;
 
-    void Start()
+    private readonly string _gameVersion = "1.0";
+    private static NetworkManager _instance;
+
+    public static NetworkManager Instance
     {
-        PhotonNetwork.GameVersion = "2.0";
-        DontDestroyOnLoad(gameObject);
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = new NetworkManager();
+            }
+            return _instance;
+        }
+    }
+
+    void Awake()
+    {
+        if (_instance == null)
+        {
+            _instance = this;
+            DontDestroyOnLoad(this.gameObject);
+        }
+        
+        else
+        {
+            Destroy(this);
+        }
+
+        PhotonNetwork.GameVersion = _gameVersion;
+        PhotonNetwork.NickName = _userName;
+        PhotonNetwork.AutomaticallySyncScene = true;
     }
 
     public void ConnectToServer()
     {
-
-        Debug.Log("서버에 연결을 시도합니다.");
-        PhotonNetwork.ConnectUsingSettings(); // 서버연결
-
-        if (PlayerPrefs.HasKey("Name"))
-            PhotonNetwork.NickName = PlayerPrefs.GetString("Name");
-
+        PhotonNetwork.ConnectUsingSettings();
     }
 
     public override void OnConnectedToMaster()
     {
-        Debug.Log("서버와 연결되었습니다.");
-        base.OnConnectedToMaster();
+        Debug.Log("Conneted to Server");
+        Debug.Log("Server Rate: " + PhotonNetwork.SendRate);
         PhotonNetwork.JoinLobby();
     }
 
     public override void OnJoinedLobby()
     {
-        base.OnJoinedLobby();
-        Debug.Log("대기실에 입장하였습니다.");
-
-        InitiliazeRoom(0);
+        Debug.Log($"PhotonNetwork.InLobby: {PhotonNetwork.InLobby}");
+        InitRoom();
     }
-    
-    public void InitiliazeRoom(int defaultRoomIndex)
-    {
-        DefaultRoom roomSettings = defaultRooms[defaultRoomIndex];
 
+    private void InitRoom()
+    {
         RoomOptions roomOptions = new RoomOptions();
-        roomOptions.MaxPlayers = (byte)roomSettings.maxPlayer;
-        roomOptions.IsVisible = true;
+        roomOptions.MaxPlayers = maxPlayer;
         roomOptions.IsOpen = true;
+        roomOptions.IsVisible = true;
 
-        PhotonNetwork.JoinOrCreateRoom(Name, roomOptions, TypedLobby.Default);
-        SceneManager.LoadScene("Main");
-        Debug.Log(Name + "룸으로 이동합니다.");
-    }
-
-    public override void OnJoinRandomFailed(short returnCode, string message)
-    {
-        Debug.Log("방 입장에 실패하였습니다.");
-        base.OnJoinRandomFailed(returnCode, message);
-    }
-
-    public override void OnPlayerEnteredRoom(Player newPlayer)
-    {
-        Debug.Log("새로운 플레이어가 입장하였습니다.");
-        base.OnPlayerEnteredRoom(newPlayer);
+        PhotonNetwork.JoinOrCreateRoom(roomName, roomOptions, TypedLobby.Default);
+        PhotonNetwork.LoadLevel("Main");
     }
 
     public override void OnJoinedRoom()
+    {
+        Debug.Log($"PhotonNetwork.InRoom: {PhotonNetwork.InRoom}");
+        Debug.Log($"CurrentRoom: {PhotonNetwork.CurrentRoom.Name}");
+        Debug.Log($"PlayerCount: {PhotonNetwork.CurrentRoom.PlayerCount}");
+
+        foreach (var player in PhotonNetwork.CurrentRoom.Players)
+        {
+            Debug.Log($"PlayerName: {player.Value.NickName},{player.Value.ActorNumber}");
+        }
+
+        CreatePlayer();
+    }
+
+    private void CreatePlayer()
     {
         Vector3 pos = new Vector3(-40f, 0f, -15f);
         Vector3 randPos = pos + Random.insideUnitSphere * 5;
         randPos.y = 0;
 
-        spawnedPlayerPrefab = PhotonNetwork.Instantiate(ChoiceCharacter.netPlayer, randPos, Quaternion.identity);
+        _networkPlayer = PhotonNetwork.Instantiate(ChoiceCharacter.netPlayer, randPos, Quaternion.identity);
+    } 
+
+    public override void OnJoinRandomFailed(short returnCode, string message)
+    {
+        Debug.Log($"OnJoinRoomFailed: {returnCode}:{message}");
+        InitRoom();
+    }
+
+    public override void OnPlayerEnteredRoom(Player player)
+    {
+        Debug.Log($"New player Entered: {player.NickName},{player.ActorNumber}");
     }
 
     public override void OnLeftRoom()
     {
-        base.OnLeftRoom();
-        PhotonNetwork.Destroy(spawnedPlayerPrefab);
+        PhotonNetwork.Destroy(_networkPlayer);
     }
 }

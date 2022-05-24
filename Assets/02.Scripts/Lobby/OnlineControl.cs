@@ -11,7 +11,7 @@ public class OnlineControl : MonoBehaviour
     public GameObject audio_;
     public Text hellotext;
 
-    public DefaultRoom privateRoom;
+    // public DefaultRoom privateRoom;
     private NetworkManager netManager;
 
     public InputField PwdText;
@@ -25,7 +25,7 @@ public class OnlineControl : MonoBehaviour
     {
         if (PwdText.text != null)
         {
-            netManager.Name = PwdText.text;
+            // netManager.Name = PwdText.text;
             Password_.SetActive(false);
             Invoke("CoroutineStart", 0.8f);
         }
