@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311915, g: 0.3807396, b: 0.35872662, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2291,7 +2291,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &358644871
 GameObject:
@@ -12859,6 +12859,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2145018973}
   m_CullTransparentMesh: 1
+--- !u!1001 &1835294210156828308
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2276006384518771213, guid: 95997958c7ff8d84eb936314bef821b1,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2276006384518771213, guid: 95997958c7ff8d84eb936314bef821b1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2276006384518771213, guid: 95997958c7ff8d84eb936314bef821b1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2276006384518771213, guid: 95997958c7ff8d84eb936314bef821b1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2276006384518771213, guid: 95997958c7ff8d84eb936314bef821b1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2276006384518771213, guid: 95997958c7ff8d84eb936314bef821b1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2276006384518771213, guid: 95997958c7ff8d84eb936314bef821b1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2276006384518771213, guid: 95997958c7ff8d84eb936314bef821b1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2276006384518771213, guid: 95997958c7ff8d84eb936314bef821b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2276006384518771213, guid: 95997958c7ff8d84eb936314bef821b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2276006384518771213, guid: 95997958c7ff8d84eb936314bef821b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2372534639915776470, guid: 95997958c7ff8d84eb936314bef821b1,
+        type: 3}
+      propertyPath: m_Name
+      value: InputManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 95997958c7ff8d84eb936314bef821b1, type: 3}
 --- !u!1001 &2525177296454866312
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12952,9 +13021,19 @@ PrefabInstance:
       objectReference: {fileID: 1783652546}
     - target: {fileID: 2717505071328538933, guid: 5a36b8a700d434697828513b423701e0,
         type: 3}
+      propertyPath: avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: 5917c0e93d180a842b61d1ebc62a195c, type: 3}
+    - target: {fileID: 2717505071328538933, guid: 5a36b8a700d434697828513b423701e0,
+        type: 3}
       propertyPath: NameText
       value: 
       objectReference: {fileID: 2095490332}
+    - target: {fileID: 2717505071328538933, guid: 5a36b8a700d434697828513b423701e0,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 2717505071328538933, guid: 5a36b8a700d434697828513b423701e0,
         type: 3}
       propertyPath: InputField
@@ -12965,6 +13044,11 @@ PrefabInstance:
       propertyPath: toggleGroup
       value: 
       objectReference: {fileID: 400009439}
+    - target: {fileID: 2717505071328538933, guid: 5a36b8a700d434697828513b423701e0,
+        type: 3}
+      propertyPath: runtimeAnimatorController
+      value: 
+      objectReference: {fileID: 9100000, guid: 09e1536f567a94a6489ed2213125911a, type: 2}
     - target: {fileID: 2717505071328538934, guid: 5a36b8a700d434697828513b423701e0,
         type: 3}
       propertyPath: m_RootOrder
