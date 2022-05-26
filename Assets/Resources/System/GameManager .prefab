@@ -48,3 +48,17 @@ MonoBehaviour:
   toggleGroup: {fileID: 0}
   NameText: {fileID: 0}
   User: {fileID: 0}
+  sensitivity: 1
+  moveSpeed: 20
+  gravity: -9.8
+  jumpPower: 2
+  maxJumpCount: 1
+  slopeLimit: 45
+  stepOffset: 0.3
+  skinWidth: 0.08
+  minMoveDistance: 0.001
+  radius: 0.23
+  height: 1.8
+  center: {x: 0, y: 0.9, z: 0}
+  runtimeAnimatorController: {fileID: 9100000, guid: 09e1536f567a94a6489ed2213125911a,
+    type: 2}

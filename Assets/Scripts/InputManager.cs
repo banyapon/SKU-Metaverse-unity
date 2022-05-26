@@ -51,16 +51,15 @@ public class InputManager : MonoBehaviour
         _inputActions.Player.Look.started += OnLook;
         _inputActions.Player.Look.performed += OnLook;
         _inputActions.Player.Look.canceled += OnLook;
+
+        _inputActions.Player.Jump.started += OnJump;
+        _inputActions.Player.Jump.performed += OnJump;
+        _inputActions.Player.Jump.canceled += OnJump;
     }
 
     void OnDisable()
     {
         _inputActions.Disable();
-    }
-
-    void Update()
-    {
-        jump = _inputActions.Player.Jump.triggered;
     }
 
     void OnMove(InputAction.CallbackContext context)
@@ -71,5 +70,10 @@ public class InputManager : MonoBehaviour
     void OnLook(InputAction.CallbackContext context)
     {
         look = context.ReadValue<Vector2>();
+    }
+
+    void OnJump(InputAction.CallbackContext context)
+    {
+        jump = _inputActions.Player.Jump.triggered;
     }
 }
