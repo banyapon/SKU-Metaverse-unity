@@ -61,6 +61,12 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this);
         }
+
+        #if UNITY_ANDROID || UNITY_IOS
+            Application.targetFrameRate = 30;
+        #elif UNITY_EDITOR || UNITY_STANDALONE
+            Application.targetFrameRate = 60;
+        #endif
     }
 
     void Start()
