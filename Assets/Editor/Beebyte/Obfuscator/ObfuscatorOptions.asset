@@ -280,7 +280,7 @@ MonoBehaviour:
   obfuscateLiteralsInAllMethods: 0
   noPublicFakeMethods: 0
   progressBar: 1
-  obfuscateReleaseOnly: 0
+  obfuscateReleaseOnly: 1
   attributesToRemoveIfObfuscatedMember:
   - UnityEngine.AddComponentMenu
   - UnityEngine.ContextMenu

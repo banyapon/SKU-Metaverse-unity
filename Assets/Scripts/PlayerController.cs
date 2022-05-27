@@ -1,6 +1,7 @@
 using UnityEngine;
+using Photon.Pun;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviourPun
 {
     [HideInInspector] public float sensitivity;
 
@@ -39,23 +40,27 @@ public class PlayerController : MonoBehaviour
 
     void Awake()
     {
+        if (!photonView.IsMine) return;
         _characterController = GetComponent<CharacterController>();
         _animator = GetComponent<Animator>();
     }
 
     void Start()
     {
+        if (!photonView.IsMine) return;
         SetPlayerSettings();
     }
 
     void Update()
     {
+        if (!photonView.IsMine) return;
         SetPlayerInput();
         SetPlayerState();
     }
 
     void LateUpdate()
     {
+        if (!photonView.IsMine) return;
         Look();
         SetBlendTree();
     }

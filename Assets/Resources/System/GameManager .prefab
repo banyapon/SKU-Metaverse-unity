@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2717505071328538934}
   - component: {fileID: 2717505071328538933}
+  - component: {fileID: 6842980232686995115}
   m_Layer: 0
   m_Name: 'GameManager '
   m_TagString: Untagged
@@ -27,6 +28,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -43,11 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a36dc8f7e62f0f4d960ef7ebe7fdadc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lobby: {fileID: 0}
-  InputField: {fileID: 0}
-  toggleGroup: {fileID: 0}
-  NameText: {fileID: 0}
-  User: {fileID: 0}
+  nickName: {fileID: 0}
+  btn1: {fileID: 0}
+  btn2: {fileID: 0}
   sensitivity: 1
   moveSpeed: 20
   gravity: -9.8
@@ -62,3 +62,15 @@ MonoBehaviour:
   center: {x: 0, y: 0.9, z: 0}
   runtimeAnimatorController: {fileID: 9100000, guid: 09e1536f567a94a6489ed2213125911a,
     type: 2}
+--- !u!114 &6842980232686995115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2717505071328538932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bd563332e31041bb9eeb30b94a98adf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

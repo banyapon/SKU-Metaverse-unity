@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class SafeArea : MonoBehaviour
 {
-    #if UNITY_EDITOR
     void Awake()
     {
         RectTransform rectTransform = GetComponent<RectTransform>();
@@ -18,5 +17,4 @@ public class SafeArea : MonoBehaviour
         rectTransform.anchorMin = minAnchor;
         rectTransform.anchorMax = maxAnchor;
     }
-    #endif
 }

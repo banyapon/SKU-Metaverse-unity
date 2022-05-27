@@ -7,7 +7,6 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 {
     public string roomName = "testRoom";
     public byte maxPlayer = 16;
-    private string _userName = "hi";
     private GameObject _networkPlayer;
 
     private readonly string _gameVersion = "1.0";
@@ -39,7 +38,6 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         }
 
         PhotonNetwork.GameVersion = _gameVersion;
-        PhotonNetwork.NickName = _userName;
         PhotonNetwork.AutomaticallySyncScene = true;
     }
 
@@ -91,7 +89,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         Vector3 randPos = pos + Random.insideUnitSphere * 5;
         randPos.y = 0;
 
-        _networkPlayer = PhotonNetwork.Instantiate("MaleA", randPos, Quaternion.identity);
+        _networkPlayer = PhotonNetwork.Instantiate("Player/Origin", randPos, Quaternion.identity);
     } 
 
     public override void OnJoinRandomFailed(short returnCode, string message)
