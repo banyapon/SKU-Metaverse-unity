@@ -62,16 +62,14 @@ public class GameManager : MonoBehaviourPun
     {
         QualitySettings.vSyncCount = 0;
         Application.targetFrameRate = 60;
-        
+
         SoundManager.Instance.login_BGM();
 
-        btn1.onClick.AddListener(() =>
-        {
+        btn1.onClick.AddListener(() => {
             btn2.gameObject.SetActive(true);
         });
 
-        btn2.onClick.AddListener(() =>
-        {
+        btn2.onClick.AddListener(() => {
             PhotonNetwork.NickName = nickName.text;
             NetworkManager.Instance.ConnectToServer();
         });

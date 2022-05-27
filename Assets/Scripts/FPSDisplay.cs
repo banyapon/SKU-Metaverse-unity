@@ -17,9 +17,7 @@ public class FPSDisplay : MonoBehaviour
 
         GUIStyle style = new GUIStyle();
 
-        // Rect rect = new Rect(0, 0, Screen.safeArea.width, Screen.safeArea.height * 2 / 100);
         Rect rect = Screen.safeArea;
-        //Rect rect = new Rect(0, 0, Screen.safeArea.width, Screen.safeArea.height * 2 / 100);
         style.alignment = TextAnchor.UpperLeft;
         style.fontSize = h * 2 / 100;
         style.normal.textColor = new Color(0.0f, 0.0f, 0.5f, 1.0f);
