@@ -60,6 +60,9 @@ public class GameManager : MonoBehaviourPun
 
     void Start()
     {
+        QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = 60;
+        
         SoundManager.Instance.login_BGM();
 
         btn1.onClick.AddListener(() =>
