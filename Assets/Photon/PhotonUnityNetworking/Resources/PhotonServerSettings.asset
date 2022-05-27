@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AppSettings:
     AppIdRealtime: d465e804-e080-4fdd-812d-881986378f08
+    AppIdFusion: 
     AppIdChat: 
     AppIdVoice: cbb63f2b-2b78-46b2-9467-a727dc401e82
     AppVersion: 
@@ -33,68 +34,16 @@ MonoBehaviour:
   RunInBackground: 1
   StartInOfflineMode: 0
   RpcList:
-  - AudioRPC
-  - AudioStopRPC
   - CantHearYou
   - ChangeColour
   - ClickRpc
   - DestroyRpc
   - DestroySpaceship
   - Fire
-  - FireworksOffRPC
-  - FireworksRPC
   - HeresWhy
-  - ImageRPC
-  - MicRPC
   - RespawnSpaceship
-  - SendRPC
-  - VideoPauseRPC
-  - VideoPlayRPC
-  - VideoRPC
-  - VideoStopRPC
-  - VideoVolumeDOWNRPC
-  - VideoVolumeUPRPC
-  - ChatRPC
-  - AudioVolumeDown
-  - AudioVolumeUp
-  - ChatRPC1
-  - ChatRPC10
-  - ChatRPC11
-  - ChatRPC12
-  - ChatRPC13
-  - ChatRPC14
-  - ChatRPC15
-  - ChatRPC16
-  - ChatRPC17
-  - ChatRPC18
-  - ChatRPC2
-  - ChatRPC3
-  - ChatRPC4
-  - ChatRPC5
-  - ChatRPC6
-  - ChatRPC7
-  - ChatRPC8
-  - ChatRPC9
-  - VoteRPC
-  - VoteRPC1
-  - VoteRPC10
-  - VoteRPC11
-  - VoteRPC12
-  - VoteRPC13
-  - VoteRPC14
-  - VoteRPC15
-  - VoteRPC16
-  - VoteRPC17
-  - VoteRPC18
-  - VoteRPC2
-  - VoteRPC3
-  - VoteRPC4
-  - VoteRPC6
-  - VoteRPC7
-  - VoteRPC8
-  - VoteRPC9
-  - VoteRPC5
-  - VideoURLRPC
+  - SetBoolRPC
+  - SetTriggerRPC
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

@@ -40,14 +40,12 @@ public class PlayerController : MonoBehaviourPun
 
     void Awake()
     {
-        if (!photonView.IsMine) return;
         _characterController = GetComponent<CharacterController>();
         _animator = GetComponent<Animator>();
     }
 
     void Start()
     {
-        if (!photonView.IsMine) return;
         SetPlayerSettings();
     }
 
@@ -160,15 +158,15 @@ public class PlayerController : MonoBehaviourPun
         {
             _yVelocity = 0;
             _currentJumpCount = 0;
-            _animator.SetBool("isJump", false);
+            photonView.RPC("SetBoolRPC", RpcTarget.AllViaServer, "isJump", false);
         }
 
         if (_jump && _currentJumpCount < _maxJumpCount)
         {
             _currentJumpCount++;
             _yVelocity = _jumpPower;
-            _animator.SetTrigger("doJump");
-            _animator.SetBool("isJump", true);
+            photonView.RPC("SetTriggerRPC", RpcTarget.AllViaServer, "doJump");
+            photonView.RPC("SetBoolRPC", RpcTarget.AllViaServer, "isJump", true);
         }
 
         _yVelocity += _gravity * Time.deltaTime;
@@ -189,5 +187,15 @@ public class PlayerController : MonoBehaviourPun
     {
         _animator.SetFloat("xDir", _move.x);
         _animator.SetFloat("zDir", _move.y);
+    }
+
+    [PunRPC] void SetBoolRPC(string anim, bool isTrigger)
+    {
+        _animator.SetBool(anim, isTrigger);
+    }
+
+    [PunRPC] void SetTriggerRPC(string anim)
+    {
+        _animator.SetTrigger(anim);
     }
 }
