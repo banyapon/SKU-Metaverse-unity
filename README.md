@@ -1,4 +1,4 @@
-# SKU_Metaverse-unity
+# SKU-Metaverse-unity
 > This project is a Metaverse for graduation exhibition in Dept. of Media Software, SKU.
 <p>
   <a><img src="https://img.shields.io/badge/unity3d-2019.3.5-blue?style=flat-square&logo=unity"></a>
@@ -12,12 +12,6 @@
  * Tool : Unity 3D 2019.3.5 (IL2CPP)
  * IDE: Visual Studio 2019 (Windows 10 SDK 10.0.18362.0)
  * API : PUN 2.32.0, Photon Voice 2.25.1
-
-## 🚀 Feature
- * Presentation screen (Presentation video by graduation project team)
- * Exhibition booth (Design by graduation project team)
- * Communication (General chat, Booth chat, Voice chat)
- * ETC (Notice, IG screenshot, Mission, Vote)
 
 ## ✔ License
 Copyright © 2021-present Dept. of Media Software, Sungkyul University.
